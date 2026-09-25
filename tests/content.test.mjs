@@ -160,7 +160,12 @@ test('placed + unplaced points reconcile to each category budget',()=>{
 
 test('scaffolded weeks are honestly labelled',()=>{
   for(const w of course.weeks) assert.ok(['authored','scaffold'].includes(w.depth),`week ${w.n}`);
-  assert.deepEqual(course.weeks.filter(w=>w.depth==='authored').map(w=>w.n),[1,2,3]);
+  const authored=course.weeks.filter(w=>w.depth==='authored').map(w=>w.n);
+  assert.ok(authored.length>0,'at least one week must be written out');
+  // Authoring runs forward through the quarter, so the written-out weeks are a
+  // contiguous run from week 1. A gap means a week was skipped or mislabelled.
+  assert.deepEqual(authored,authored.map((_,i)=>i+1),
+    `authored weeks should be a contiguous run from 1, got ${authored.join(', ')}`);
 });
 
 test('Thanksgiving is recorded as a risk to Week 10, not silently adjusted',()=>{
@@ -239,4 +244,12 @@ test('every unversioned file sw.js precaches exists',()=>{
   const shell=sw.slice(sw.indexOf('const SHELL'),sw.indexOf('];',sw.indexOf('const SHELL')));
   for(const m of shell.matchAll(/'\.\/([\w./-]+\.(?:js|json|svg|html))'/g))
     assert.ok(existsSync(join(ROOT,m[1])),`sw.js precaches ${m[1]} which does not exist`);
+});
+
+test('the service worker precaches every authored week',()=>{
+  // Offline is only honest if the content the app offers is actually cached.
+  const sw=readFileSync(join(ROOT,'sw.js'),'utf8');
+  for(const w of course.weeks.filter(x=>x.depth==='authored'))
+    assert.ok(sw.includes(`'./${w.contentFile}'`),
+      `week ${w.n} is authored but sw.js does not precache ${w.contentFile}`);
 });

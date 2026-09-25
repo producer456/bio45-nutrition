@@ -1,0 +1,384 @@
+{
+ "schemaVersion": 1,
+ "week": 5,
+ "version": "2026.09.25.1",
+ "objectives": [
+  {
+   "id": "w05-o1",
+   "text": "Name the three classes of lipid and say which makes up most body and food fat.",
+   "source": {
+    "book": "aitn",
+    "section": "5.1"
+   }
+  },
+  {
+   "id": "w05-o2",
+   "text": "Distinguish saturated, monounsaturated and polyunsaturated fatty acids.",
+   "source": {
+    "book": "aitn",
+    "section": "5.2"
+   }
+  },
+  {
+   "id": "w05-o3",
+   "text": "Describe how fat is digested and why bile is needed.",
+   "source": {
+    "book": "aitn",
+    "section": "5.3"
+   }
+  },
+  {
+   "id": "w05-o4",
+   "text": "Distinguish LDL from HDL and say why the labels 'bad' and 'good' are used.",
+   "source": {
+    "book": "aitn",
+    "section": "5.4"
+   }
+  },
+  {
+   "id": "w05-o5",
+   "text": "Explain what hydrogenation produces and why it matters for health.",
+   "source": {
+    "book": "aitn",
+    "section": "5.6"
+   }
+  },
+  {
+   "id": "w05-o6",
+   "text": "Name the main causes of foodborne illness and the practices that prevent it.",
+   "source": {
+    "book": "aitn",
+    "section": "15.4"
+   }
+  }
+ ],
+ "terms": [
+  {
+   "term": "Triacylglycerol",
+   "gloss": "Three fatty acids on a glycerol backbone. Most body fat and most food fat.",
+   "source": {
+    "book": "aitn",
+    "section": "5.1"
+   }
+  },
+  {
+   "term": "Saturated fatty acid",
+   "gloss": "Carbon chain filled with hydrogen, no double bonds. Usually solid at room temperature.",
+   "source": {
+    "book": "aitn",
+    "section": "5.2"
+   }
+  },
+  {
+   "term": "Bile",
+   "gloss": "Made by the liver, stored in the gallbladder. Emulsifies fat so enzymes can reach it.",
+   "source": {
+    "book": "aitn",
+    "section": "5.3"
+   }
+  },
+  {
+   "term": "Chylomicron",
+   "gloss": "The lipoprotein that carries absorbed long-chain fat out through the lymph.",
+   "source": {
+    "book": "aitn",
+    "section": "5.3"
+   }
+  },
+  {
+   "term": "LDL",
+   "gloss": "Low protein, high cholesterol. High levels are associated with cardiovascular risk.",
+   "source": {
+    "book": "aitn",
+    "section": "5.4"
+   }
+  },
+  {
+   "term": "Hydrogenation",
+   "gloss": "Adding hydrogen to unsaturated fat to harden it. Produces trans fat as a by-product.",
+   "source": {
+    "book": "aitn",
+    "section": "5.6"
+   }
+  }
+ ],
+ "questions": [
+  {
+   "id": "w05-q1",
+   "objective": "w05-o1",
+   "type": "mc",
+   "prompt": "Which lipid class makes up most of both body fat and food fat?",
+   "options": [
+    "Triacylglycerols",
+    "Phospholipids",
+    "Sterols",
+    "Long-chain fatty alcohols"
+   ],
+   "answer": 0,
+   "why": "Three fatty acids on a glycerol backbone — the storage form, and what 'fats and oils' means on a label.",
+   "distractorNotes": [
+    null,
+    "Structural, chiefly in cell membranes.",
+    "Cholesterol belongs here; a small fraction of the total.",
+    "Not one of the three classes."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "5.1",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w05-q2",
+   "objective": "w05-o2",
+   "type": "mc",
+   "prompt": "A fatty acid that is solid at room temperature is most likely:",
+   "options": [
+    "Saturated",
+    "Polyunsaturated",
+    "Monounsaturated",
+    "A trans-free oil"
+   ],
+   "answer": 0,
+   "why": "Saturated chains pack together tightly. Double bonds kink the chain and keep it liquid.",
+   "distractorNotes": [
+    null,
+    "Several double bonds; liquid at room temperature.",
+    "One double bond; usually liquid.",
+    "Being trans-free says nothing about the state."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "5.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w05-q3",
+   "objective": "w05-o3",
+   "type": "mc",
+   "prompt": "What does bile actually do to fat?",
+   "options": [
+    "Emulsifies it",
+    "Digests it into fatty acids",
+    "Absorbs it across the wall",
+    "Converts it into glucose"
+   ],
+   "answer": 0,
+   "why": "Bile is a detergent, not an enzyme. It breaks fat into droplets so lipase has surface to work on.",
+   "distractorNotes": [
+    null,
+    "That is lipase's job.",
+    "Absorption happens at the lining, not by bile.",
+    "Fat is not converted to glucose."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "5.3",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w05-q4",
+   "objective": "w05-o3",
+   "type": "mc",
+   "prompt": "Absorbed long-chain fat leaves the intestine by which route?",
+   "options": [
+    "The lymph, as chylomicrons",
+    "The portal vein, as free fat",
+    "The bile duct, back to the liver",
+    "The colon, for fermentation"
+   ],
+   "answer": 0,
+   "why": "Chylomicrons are too large for the capillaries, so they enter the lymph first and join the blood later.",
+   "distractorNotes": [
+    null,
+    "That is the route for sugars and amino acids.",
+    "Bile flows toward the gut, not away.",
+    "Fat is absorbed well before the colon."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "5.3",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w05-q5",
+   "objective": "w05-o4",
+   "type": "mc",
+   "prompt": "Why is LDL called the 'bad' cholesterol?",
+   "options": [
+    "High levels track with heart risk",
+    "It is chemically a different sterol",
+    "It is the only one carrying fat",
+    "It cannot be measured in blood"
+   ],
+   "answer": 0,
+   "why": "LDL is low in protein and high in cholesterol, and high levels are associated with cardiovascular disease. HDL runs the other way.",
+   "distractorNotes": [
+    null,
+    "The cholesterol is identical; the carrier differs.",
+    "Several lipoproteins carry lipid.",
+    "It is routinely measured."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "5.4",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w05-q6",
+   "objective": "w05-o5",
+   "type": "mc",
+   "prompt": "Hydrogenation is used by manufacturers mainly because it:",
+   "options": [
+    "Extends shelf life and firms texture",
+    "Lowers the calories in the fat",
+    "Strips the cholesterol out of the oil",
+    "Turns saturated fat unsaturated"
+   ],
+   "answer": 0,
+   "why": "Hardened oils resist oxidation and keep longer. The cost is trans fat formed at the same time.",
+   "distractorNotes": [
+    null,
+    "The energy content is unchanged.",
+    "Vegetable oils have no cholesterol to remove.",
+    "It runs the other way — it saturates."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "5.6",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w05-q7",
+   "objective": "w05-o2",
+   "type": "mc",
+   "prompt": "Recommended fat intake for adults is what share of total calories?",
+   "options": [
+    "20 to 35 percent",
+    "5 to 10 percent",
+    "45 to 60 percent",
+    "Under 5 percent"
+   ],
+   "answer": 0,
+   "why": "Within that band, saturated fat is kept under 10 percent of calories, and trans fat as low as possible.",
+   "distractorNotes": [
+    null,
+    "Too low; essential fatty acids would be at risk.",
+    "That is closer to the carbohydrate range.",
+    "Far too low to be workable or healthy."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "5.5",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w05-q8",
+   "objective": "w05-o4",
+   "type": "mc",
+   "prompt": "What most raises unfavourable blood cholesterol for most people?",
+   "options": [
+    "Saturated and trans fat intake",
+    "Dietary cholesterol alone",
+    "Total calories taken from protein",
+    "Fibre in whole grains"
+   ],
+   "answer": 0,
+   "why": "Cholesterol in food affects blood cholesterol less than many assume; the fats eaten alongside it matter more.",
+   "distractorNotes": [
+    null,
+    "Its effect is smaller than commonly believed.",
+    "Protein is not the main driver.",
+    "Fibre tends to help, not harm."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "5.7",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w05-q9",
+   "objective": "w05-o6",
+   "type": "mc",
+   "prompt": "The single most effective everyday guard against foodborne illness is:",
+   "options": [
+    "Washing hands and separating raw foods",
+    "Rinsing raw meat under the tap",
+    "Keeping cooked food at room temperature",
+    "Relying on smell to judge safety"
+   ],
+   "answer": 0,
+   "why": "Hand hygiene and preventing cross-contamination do more than any single other habit. Temperature control is the other half.",
+   "distractorNotes": [
+    null,
+    "Rinsing raw meat spreads bacteria around the sink.",
+    "The danger zone is exactly where bacteria multiply.",
+    "Many pathogens leave no smell at all."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "15.4",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w05-q10",
+   "objective": "w05-o6",
+   "type": "mc",
+   "prompt": "Leaving cooked food in the danger zone is risky because:",
+   "options": [
+    "Bacteria multiply fastest at those temperatures",
+    "Nutrients break down and are lost",
+    "Fat separates out of the dish",
+    "Food takes up airborne bacteria from the kitchen"
+   ],
+   "answer": 0,
+   "why": "Between refrigeration and hot-holding temperatures, bacterial growth is rapid. Time at that range is what accumulates risk.",
+   "distractorNotes": [
+    null,
+    "Some loss occurs, but it is not the safety issue.",
+    "Not a food-safety mechanism.",
+    "Airborne contamination is not the main route."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "15.4",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  }
+ ],
+ "applicationPrompts": [
+  {
+   "id": "w05-a1",
+   "forAssignment": null,
+   "checklist": [
+    "Pick one fat-containing food and name which lipid class dominates it.",
+    "Say whether its fatty acids are mainly saturated, mono- or polyunsaturated.",
+    "Follow it through emulsification, digestion and absorption.",
+    "Say one swap that would improve its saturated-fat profile."
+   ],
+   "selfCheck": [
+    "Did I say why bile is needed before lipase can work?",
+    "Did I name the route absorbed fat takes out of the gut?"
+   ],
+   "aiPolicy": "These are questions for you to answer. This app does not write any part of a submission."
+  }
+ ]
+}

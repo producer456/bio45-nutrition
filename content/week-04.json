@@ -1,0 +1,376 @@
+{
+ "schemaVersion": 1,
+ "week": 4,
+ "version": "2026.09.25.1",
+ "objectives": [
+  {
+   "id": "w04-o1",
+   "text": "Classify carbohydrates as fast- or slow-releasing and give examples of each.",
+   "source": {
+    "book": "aitn",
+    "section": "4.1"
+   }
+  },
+  {
+   "id": "w04-o2",
+   "text": "Trace carbohydrate digestion from mouth to colon and say what is absorbed where.",
+   "source": {
+    "book": "aitn",
+    "section": "4.2"
+   }
+  },
+  {
+   "id": "w04-o3",
+   "text": "Name the four functions of carbohydrate in the body, including protein sparing.",
+   "source": {
+    "book": "aitn",
+    "section": "4.3"
+   }
+  },
+  {
+   "id": "w04-o4",
+   "text": "Distinguish type 1 from type 2 diabetes in terms of insulin.",
+   "source": {
+    "book": "aitn",
+    "section": "4.4"
+   }
+  },
+  {
+   "id": "w04-o5",
+   "text": "Explain what the colonic microbiota do with the carbohydrate we cannot digest.",
+   "source": {
+    "book": "callahan",
+    "section": "4.6"
+   }
+  }
+ ],
+ "terms": [
+  {
+   "term": "Monosaccharide",
+   "gloss": "A single sugar unit — glucose, fructose, galactose.",
+   "source": {
+    "book": "aitn",
+    "section": "4.1"
+   }
+  },
+  {
+   "term": "Disaccharide",
+   "gloss": "Two sugar units joined — sucrose, lactose, maltose.",
+   "source": {
+    "book": "aitn",
+    "section": "4.1"
+   }
+  },
+  {
+   "term": "Glycogen",
+   "gloss": "The storage form of glucose in liver and muscle. Liver glycogen serves the blood; muscle glycogen serves the muscle.",
+   "source": {
+    "book": "aitn",
+    "section": "4.3"
+   }
+  },
+  {
+   "term": "Protein sparing",
+   "gloss": "Enough dietary glucose means the body need not break down protein to make it.",
+   "source": {
+    "book": "aitn",
+    "section": "4.3"
+   }
+  },
+  {
+   "term": "Glycemic index",
+   "gloss": "A ranking of how quickly a carbohydrate food raises blood glucose.",
+   "source": {
+    "book": "aitn",
+    "section": "4.2"
+   }
+  },
+  {
+   "term": "Gut microbiota",
+   "gloss": "The bacteria living in the colon. They ferment the fibre our own enzymes cannot digest.",
+   "source": {
+    "book": "callahan",
+    "section": "4.6"
+   }
+  }
+ ],
+ "questions": [
+  {
+   "id": "w04-q1",
+   "objective": "w04-o1",
+   "type": "mc",
+   "prompt": "Which is a slow-releasing carbohydrate?",
+   "options": [
+    "Starch in a whole grain",
+    "Sucrose in ordinary table sugar",
+    "Lactose in milk",
+    "Fructose in honey"
+   ],
+   "answer": 0,
+   "why": "Starch is a polysaccharide — long chains that take time to break down. Mono- and disaccharides are the fast-releasing ones.",
+   "distractorNotes": [
+    null,
+    "A disaccharide, and fast-releasing.",
+    "A disaccharide, and fast-releasing.",
+    "A monosaccharide, the fastest kind."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "4.1",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w04-q2",
+   "objective": "w04-o2",
+   "type": "mc",
+   "prompt": "Carbohydrate digestion begins where, and with what?",
+   "options": [
+    "The mouth, with salivary amylase",
+    "The stomach, with gastric acid",
+    "The small bowel, with pancreatic juice",
+    "The colon, with resident bacteria"
+   ],
+   "answer": 0,
+   "why": "Chewing supplies the mechanical half and salivary amylase the chemical half. Both start before the food is swallowed.",
+   "distractorNotes": [
+    null,
+    "Acid largely halts amylase; protein digestion starts here.",
+    "Digestion continues there, but it did not begin there.",
+    "Only the indigestible remainder reaches the colon."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "4.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w04-q3",
+   "objective": "w04-o2",
+   "type": "mc",
+   "prompt": "After absorption, monosaccharides are delivered first to:",
+   "options": [
+    "The liver",
+    "The muscles",
+    "Adipose tissue",
+    "The pancreas"
+   ],
+   "answer": 0,
+   "why": "Absorbed sugars travel by the portal vein to the liver, which decides what is stored, converted or released.",
+   "distractorNotes": [
+    null,
+    "Muscle takes glucose up, but not first.",
+    "Storage as fat comes later, and elsewhere.",
+    "The pancreas senses glucose; it is not the first destination."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "4.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w04-q4",
+   "objective": "w04-o3",
+   "type": "mc",
+   "prompt": "Which is the clearest example of protein sparing?",
+   "options": [
+    "Adequate glucose stops protein becoming glucose",
+    "Protein and carbohydrate are absorbed together",
+    "Dietary protein slows the absorption of carbohydrate",
+    "Extra protein is converted into glycogen"
+   ],
+   "answer": 0,
+   "why": "Without enough dietary carbohydrate the body makes glucose from amino acids. Adequate carbohydrate spares protein for its own jobs.",
+   "distractorNotes": [
+    null,
+    "True of a mixed meal, but not what the term means.",
+    "A real effect, but a different one.",
+    "Protein can yield glucose, but that is the opposite of sparing."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "4.3",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w04-q5",
+   "objective": "w04-o3",
+   "type": "mc",
+   "prompt": "Liver glycogen differs from muscle glycogen in that:",
+   "options": [
+    "Liver glycogen can restore blood glucose",
+    "Muscle glycogen is the larger reserve",
+    "Liver glycogen is drawn on only during exercise",
+    "Muscle glycogen is released into blood"
+   ],
+   "answer": 0,
+   "why": "The liver can release glucose into the bloodstream for the whole body. Muscle keeps its glycogen for its own contraction.",
+   "distractorNotes": [
+    null,
+    "Muscle does hold more in total, but that is not the functional difference.",
+    "The liver's reserve is drawn on between meals as well.",
+    "Muscle cannot export glucose back to the blood."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "4.3",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w04-q6",
+   "objective": "w04-o4",
+   "type": "mc",
+   "prompt": "Type 1 diabetes is best described as:",
+   "options": [
+    "Too little insulin produced",
+    "Poor tissue response to insulin",
+    "Too much insulin produced",
+    "Insulin of the wrong type"
+   ],
+   "answer": 0,
+   "why": "Type 1 is insulin deficiency and is treated with injected insulin. Type 2 begins as resistance to insulin that is present.",
+   "distractorNotes": [
+    null,
+    "That is type 2 — resistance rather than deficiency.",
+    "The opposite of the problem.",
+    "Insulin structure is not what differs."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "4.4",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w04-q7",
+   "objective": "w04-o5",
+   "type": "mc",
+   "prompt": "What do colonic bacteria do with fibre that reaches them?",
+   "options": [
+    "Ferment it",
+    "Absorb it whole",
+    "Convert it to starch",
+    "Return it to the small bowel"
+   ],
+   "answer": 0,
+   "why": "Our own enzymes cannot break fibre down, so it arrives in the colon intact and the resident bacteria ferment it.",
+   "distractorNotes": [
+    null,
+    "Bacteria break it down; they do not absorb it as-is.",
+    "Fermentation does not rebuild starch.",
+    "Movement through the tract runs one way."
+   ],
+   "source": {
+    "book": "callahan",
+    "section": "4.6",
+    "license": "CC BY-NC-SA 4.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w04-q8",
+   "objective": "w04-o5",
+   "type": "mc",
+   "prompt": "Why does fibre reach the colon undigested in the first place?",
+   "options": [
+    "We make no enzyme that breaks it down",
+    "Fibre passes the small bowel too quickly",
+    "Fibre is absorbed and then re-secreted",
+    "Stomach acid makes fibre indigestible"
+   ],
+   "answer": 0,
+   "why": "It is an enzyme gap, not a timing problem. That gap is exactly what makes fibre available to the microbiota.",
+   "distractorNotes": [
+    null,
+    "Transit speed is not the reason.",
+    "Fibre is not absorbed at all.",
+    "Acid does not create the indigestibility."
+   ],
+   "source": {
+    "book": "callahan",
+    "section": "4.6",
+    "license": "CC BY-NC-SA 4.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w04-q9",
+   "objective": "w04-o1",
+   "type": "mc",
+   "prompt": "The RDA for carbohydrate in adults is set at 130 g/day mainly to:",
+   "options": [
+    "Supply the brain with glucose",
+    "Prevent the loss of muscle glycogen",
+    "Meet the daily fibre target",
+    "Keep body weight steady"
+   ],
+   "answer": 0,
+   "why": "That figure is the amount needed to supply the brain, which relies heavily on glucose. It is a floor, not a recommended intake.",
+   "distractorNotes": [
+    null,
+    "Muscle glycogen matters, but is not the basis for this number.",
+    "Fibre has its own separate recommendation.",
+    "Weight is not what the figure is derived from."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "4.6",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w04-q10",
+   "objective": "w04-o1",
+   "type": "mc",
+   "prompt": "Which change matches the Dietary Guidelines' advice on carbohydrate?",
+   "options": [
+    "More whole grains, fewer added sugars",
+    "Fewer whole grains, more added sugars",
+    "Avoid all carbohydrate-rich foods",
+    "Replace whole grains with refined"
+   ],
+   "answer": 0,
+   "why": "The direction is toward slow-releasing carbohydrate and fibre, and away from added sugar and refined grain.",
+   "distractorNotes": [
+    null,
+    "Exactly backwards.",
+    "Carbohydrate is not to be eliminated.",
+    "Refining is what the advice moves away from."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "4.6",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  }
+ ],
+ "applicationPrompts": [
+  {
+   "id": "w04-a1",
+   "forAssignment": null,
+   "checklist": [
+    "Pick one carbohydrate food you ate and classify it fast- or slow-releasing.",
+    "Say what happens to it in the mouth, small intestine and colon.",
+    "Name which part of it your own enzymes cannot digest.",
+    "Say what the colonic bacteria do with that part."
+   ],
+   "selfCheck": [
+    "Did I distinguish digestion from absorption?",
+    "Did I name an actual enzyme rather than saying 'enzymes'?"
+   ],
+   "aiPolicy": "These are questions for you to answer. This app does not write any part of a submission."
+  }
+ ]
+}

@@ -1,6 +1,7 @@
 # Handoff
 
-**Parked 2026-09-25.** Working tree clean, 84 tests green, nothing published yet.
+**Updated 2026-09-25.** Working tree clean, 85 tests green, nothing published yet.
+All 11 weeks are now written out.
 
 ```sh
 cd ~/bio45-nutrition
@@ -19,9 +20,9 @@ third-party requests. State persists and survives reload under
   Entering scores gave 141/155 = 91.0% A-, checked by hand.
 - **Weeks 2–11 are projected** onto the Sunday cadence and marked `inferred`
   on screen.
-- **Weeks 1–3 are written out** — 30 quiz questions with per-distractor rationale
-  and citations. Weeks 4–11 carry their reading map and are labelled
-  *reading map only*.
+- **All 11 weeks are written out** — **110 questions**, 59 objectives and 66 terms,
+  every question carrying a rationale for each wrong option and a citation. Zero of
+  the 110 have the correct answer as the uniquely longest option.
 - **The diary** encodes her rubric; vague portions are rejected by name, quoting her.
 
 ## The immediate next step
@@ -54,14 +55,11 @@ Two things to check before you do:
      (`reflection-count`);
    - what the embedded video quizzes actually are — 50 points, never enumerated
      (`videoquiz-items`).
-3. **Author weeks 4–11.** `node tools/extract-aitn.mjs` rebuilds the scaffold into
-   `content/_seed/` (gitignored). Copy a `content/week-0N.json` and follow its shape,
-   then flip that week to `depth: "authored"` in `course.json` — a test refuses to let
-   a scaffold week ship questions.
-   ⚠ Week 4's microbiome has no home in the primary textbook (it predates the
-   literature). Callahan is the only supplied source that covers it.
-4. **Optional:** a Playwright browser suite, adapting the pattern from the project
+3. **Optional:** a Playwright browser suite, adapting the pattern from the project
    this forked from.
+4. **Optional:** deepen any week. `node tools/extract-aitn.mjs` rebuilds the
+   authoring scaffold into `content/_seed/` (gitignored); copy a
+   `content/week-NN.json` and follow its shape.
 
 ## Traps, the ones that actually cost time
 

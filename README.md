@@ -13,7 +13,7 @@ date, point value and policy there. Where this app is guessing, it says so on sc
 |---|---|
 | **Today** | What is due, the current week, where the grade stands, coupons left |
 | **Weeks** | All 11 topic weeks with their reading map |
-| **Study** | Objectives, terms and a self-quiz for the weeks that are written out |
+| **Study** | Objectives, terms and a self-quiz — all 11 weeks |
 | **Coursework** | Every assignment: tick it off, type the score, spend a late coupon |
 | **Grades** | Category breakdown, drop-lowest, and what each letter needs |
 | **Food diary** | The ten-day diary, checked against her rubric |
@@ -68,9 +68,12 @@ Node 22+. There is **no build step** — every file is served as written.
 | `tools/extract-aitn.mjs` | Rebuilds the authoring scaffold in `content/_seed/` (gitignored) |
 
 As each week's module opens, replace that week's projected assignments with the real
-ones and drop `projected: true`. Weeks 1–3 are `depth: "authored"`; the rest are
-`"scaffold"` and say so on screen. A test refuses to let a scaffold week ship
-questions — mark it authored so the quality rules apply.
+ones and drop `projected: true`.
+
+All 11 weeks are `depth: "authored"` — 110 questions, 59 objectives and 66 terms,
+every one cited. A test refuses to let a `"scaffold"` week ship questions, and
+requires the authored weeks to be a contiguous run from week 1, so a gap fails the
+build rather than quietly shipping a half-written week.
 
 **After editing a stylesheet or a script, bump its `?v=` in `index.html` *and* in
 `sw.js`'s `SHELL`.** They must match.

@@ -1,0 +1,376 @@
+{
+ "schemaVersion": 1,
+ "week": 6,
+ "version": "2026.09.25.1",
+ "objectives": [
+  {
+   "id": "w06-o1",
+   "text": "Distinguish essential from nonessential amino acids.",
+   "source": {
+    "book": "aitn",
+    "section": "6.1"
+   }
+  },
+  {
+   "id": "w06-o2",
+   "text": "Explain denaturation and where it happens in cooking and digestion.",
+   "source": {
+    "book": "aitn",
+    "section": "6.2"
+   }
+  },
+  {
+   "id": "w06-o3",
+   "text": "Trace protein digestion from stomach to small intestine.",
+   "source": {
+    "book": "aitn",
+    "section": "6.3"
+   }
+  },
+  {
+   "id": "w06-o4",
+   "text": "Name several distinct functions proteins perform in the body.",
+   "source": {
+    "book": "aitn",
+    "section": "6.4"
+   }
+  },
+  {
+   "id": "w06-o5",
+   "text": "Apply the adult RDA of 0.8 g per kg body weight.",
+   "source": {
+    "book": "aitn",
+    "section": "6.6"
+   }
+  }
+ ],
+ "terms": [
+  {
+   "term": "Amino acid",
+   "gloss": "The monomer of protein. Twenty kinds, differing in their side chains.",
+   "source": {
+    "book": "aitn",
+    "section": "6.1"
+   }
+  },
+  {
+   "term": "Essential amino acid",
+   "gloss": "One the body cannot make, so it must come from the diet.",
+   "source": {
+    "book": "aitn",
+    "section": "6.1"
+   }
+  },
+  {
+   "term": "Peptide bond",
+   "gloss": "The link joining one amino acid to the next.",
+   "source": {
+    "book": "aitn",
+    "section": "6.1"
+   }
+  },
+  {
+   "term": "Denaturation",
+   "gloss": "Loss of a protein's folded shape. Cooking and stomach acid both do it.",
+   "source": {
+    "book": "aitn",
+    "section": "6.2"
+   }
+  },
+  {
+   "term": "Pepsin",
+   "gloss": "The stomach enzyme that begins chemical protein digestion, working in acid.",
+   "source": {
+    "book": "aitn",
+    "section": "6.3"
+   }
+  },
+  {
+   "term": "Protein quality",
+   "gloss": "Judged by amino acid content together with how much is actually digested and absorbed.",
+   "source": {
+    "book": "aitn",
+    "section": "6.6"
+   }
+  }
+ ],
+ "questions": [
+  {
+   "id": "w06-q1",
+   "objective": "w06-o1",
+   "type": "mc",
+   "prompt": "An essential amino acid is one that:",
+   "options": [
+    "The body cannot make in enough quantity",
+    "Is required in the largest daily amounts",
+    "Is found only in animal foods",
+    "Cannot be stored by the body"
+   ],
+   "answer": 0,
+   "why": "Essential is about origin, not importance or amount — the body cannot synthesise it, so the diet has to supply it.",
+   "distractorNotes": [
+    null,
+    "Essential refers to source, not quantity.",
+    "Plant foods supply them too.",
+    "Amino acids generally are not stored as such."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "6.1",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w06-q2",
+   "objective": "w06-o2",
+   "type": "mc",
+   "prompt": "Whisking egg white until it stiffens is an example of:",
+   "options": [
+    "Denaturation",
+    "Digestion",
+    "Absorption",
+    "Peptide bond formation"
+   ],
+   "answer": 0,
+   "why": "The folded structure unwinds and the strands tangle. Heat and acid do the same thing by other means.",
+   "distractorNotes": [
+    null,
+    "No enzyme is splitting anything.",
+    "Nothing has crossed a membrane.",
+    "Bonds are not being made here."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "6.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w06-q3",
+   "objective": "w06-o3",
+   "type": "mc",
+   "prompt": "Chemical digestion of protein begins where?",
+   "options": [
+    "The stomach",
+    "The mouth",
+    "The small intestine",
+    "The large intestine"
+   ],
+   "answer": 0,
+   "why": "Pepsin, working in stomach acid, makes the first chemical cuts. The mouth contributes mechanical breakdown only.",
+   "distractorNotes": [
+    null,
+    "Chewing is mechanical; no protein enzyme acts there.",
+    "Digestion finishes there, but does not begin.",
+    "Protein is long gone before the colon."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "6.3",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w06-q4",
+   "objective": "w06-o4",
+   "type": "mc",
+   "prompt": "Which best shows the range of jobs proteins do?",
+   "options": [
+    "Enzymes, transport, structure, immunity",
+    "Long-term energy storage in adipose tissue",
+    "Insulating the body against cold",
+    "Carrying fat through the lymph"
+   ],
+   "answer": 0,
+   "why": "Shape determines function, and protein shapes are enormously varied — which is why one deficiency impairs many systems at once.",
+   "distractorNotes": [
+    null,
+    "That is fat's role.",
+    "Also fat's role.",
+    "Chylomicrons are lipoproteins doing a lipid job."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "6.4",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w06-q5",
+   "objective": "w06-o5",
+   "type": "mc",
+   "prompt": "The adult RDA for protein is:",
+   "options": [
+    "0.8 g per kg of body weight",
+    "0.8 g per pound of weight",
+    "8 g per kg of body weight",
+    "80 g regardless of body weight"
+   ],
+   "answer": 0,
+   "why": "It scales with body weight. A 70 kg adult needs about 56 g a day.",
+   "distractorNotes": [
+    null,
+    "Wrong unit — that would be roughly double.",
+    "Off by a factor of ten.",
+    "A flat figure ignores body size."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "6.6",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w06-q6",
+   "objective": "w06-o5",
+   "type": "mc",
+   "prompt": "A 70 kg adult's RDA for protein is closest to:",
+   "options": [
+    "56 g per day",
+    "26 g per day",
+    "96 g per day",
+    "150 g per day"
+   ],
+   "answer": 0,
+   "why": "70 × 0.8 = 56 g. Worth doing once so the figure is yours rather than memorised.",
+   "distractorNotes": [
+    null,
+    "Too low — that would be about 0.37 g/kg.",
+    "Above the RDA, though not harmful.",
+    "Well above the RDA for that weight."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "6.6",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w06-q7",
+   "objective": "w06-o4",
+   "type": "mc",
+   "prompt": "Why does inadequate protein impair so many functions at once?",
+   "options": [
+    "Proteins do many different jobs",
+    "Protein is the body's main fuel",
+    "Protein is needed to absorb water",
+    "Protein is stored and then depleted"
+   ],
+   "answer": 0,
+   "why": "Without the full set of essential amino acids, every protein-dependent function is affected — enzymes, transport, immunity, structure.",
+   "distractorNotes": [
+    null,
+    "Carbohydrate and fat are the main fuels.",
+    "Not protein's role.",
+    "The body keeps no true protein store."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "6.4",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w06-q8",
+   "objective": "w06-o1",
+   "type": "mc",
+   "prompt": "Protein quality is judged by amino acid content together with:",
+   "options": [
+    "How much is digested and absorbed",
+    "The total grams in a typical serving",
+    "Whether the source is animal",
+    "How long it takes to cook"
+   ],
+   "answer": 0,
+   "why": "A food can carry the right amino acids and still score poorly if little of it is actually absorbed.",
+   "distractorNotes": [
+    null,
+    "Quantity is separate from quality.",
+    "Plant sources can score well.",
+    "Irrelevant to quality."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "6.6",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w06-q9",
+   "objective": "w06-o3",
+   "type": "mc",
+   "prompt": "What happens to amino acids the body does not immediately need?",
+   "options": [
+    "They are recycled into other proteins",
+    "They are stored as spare protein",
+    "They are excreted from the body unused",
+    "They are converted into vitamins"
+   ],
+   "answer": 0,
+   "why": "The body continually breaks down and rebuilds proteins, reusing amino acids. What genuinely exceeds need is largely burned or converted.",
+   "distractorNotes": [
+    null,
+    "There is no dedicated protein store.",
+    "Some nitrogen is excreted, but not the whole amino acid.",
+    "Amino acids do not become vitamins."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "6.3",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w06-q10",
+   "objective": "w06-o1",
+   "type": "mc",
+   "prompt": "Protein deficiency syndromes are a leading cause of death in:",
+   "options": [
+    "Children under five in poor regions",
+    "Older adults in wealthier countries",
+    "Athletes on high-protein diets",
+    "Adults eating vegetarian diets"
+   ],
+   "answer": 0,
+   "why": "It is fundamentally a problem of food access. Adequate, varied food prevents it.",
+   "distractorNotes": [
+    null,
+    "Not the group the chapter identifies.",
+    "Excess is a different question entirely.",
+    "A varied vegetarian diet meets protein needs."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "6.5",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  }
+ ],
+ "applicationPrompts": [
+  {
+   "id": "w06-a1",
+   "forAssignment": null,
+   "checklist": [
+    "Work out your own RDA: body weight in kg times 0.8.",
+    "Add up the protein in one day of your actual eating.",
+    "Compare the two and say which way the gap runs.",
+    "Name two protein foods that would close it, and say why you picked them."
+   ],
+   "selfCheck": [
+    "Did I convert pounds to kilograms before multiplying?",
+    "Did I judge quality as well as grams?"
+   ],
+   "aiPolicy": "These are questions for you to answer. This app does not write any part of a submission."
+  }
+ ]
+}

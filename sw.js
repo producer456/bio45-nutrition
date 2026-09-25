@@ -21,7 +21,17 @@ const SHELL = [
   './assets/course-app.js?v=4',
   './assets/course-store.js', './assets/state-merge.js', './assets/state.js',
   './assets/grading.js', './assets/deadlines.js', './assets/diary.js',
-  './content/week-01.json', './content/week-02.json', './content/week-03.json',
+  './content/week-01.json',
+  './content/week-02.json',
+  './content/week-03.json',
+  './content/week-04.json',
+  './content/week-05.json',
+  './content/week-06.json',
+  './content/week-07.json',
+  './content/week-08.json',
+  './content/week-09.json',
+  './content/week-10.json',
+  './content/week-11.json',
 ];
 
 self.addEventListener('install', e => {

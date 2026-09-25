@@ -1,0 +1,376 @@
+{
+ "schemaVersion": 1,
+ "week": 8,
+ "version": "2026.09.25.1",
+ "objectives": [
+  {
+   "id": "w08-o1",
+   "text": "Explain what bone mineral density measures and how it is assessed.",
+   "source": {
+    "book": "aitn",
+    "section": "9.2"
+   }
+  },
+  {
+   "id": "w08-o2",
+   "text": "Name calcium's functions and the three hormones controlling blood calcium.",
+   "source": {
+    "book": "aitn",
+    "section": "9.3"
+   }
+  },
+  {
+   "id": "w08-o3",
+   "text": "Separate modifiable from non-modifiable osteoporosis risk factors.",
+   "source": {
+    "book": "aitn",
+    "section": "9.6"
+   }
+  },
+  {
+   "id": "w08-o4",
+   "text": "Explain why B vitamins matter to metabolism without supplying energy.",
+   "source": {
+    "book": "aitn",
+    "section": "10.3"
+   }
+  },
+  {
+   "id": "w08-o5",
+   "text": "Describe iron-deficiency anaemia and its main causes worldwide.",
+   "source": {
+    "book": "aitn",
+    "section": "10.5"
+   }
+  }
+ ],
+ "terms": [
+  {
+   "term": "Bone mineral density",
+   "gloss": "A measure of calcified bone tissue; it correlates with bone strength.",
+   "source": {
+    "book": "aitn",
+    "section": "9.2"
+   }
+  },
+  {
+   "term": "DEXA",
+   "gloss": "The clinical scan used to assess bone mineral density.",
+   "source": {
+    "book": "aitn",
+    "section": "9.2"
+   }
+  },
+  {
+   "term": "Parathyroid hormone",
+   "gloss": "One of three hormones — with calcitriol and calcitonin — that hold blood calcium steady.",
+   "source": {
+    "book": "aitn",
+    "section": "9.3"
+   }
+  },
+  {
+   "term": "Osteoporosis",
+   "gloss": "Bone loss severe enough to raise fracture risk. Described as a childhood disease with old-age consequences.",
+   "source": {
+    "book": "aitn",
+    "section": "9.7"
+   }
+  },
+  {
+   "term": "Coenzyme",
+   "gloss": "A non-protein helper a vitamin becomes, letting an enzyme do its work. It supplies no energy itself.",
+   "source": {
+    "book": "aitn",
+    "section": "10.3"
+   }
+  },
+  {
+   "term": "Iron-deficiency anaemia",
+   "gloss": "Too little iron to make enough functional haemoglobin, so less oxygen is carried.",
+   "source": {
+    "book": "aitn",
+    "section": "10.5"
+   }
+  }
+ ],
+ "questions": [
+  {
+   "id": "w08-q1",
+   "objective": "w08-o2",
+   "type": "mc",
+   "prompt": "Blood calcium is held steady by which three hormones?",
+   "options": [
+    "PTH, calcitriol and calcitonin",
+    "Insulin, glucagon and cortisol",
+    "Oestrogen, thyroxine and leptin",
+    "Adrenaline, gastrin and secretin"
+   ],
+   "answer": 0,
+   "why": "Blood calcium is regulated tightly because it is needed for nerve and muscle function, not only for bone.",
+   "distractorNotes": [
+    null,
+    "Those govern blood glucose and stress.",
+    "Each affects bone, but they are not the three regulators.",
+    "Those act on circulation and digestion."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "9.3",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w08-q2",
+   "objective": "w08-o2",
+   "type": "mc",
+   "prompt": "If dietary calcium runs short, the body will:",
+   "options": [
+    "Draw calcium out of the bone",
+    "Stop using calcium in the nerves",
+    "Excrete less of every other mineral",
+    "Absorb calcium through the skin"
+   ],
+   "answer": 0,
+   "why": "Blood calcium is defended first because it is immediately vital. The skeleton is the reserve it is defended from.",
+   "distractorNotes": [
+    null,
+    "Nerve function is precisely what is being protected.",
+    "Not the mechanism.",
+    "Calcium is not absorbed that way."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "9.3",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w08-q3",
+   "objective": "w08-o3",
+   "type": "mc",
+   "prompt": "Which is a MODIFIABLE risk factor for osteoporosis?",
+   "options": [
+    "Smoking and physical inactivity",
+    "Being female rather than being male",
+    "Being over the age of fifty",
+    "Having a small body frame"
+   ],
+   "answer": 0,
+   "why": "Separating what can be changed from what cannot is the point: smoking, alcohol, inactivity and diet are all open to action.",
+   "distractorNotes": [
+    null,
+    "Non-modifiable.",
+    "Non-modifiable.",
+    "Non-modifiable."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "9.6",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w08-q4",
+   "objective": "w08-o3",
+   "type": "mc",
+   "prompt": "Osteoporosis is called a childhood disease with old-age consequences because:",
+   "options": [
+    "Peak bone mass is built when young",
+    "Children are diagnosed with it most often",
+    "It is inherited directly from a parent",
+    "Symptoms always appear during childhood"
+   ],
+   "answer": 0,
+   "why": "Most bone is laid down early in life. How much was built then sets how much can be lost later before fracture risk rises.",
+   "distractorNotes": [
+    null,
+    "It is diagnosed in later life.",
+    "Family history is a factor, not direct inheritance.",
+    "It is typically silent until a fracture."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "9.7",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w08-q5",
+   "objective": "w08-o1",
+   "type": "mc",
+   "prompt": "Bone mineral density is assessed clinically using:",
+   "options": [
+    "A DEXA scan",
+    "A standard blood panel",
+    "A urine calcium test",
+    "A plain X-ray series"
+   ],
+   "answer": 0,
+   "why": "DEXA measures calcified bone tissue, and the result correlates with bone strength.",
+   "distractorNotes": [
+    null,
+    "Blood calcium is defended and reveals little about bone.",
+    "Not the clinical standard.",
+    "Not sensitive enough for density."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "9.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w08-q6",
+   "objective": "w08-o4",
+   "type": "mc",
+   "prompt": "B vitamins matter to energy metabolism because they:",
+   "options": [
+    "Act as coenzymes in the pathways",
+    "Are burned as fuel alongside glucose",
+    "Are stored and released when needed",
+    "Slow the rate of metabolism down"
+   ],
+   "answer": 0,
+   "why": "They are functional parts of the machinery, not fuel for it. That is why a deficiency shows up as fatigue without the vitamin supplying any calories.",
+   "distractorNotes": [
+    null,
+    "Vitamins yield no energy at all.",
+    "Water-soluble vitamins are largely not stored.",
+    "They enable the pathways rather than slowing them."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "10.3",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w08-q7",
+   "objective": "w08-o4",
+   "type": "mc",
+   "prompt": "Minerals differ from the energy-yielding nutrients in that they:",
+   "options": [
+    "Cannot be broken down for energy",
+    "Are needed in much larger amounts",
+    "Are absorbed only in the large bowel",
+    "Are made by the body when required"
+   ],
+   "answer": 0,
+   "why": "A mineral is an element. There is nothing to break down. They act as cofactors for hundreds of enzymes instead.",
+   "distractorNotes": [
+    null,
+    "They are needed in small amounts.",
+    "Absorption is mainly in the small intestine.",
+    "Elements cannot be synthesised."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "10.4",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w08-q8",
+   "objective": "w08-o5",
+   "type": "mc",
+   "prompt": "Iron-deficiency anaemia reduces the blood's ability to:",
+   "options": [
+    "Carry oxygen to the tissues",
+    "Clot after an injury occurs",
+    "Fight off bacterial infection",
+    "Regulate the body temperature"
+   ],
+   "answer": 0,
+   "why": "Too little iron means too little functional haemoglobin, and haemoglobin is what carries oxygen.",
+   "distractorNotes": [
+    null,
+    "Clotting involves platelets and clotting factors.",
+    "A different part of the immune system.",
+    "Not the primary function affected."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "10.5",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w08-q9",
+   "objective": "w08-o5",
+   "type": "mc",
+   "prompt": "The main cause of iron deficiency worldwide is:",
+   "options": [
+    "Parasitic worm infection in the gut",
+    "Excessive intake of dietary calcium",
+    "Drinking too much water each day",
+    "Eating an entirely cooked-food diet"
+   ],
+   "answer": 0,
+   "why": "Blood loss from gut parasites is the leading cause globally — which makes it as much a public-health problem as a dietary one.",
+   "distractorNotes": [
+    null,
+    "Calcium can hinder absorption, but is not the main cause.",
+    "Not a cause of iron deficiency.",
+    "Cooking does not cause it."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "10.5",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w08-q10",
+   "objective": "w08-o2",
+   "type": "mc",
+   "prompt": "Someone taking a calcium supplement should also watch their:",
+   "options": [
+    "Vitamin D intake",
+    "Vitamin C intake",
+    "Dietary fibre intake",
+    "Total protein intake"
+   ],
+   "answer": 0,
+   "why": "Calcium absorption depends on vitamin D. Without enough of it, the supplement delivers less than it appears to.",
+   "distractorNotes": [
+    null,
+    "Helps with iron, not calcium.",
+    "Affects absorption somewhat, but is not the pairing.",
+    "Relevant to bone, but not the pairing here."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "9.8",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  }
+ ],
+ "applicationPrompts": [
+  {
+   "id": "w08-a1",
+   "forAssignment": null,
+   "checklist": [
+    "List your calcium sources across one day and estimate the total.",
+    "Compare it with the recommendation for your age and sex.",
+    "Sort your own osteoporosis risk factors into modifiable and not.",
+    "Name one change you could make, and say which risk factor it addresses."
+   ],
+   "selfCheck": [
+    "Did I check vitamin D alongside calcium?",
+    "Did I keep non-modifiable factors out of the action list?"
+   ],
+   "aiPolicy": "These are questions for you to answer. This app does not write any part of a submission."
+  }
+ ]
+}

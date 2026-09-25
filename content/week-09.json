@@ -1,0 +1,376 @@
+{
+ "schemaVersion": 1,
+ "week": 9,
+ "version": "2026.09.25.1",
+ "objectives": [
+  {
+   "id": "w09-o1",
+   "text": "Define energy balance and say what happens when it tips either way.",
+   "source": {
+    "book": "aitn",
+    "section": "11.2"
+   }
+  },
+  {
+   "id": "w09-o2",
+   "text": "Explain what BMI measures and where it misleads.",
+   "source": {
+    "book": "aitn",
+    "section": "11.1"
+   }
+  },
+  {
+   "id": "w09-o3",
+   "text": "State the health risks associated with too much and too little body fat.",
+   "source": {
+    "book": "aitn",
+    "section": "11.3"
+   }
+  },
+  {
+   "id": "w09-o4",
+   "text": "Describe what defines successful weight loss and what it usually involves.",
+   "source": {
+    "book": "aitn",
+    "section": "11.4"
+   }
+  },
+  {
+   "id": "w09-o5",
+   "text": "Explain what a metabolic pathway is and what metabolism is for.",
+   "source": {
+    "book": "aitn",
+    "section": "10.2"
+   }
+  }
+ ],
+ "terms": [
+  {
+   "term": "Energy balance",
+   "gloss": "Energy in equal to energy out. Weight is stable when it holds.",
+   "source": {
+    "book": "aitn",
+    "section": "11.2"
+   }
+  },
+  {
+   "term": "BMI",
+   "gloss": "Weight over height squared. A population screening tool, not a measure of an individual's body fat.",
+   "source": {
+    "book": "aitn",
+    "section": "11.1"
+   }
+  },
+  {
+   "term": "Metabolism",
+   "gloss": "The sum of chemical reactions in the body. Its goals are energy transfer and matter transport.",
+   "source": {
+    "book": "aitn",
+    "section": "10.2"
+   }
+  },
+  {
+   "term": "Metabolic pathway",
+   "gloss": "A series of enzyme steps turning a starting substrate into a product.",
+   "source": {
+    "book": "aitn",
+    "section": "10.2"
+   }
+  },
+  {
+   "term": "Fat distribution",
+   "gloss": "Where fat sits. Abdominal fat carries more risk than the same weight elsewhere.",
+   "source": {
+    "book": "aitn",
+    "section": "11.1"
+   }
+  },
+  {
+   "term": "Successful weight loss",
+   "gloss": "Defined as intentionally losing at least ten percent of body weight and keeping it off.",
+   "source": {
+    "book": "aitn",
+    "section": "11.4"
+   }
+  }
+ ],
+ "questions": [
+  {
+   "id": "w09-q1",
+   "objective": "w09-o1",
+   "type": "mc",
+   "prompt": "Body weight stays stable when:",
+   "options": [
+    "Energy taken in equals energy spent",
+    "Calories are kept below two thousand",
+    "Carbohydrate is avoided in the evening",
+    "Meals are eaten at regular times"
+   ],
+   "answer": 0,
+   "why": "Balance is the whole mechanism. Everything else is a strategy for achieving it.",
+   "distractorNotes": [
+    null,
+    "Needs vary widely between people.",
+    "Timing is not what decides the balance.",
+    "Regularity can help, but is not the mechanism."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "11.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w09-q2",
+   "objective": "w09-o2",
+   "type": "mc",
+   "prompt": "BMI is best understood as:",
+   "options": [
+    "A screening tool for populations",
+    "A direct measurement of body fat",
+    "An exact guide to an individual's health",
+    "A measure of how fat is distributed"
+   ],
+   "answer": 0,
+   "why": "It is weight over height squared — cheap and useful across groups, but it cannot tell muscle from fat in one person.",
+   "distractorNotes": [
+    null,
+    "It measures neither fat nor its distribution.",
+    "It is too blunt to settle an individual case.",
+    "Distribution is assessed separately."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "11.1",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w09-q3",
+   "objective": "w09-o2",
+   "type": "mc",
+   "prompt": "A very muscular athlete may be classed overweight by BMI because:",
+   "options": [
+    "BMI cannot distinguish muscle from fat",
+    "Athletes have denser bone than average",
+    "Athletes carry more water in the body",
+    "BMI uses height in metres, not inches"
+   ],
+   "answer": 0,
+   "why": "It is a ratio of weight to height. Anything that adds weight raises it, whatever that weight is made of.",
+   "distractorNotes": [
+    null,
+    "A minor factor, not the explanation.",
+    "Also minor.",
+    "The unit is not the problem."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "11.1",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w09-q4",
+   "objective": "w09-o3",
+   "type": "mc",
+   "prompt": "As BMI rises above 25, risk increases for:",
+   "options": [
+    "Heart disease, type 2 diabetes, hypertension",
+    "Osteoporosis, anaemia and scurvy",
+    "Lactose intolerance, coeliac disease and reflux",
+    "Vitamin A toxicity and iron overload"
+   ],
+   "answer": 0,
+   "why": "These are the associations the chapter names. Association across a population is not a prediction about one person.",
+   "distractorNotes": [
+    null,
+    "Those are deficiency- and bone-related conditions.",
+    "Those are digestive conditions with other causes.",
+    "Those relate to excessive intakes."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "11.3",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w09-q5",
+   "objective": "w09-o3",
+   "type": "mc",
+   "prompt": "Worldwide, the number of people overweight or obese now:",
+   "options": [
+    "Exceeds the number who are starving",
+    "Remains far below the number who starve",
+    "Is roughly equal to those starving",
+    "Has been falling for two decades"
+   ],
+   "answer": 0,
+   "why": "The balance tipped, and it reframes undernutrition and overnutrition as two halves of one problem rather than opposites.",
+   "distractorNotes": [
+    null,
+    "The crossover has already happened.",
+    "It has passed equality.",
+    "It has risen, not fallen."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "11.3",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w09-q6",
+   "objective": "w09-o4",
+   "type": "mc",
+   "prompt": "Successful weight loss is defined as:",
+   "options": [
+    "Losing ten percent and keeping it off",
+    "Losing any amount of weight in a month",
+    "Reaching a BMI below twenty-five",
+    "Losing weight without any exercise"
+   ],
+   "answer": 0,
+   "why": "The definition includes maintenance. Losing weight is common; keeping it off is what the definition asks about.",
+   "distractorNotes": [
+    null,
+    "Speed is not what the definition measures.",
+    "A target, not the definition of success.",
+    "Most successful cases involve activity."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "11.4",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w09-q7",
+   "objective": "w09-o5",
+   "type": "mc",
+   "prompt": "A metabolic pathway is:",
+   "options": [
+    "A series of enzyme steps to a product",
+    "A single reaction that releases energy",
+    "The route food travels through the gut",
+    "A store of energy held in the liver"
+   ],
+   "answer": 0,
+   "why": "Substrate in, product out, through a sequence of enzyme-catalysed steps. Metabolism is the sum of all of them.",
+   "distractorNotes": [
+    null,
+    "Pathways are sequences, not single reactions.",
+    "That is the digestive tract, a different thing.",
+    "That describes glycogen."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "10.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w09-q8",
+   "objective": "w09-o5",
+   "type": "mc",
+   "prompt": "The two overall goals of metabolism are:",
+   "options": [
+    "Energy transfer and matter transport",
+    "Digestion and the absorption of food",
+    "Storing fat and building more muscle",
+    "Removing waste and fighting infection"
+   ],
+   "answer": 0,
+   "why": "Every pathway serves one or both: moving energy where it is needed, and moving materials where they belong.",
+   "distractorNotes": [
+    null,
+    "Those precede metabolism.",
+    "Two outcomes among many, not the goals.",
+    "Important functions, but not metabolism's aims."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "10.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w09-q9",
+   "objective": "w09-o2",
+   "type": "mc",
+   "prompt": "Fat distribution matters because:",
+   "options": [
+    "Abdominal fat carries more risk",
+    "All fat carries identical health risk",
+    "Fat on the limbs is more dangerous",
+    "Distribution changes total body weight"
+   ],
+   "answer": 0,
+   "why": "Where fat sits changes the risk it carries, which is why waist measurement adds information BMI cannot give.",
+   "distractorNotes": [
+    null,
+    "Location changes the risk.",
+    "The relationship runs the other way.",
+    "Distribution does not alter the total."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "11.1",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w09-q10",
+   "objective": "w09-o1",
+   "type": "mc",
+   "prompt": "Knowing your daily calorie need is useful, but the chapter stresses:",
+   "options": [
+    "Also watching how your weight responds",
+    "That the figure is precise for everyone",
+    "That the number never changes with age",
+    "Counting only the calories from fat"
+   ],
+   "answer": 0,
+   "why": "A calculated figure is an estimate. What your weight actually does over weeks is the better feedback.",
+   "distractorNotes": [
+    null,
+    "Estimates vary between individuals.",
+    "Needs change across the lifespan.",
+    "All energy-yielding nutrients count."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "11.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  }
+ ],
+ "applicationPrompts": [
+  {
+   "id": "w09-a1",
+   "forAssignment": null,
+   "checklist": [
+    "Work out your own BMI and say plainly what it does and does not tell you.",
+    "Estimate one day's energy in and energy out.",
+    "Name two things that would change your energy expenditure.",
+    "Say why waist measurement adds something BMI does not."
+   ],
+   "selfCheck": [
+    "Did I avoid treating BMI as a measure of my own body fat?",
+    "Did I account for activity as well as intake?"
+   ],
+   "aiPolicy": "These are questions for you to answer. This app does not write any part of a submission."
+  }
+ ]
+}

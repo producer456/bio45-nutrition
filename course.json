@@ -348,7 +348,7 @@
     }
    ],
    "contentFile": "content/week-04.json",
-   "depth": "scaffold"
+   "depth": "authored"
   },
   {
    "n": 5,
@@ -384,7 +384,7 @@
     }
    ],
    "contentFile": "content/week-05.json",
-   "depth": "scaffold"
+   "depth": "authored"
   },
   {
    "n": 6,
@@ -407,7 +407,7 @@
    ],
    "supplements": [],
    "contentFile": "content/week-06.json",
-   "depth": "scaffold"
+   "depth": "authored"
   },
   {
    "n": 7,
@@ -437,7 +437,7 @@
    ],
    "supplements": [],
    "contentFile": "content/week-07.json",
-   "depth": "scaffold"
+   "depth": "authored"
   },
   {
    "n": 8,
@@ -467,7 +467,7 @@
    ],
    "supplements": [],
    "contentFile": "content/week-08.json",
-   "depth": "scaffold"
+   "depth": "authored"
   },
   {
    "n": 9,
@@ -497,7 +497,7 @@
    ],
    "supplements": [],
    "contentFile": "content/week-09.json",
-   "depth": "scaffold"
+   "depth": "authored"
   },
   {
    "n": 10,
@@ -539,7 +539,7 @@
    ],
    "supplements": [],
    "contentFile": "content/week-10.json",
-   "depth": "scaffold"
+   "depth": "authored"
   },
   {
    "n": 11,
@@ -581,7 +581,7 @@
     }
    ],
    "contentFile": "content/week-11.json",
-   "depth": "scaffold"
+   "depth": "authored"
   },
   {
    "n": 12,

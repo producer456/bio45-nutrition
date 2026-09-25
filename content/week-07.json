@@ -1,0 +1,384 @@
+{
+ "schemaVersion": 1,
+ "week": 7,
+ "version": "2026.09.25.1",
+ "objectives": [
+  {
+   "id": "w07-o1",
+   "text": "Name the four broad functions of water in the body.",
+   "source": {
+    "book": "aitn",
+    "section": "7.2"
+   }
+  },
+  {
+   "id": "w07-o2",
+   "text": "Explain how electrolytes govern the movement of water between compartments.",
+   "source": {
+    "book": "aitn",
+    "section": "7.4"
+   }
+  },
+  {
+   "id": "w07-o3",
+   "text": "Describe how water balance is regulated and what triggers thirst.",
+   "source": {
+    "book": "aitn",
+    "section": "7.3"
+   }
+  },
+  {
+   "id": "w07-o4",
+   "text": "State the consequences of dehydration, including its link to heat stroke.",
+   "source": {
+    "book": "aitn",
+    "section": "7.5"
+   }
+  },
+  {
+   "id": "w07-o5",
+   "text": "Explain what a free radical is and how it damages a cell.",
+   "source": {
+    "book": "aitn",
+    "section": "8.1"
+   }
+  },
+  {
+   "id": "w07-o6",
+   "text": "Say why antioxidant-rich foods are supported by evidence where supplements are not.",
+   "source": {
+    "book": "aitn",
+    "section": "8.2"
+   }
+  }
+ ],
+ "terms": [
+  {
+   "term": "Electrolyte",
+   "gloss": "A dissolved mineral carrying a charge — sodium, potassium, chloride. Their concentration decides where water goes.",
+   "source": {
+    "book": "aitn",
+    "section": "7.4"
+   }
+  },
+  {
+   "term": "Universal solvent",
+   "gloss": "Water's nickname: more substances dissolve in it than in any other fluid.",
+   "source": {
+    "book": "aitn",
+    "section": "7.2"
+   }
+  },
+  {
+   "term": "Dehydration",
+   "gloss": "Water output exceeding intake. It lowers blood volume and is a primary cause of heat stroke.",
+   "source": {
+    "book": "aitn",
+    "section": "7.5"
+   }
+  },
+  {
+   "term": "Free radical",
+   "gloss": "An unstable molecule with an unpaired electron, produced unavoidably by normal metabolism.",
+   "source": {
+    "book": "aitn",
+    "section": "8.1"
+   }
+  },
+  {
+   "term": "Antioxidant",
+   "gloss": "A substance that donates an electron to a free radical, interrupting the damage it would otherwise do.",
+   "source": {
+    "book": "aitn",
+    "section": "8.2"
+   }
+  },
+  {
+   "term": "Phytochemical",
+   "gloss": "A plant compound that is not a nutrient but appears to contribute to reduced disease risk.",
+   "source": {
+    "book": "aitn",
+    "section": "8.3"
+   }
+  }
+ ],
+ "questions": [
+  {
+   "id": "w07-q1",
+   "objective": "w07-o2",
+   "type": "mc",
+   "prompt": "Water moves between body compartments mainly in response to:",
+   "options": [
+    "The concentration of dissolved electrolytes",
+    "The total volume of fluid that a person drinks",
+    "How much protein is present in the diet",
+    "The temperature of the surrounding air"
+   ],
+   "answer": 0,
+   "why": "The body does not push water around directly. It moves electrolytes, and water follows the concentration gradient.",
+   "distractorNotes": [
+    null,
+    "Intake matters, but it is not the mechanism of distribution.",
+    "Plasma proteins play a part, but electrolytes govern it.",
+    "Temperature affects loss, not distribution."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "7.4",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w07-q2",
+   "objective": "w07-o1",
+   "type": "mc",
+   "prompt": "Which is NOT one of water's four broad functions?",
+   "options": [
+    "Supplying energy to working cells",
+    "Acting as a transportation vehicle",
+    "Serving as the universal solvent",
+    "Helping to regulate temperature"
+   ],
+   "answer": 0,
+   "why": "Water is a macronutrient because it is needed in quantity, but it yields no energy at all.",
+   "distractorNotes": [
+    null,
+    "One of the four — it carries nutrients and waste.",
+    "One of the four — more dissolves in it than anything else.",
+    "One of the four — sweat and blood flow move heat."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "7.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w07-q3",
+   "objective": "w07-o3",
+   "type": "mc",
+   "prompt": "Thirst is best described as:",
+   "options": [
+    "A coordinated hormonal and neural response",
+    "A simple reflex triggered by a dry mouth",
+    "A conscious decision made about fluid intake",
+    "A signal that appears only after dehydration"
+   ],
+   "answer": 0,
+   "why": "Several hormones and neural signals combine to defend fluid balance. A dry mouth is a symptom along the way, not the trigger.",
+   "distractorNotes": [
+    null,
+    "Dry mouth accompanies thirst; it does not cause it.",
+    "The drive is involuntary, whatever you then choose.",
+    "It generally begins before dehydration is established."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "7.3",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w07-q4",
+   "objective": "w07-o4",
+   "type": "mc",
+   "prompt": "Dehydration is a primary cause of heat stroke because it:",
+   "options": [
+    "Lowers blood volume and limits cooling",
+    "Raises the body's core temperature directly",
+    "Reduces the amount of salt in the blood",
+    "Prevents the skin from absorbing water"
+   ],
+   "answer": 0,
+   "why": "Less blood volume means less capacity to carry heat to the skin and to sweat, so the body loses its main way of shedding heat.",
+   "distractorNotes": [
+    null,
+    "It undermines cooling; it is not itself a heat source.",
+    "Sodium concentration typically rises.",
+    "Skin does not absorb water for this purpose."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "7.5",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w07-q5",
+   "objective": "w07-o5",
+   "type": "mc",
+   "prompt": "A free radical is damaging because it:",
+   "options": [
+    "Steals electrons from nearby molecules",
+    "Blocks enzymes from reaching a substrate",
+    "Occupies space that a nutrient would use",
+    "Lowers the acidity inside the cell body"
+   ],
+   "answer": 0,
+   "why": "It takes electrons from lipids, proteins, RNA and DNA, damaging each in turn and often creating another radical.",
+   "distractorNotes": [
+    null,
+    "Not the mechanism described.",
+    "Not a space problem.",
+    "Not how the damage works."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "8.1",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w07-q6",
+   "objective": "w07-o5",
+   "type": "mc",
+   "prompt": "Free radicals in the body are:",
+   "options": [
+    "An unavoidable by-product of metabolism",
+    "Produced only by pollution and by smoking",
+    "Created solely during heavy exercise",
+    "Present only in people who are unwell"
+   ],
+   "answer": 0,
+   "why": "Normal cellular metabolism generates them continuously. External sources add to a load that already exists.",
+   "distractorNotes": [
+    null,
+    "Those add to the load but are not the only source.",
+    "Exercise adds to it; it is not the sole source.",
+    "Everyone produces them all the time."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "8.1",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w07-q7",
+   "objective": "w07-o6",
+   "type": "mc",
+   "prompt": "What does the evidence support about antioxidants?",
+   "options": [
+    "Antioxidant-rich foods reduce disease risk",
+    "High-dose supplements reliably reduce risk",
+    "Supplements work better than whole foods",
+    "Antioxidants have no measurable effect"
+   ],
+   "answer": 0,
+   "why": "Foods rich in antioxidants are supported. High-dose supplements are not, and some evidence suggests they can do harm.",
+   "distractorNotes": [
+    null,
+    "Supplement claims are not backed, and may carry risk.",
+    "The evidence runs the other way.",
+    "Overcorrection — the food evidence is real."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "8.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w07-q8",
+   "objective": "w07-o6",
+   "type": "mc",
+   "prompt": "Why might an antioxidant help at low dose but not at high?",
+   "options": [
+    "Benefit does not scale without limit",
+    "Absorption stops above a fixed amount",
+    "High doses are destroyed by stomach acid",
+    "The body excretes everything above the RDA"
+   ],
+   "answer": 0,
+   "why": "More is not simply better. Antioxidants and phytochemicals appear beneficial in the amounts food supplies, not in concentrated doses.",
+   "distractorNotes": [
+    null,
+    "Absorption is not the explanation given.",
+    "Not the mechanism.",
+    "Not true of all of them."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "8.3",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w07-q9",
+   "objective": "w07-o1",
+   "type": "mc",
+   "prompt": "Beverages differ from solid food in that they:",
+   "options": [
+    "Satisfy thirst without satisfying hunger",
+    "Are absorbed before reaching the stomach",
+    "Contain no calories worth counting daily",
+    "Are digested by a separate set of enzymes"
+   ],
+   "answer": 0,
+   "why": "Drinks quench thirst rather than filling you, which is why calories drunk are easy to miss. They average about a fifth of daily intake.",
+   "distractorNotes": [
+    null,
+    "Absorption still happens downstream.",
+    "They supply about 21 percent of daily calories.",
+    "No separate enzyme system exists."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "7.6",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w07-q10",
+   "objective": "w07-o2",
+   "type": "mc",
+   "prompt": "Sodium and potassium sit at different concentrations across a cell membrane because:",
+   "options": [
+    "That difference is what lets water be moved",
+    "Sodium cannot cross a cell membrane at all",
+    "Potassium is too large to leave a cell body",
+    "The two minerals never mix inside the body"
+   ],
+   "answer": 0,
+   "why": "Maintaining different solute concentrations on either side gives the body a way to direct water between compartments.",
+   "distractorNotes": [
+    null,
+    "Sodium crosses, under control.",
+    "Potassium moves too.",
+    "They coexist throughout the body."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "7.4",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  }
+ ],
+ "applicationPrompts": [
+  {
+   "id": "w07-a1",
+   "forAssignment": null,
+   "checklist": [
+    "Estimate your fluid intake across one day, drinks and food.",
+    "Name two electrolytes and say what each does for fluid balance.",
+    "Describe one situation that would raise your needs and say why.",
+    "Name one antioxidant-rich food and cite where its evidence comes from."
+   ],
+   "selfCheck": [
+    "Did I distinguish antioxidant foods from antioxidant supplements?",
+    "Did I explain water movement through electrolytes rather than by itself?"
+   ],
+   "aiPolicy": "These are questions for you to answer. This app does not write any part of a submission."
+  }
+ ]
+}

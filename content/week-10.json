@@ -1,0 +1,384 @@
+{
+ "schemaVersion": 1,
+ "week": 10,
+ "version": "2026.09.25.1",
+ "objectives": [
+  {
+   "id": "w10-o1",
+   "text": "Define food security and food insecurity, and give the scale of the problem.",
+   "source": {
+    "book": "aitn",
+    "section": "14.5"
+   }
+  },
+  {
+   "id": "w10-o2",
+   "text": "Name factors driving food prices and say who they affect.",
+   "source": {
+    "book": "aitn",
+    "section": "14.4"
+   }
+  },
+  {
+   "id": "w10-o3",
+   "text": "Say what the food industry covers and weigh processing's benefits against its costs.",
+   "source": {
+    "book": "aitn",
+    "section": "14.2"
+   }
+  },
+  {
+   "id": "w10-o4",
+   "text": "Name concrete steps toward a more sustainable food pattern.",
+   "source": {
+    "book": "aitn",
+    "section": "15.5"
+   }
+  },
+  {
+   "id": "w10-o5",
+   "text": "Distinguish an evidence-based diet from a fashionable one.",
+   "source": {
+    "book": "aitn",
+    "section": "15.1"
+   }
+  },
+  {
+   "id": "w10-o6",
+   "text": "Judge a nutrition claim carried by the media.",
+   "source": {
+    "book": "aitn",
+    "section": "2.9"
+   }
+  }
+ ],
+ "terms": [
+  {
+   "term": "Food security",
+   "gloss": "Continual access to safe, sufficient food. Its absence is food insecurity.",
+   "source": {
+    "book": "aitn",
+    "section": "14.5"
+   }
+  },
+  {
+   "term": "Food industry",
+   "gloss": "Everything from production and manufacturing to distribution, marketing and retail.",
+   "source": {
+    "book": "aitn",
+    "section": "14.2"
+   }
+  },
+  {
+   "term": "Food processing",
+   "gloss": "Treatment that extends shelf life and improves safety and supply — at some cost to nutrients.",
+   "source": {
+    "book": "aitn",
+    "section": "14.2"
+   }
+  },
+  {
+   "term": "Sustainable food system",
+   "gloss": "One that can keep feeding people without exhausting what it depends on.",
+   "source": {
+    "book": "aitn",
+    "section": "15.5"
+   }
+  },
+  {
+   "term": "Mediterranean diet",
+   "gloss": "One of several patterns with actual evidence behind it, alongside DASH and vegetarian diets.",
+   "source": {
+    "book": "aitn",
+    "section": "15.1"
+   }
+  },
+  {
+   "term": "Food desert",
+   "gloss": "An area where affordable, nutritious food is hard to reach — access as a barrier, not knowledge.",
+   "source": {
+    "book": "aitn",
+    "section": "14.5"
+   }
+  }
+ ],
+ "questions": [
+  {
+   "id": "w10-q1",
+   "objective": "w10-o1",
+   "type": "mc",
+   "prompt": "Food security means:",
+   "options": [
+    "Continual access to safe, sufficient food",
+    "Having enough money to buy any food at all",
+    "Growing some of your own food at home",
+    "A guaranteed national supply of the staple grains"
+   ],
+   "answer": 0,
+   "why": "Continual is the operative word. Someone who eats today but cannot count on tomorrow is food insecure.",
+   "distractorNotes": [
+    null,
+    "Income helps but is not the definition.",
+    "Not what the term covers.",
+    "National supply does not guarantee household access."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "14.5",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w10-q2",
+   "objective": "w10-o1",
+   "type": "mc",
+   "prompt": "Roughly how many people worldwide live with constant hunger?",
+   "options": [
+    "Close to one billion",
+    "Close to one million",
+    "Close to ten thousand",
+    "Close to ten billion"
+   ],
+   "answer": 0,
+   "why": "The figure is on the order of a billion — about one person in eight at the time the chapter was written.",
+   "distractorNotes": [
+    null,
+    "Three orders of magnitude too low.",
+    "Far too low.",
+    "More than the world's whole population."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "14.5",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w10-q3",
+   "objective": "w10-o2",
+   "type": "mc",
+   "prompt": "Which is named as a driver of rising food prices?",
+   "options": [
+    "Population growth and natural disasters",
+    "A worldwide fall in the demand for grain crops",
+    "Reduced spending on food advertising",
+    "Lower fuel costs in food transportation"
+   ],
+   "answer": 0,
+   "why": "Several forces push at once — more people, disrupted harvests, higher input costs — and they fall hardest on those with least margin.",
+   "distractorNotes": [
+    null,
+    "Demand has risen, not fallen.",
+    "Not a price driver.",
+    "Fuel costs rising, not falling, feeds through to price."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "14.4",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w10-q4",
+   "objective": "w10-o3",
+   "type": "mc",
+   "prompt": "Food processing is best described as:",
+   "options": [
+    "A trade-off between safety and nutrients",
+    "An unambiguous harm to public health",
+    "A purely commercial decision by industry",
+    "A process that always adds more nutrients"
+   ],
+   "answer": 0,
+   "why": "Processing improves safety, shelf life and supply, and can cost nutrients. Weighing both is the honest position.",
+   "distractorNotes": [
+    null,
+    "It has real benefits, including safety.",
+    "It has public-health consequences either way.",
+    "Some processing fortifies; much does not."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "14.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w10-q5",
+   "objective": "w10-o4",
+   "type": "mc",
+   "prompt": "Which is a concrete step toward a sustainable food pattern?",
+   "options": [
+    "Buying locally grown food where you can",
+    "Buying only the imported organic produce",
+    "Eating nothing but raw uncooked foods",
+    "Refusing all commercially sold food"
+   ],
+   "answer": 0,
+   "why": "The chapter's suggestions are small and cumulative — local sourcing, less waste, seasonal eating — rather than dramatic.",
+   "distractorNotes": [
+    null,
+    "Importing adds transport cost, sustainable or not.",
+    "Not a sustainability measure.",
+    "Not practical or necessary."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "15.5",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w10-q6",
+   "objective": "w10-o5",
+   "type": "mc",
+   "prompt": "Which diets does the chapter name as evidence-based?",
+   "options": [
+    "Mediterranean, DASH and vegetarian",
+    "Any diet that eliminates carbohydrate",
+    "Whichever diet is currently popular",
+    "Only diets prescribed by a physician"
+   ],
+   "answer": 0,
+   "why": "These have research behind them. The point is to ground choices in fact rather than fashion.",
+   "distractorNotes": [
+    null,
+    "Elimination alone is not evidence.",
+    "Popularity is precisely the wrong test.",
+    "Evidence is not limited to prescriptions."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "15.1",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w10-q7",
+   "objective": "w10-o6",
+   "type": "mc",
+   "prompt": "A magazine reports one study showing a food prevents cancer. The right response is:",
+   "options": [
+    "Ask what the whole body of evidence says",
+    "Accept it, since a real study was published",
+    "Dismiss all reporting about nutrition",
+    "Adopt it until another study appears"
+   ],
+   "answer": 0,
+   "why": "A single study is one data point. Scientific consensus is built over time, and the media reports individual studies as though they were conclusions.",
+   "distractorNotes": [
+    null,
+    "Publication is not confirmation.",
+    "Overcorrection — some reporting is sound.",
+    "That is how diet fashions replace each other."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "2.9",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w10-q8",
+   "objective": "w10-o3",
+   "type": "mc",
+   "prompt": "What does the food industry cover?",
+   "options": [
+    "Production, distribution, marketing, retail",
+    "Only the farms that grow raw crops",
+    "Only supermarkets and the grocery store chains",
+    "Only manufacturers of packaged goods"
+   ],
+   "answer": 0,
+   "why": "It is the whole chain. Which matters, because a change at any point along it reaches your plate.",
+   "distractorNotes": [
+    null,
+    "Farming is one link in the chain.",
+    "Retail is one link.",
+    "Manufacturing is one link."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "14.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w10-q9",
+   "objective": "w10-o4",
+   "type": "mc",
+   "prompt": "Family meals and home-cooked food are associated with:",
+   "options": [
+    "Better health and other benefits too",
+    "Higher food costs and nothing else",
+    "Worse nutrition than eating out does",
+    "No measurable difference in outcomes"
+   ],
+   "answer": 0,
+   "why": "The studies cited find benefits beyond nutrition alone, which is a reason to treat cooking as more than fuel preparation.",
+   "distractorNotes": [
+    null,
+    "Home cooking is often cheaper.",
+    "The evidence runs the other way.",
+    "Differences are measurable."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "14.6",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w10-q10",
+   "objective": "w10-o5",
+   "type": "mc",
+   "prompt": "Why does the chapter insist on grounding diet in fact rather than fashion?",
+   "options": [
+    "Attitudes to food shift over time",
+    "Because all popular diets are harmful",
+    "Because science never changes at all",
+    "Because fashion is illegal to advertise"
+   ],
+   "answer": 0,
+   "why": "What is fashionable changes; what is supported changes much more slowly and for different reasons. Knowing which you are following is the skill.",
+   "distractorNotes": [
+    null,
+    "Some popular diets are evidence-based.",
+    "Science does revise, on evidence.",
+    "Not the reason."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "15.1",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  }
+ ],
+ "applicationPrompts": [
+  {
+   "id": "w10-a1",
+   "forAssignment": null,
+   "checklist": [
+    "Pick one food you eat often and trace where it comes from.",
+    "Name one factor that would raise its price and say who that hurts most.",
+    "Name one change that would make your own pattern more sustainable.",
+    "Find one nutrition claim in the media and say what evidence would settle it."
+   ],
+   "selfCheck": [
+    "Did I separate a single study from a body of evidence?",
+    "Did I treat access and cost as real constraints, not just choices?"
+   ],
+   "aiPolicy": "These are questions for you to answer. This app does not write any part of a submission."
+  }
+ ]
+}

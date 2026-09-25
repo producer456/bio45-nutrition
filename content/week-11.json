@@ -1,0 +1,384 @@
+{
+ "schemaVersion": 1,
+ "week": 11,
+ "version": "2026.09.25.1",
+ "objectives": [
+  {
+   "id": "w11-o1",
+   "text": "Name the stages of the human life cycle and why needs change across them.",
+   "source": {
+    "book": "aitn",
+    "section": "12.1"
+   }
+  },
+  {
+   "id": "w11-o2",
+   "text": "Say what governs recommended weight gain in pregnancy.",
+   "source": {
+    "book": "aitn",
+    "section": "12.2"
+   }
+  },
+  {
+   "id": "w11-o3",
+   "text": "State infant feeding recommendations for the first year.",
+   "source": {
+    "book": "aitn",
+    "section": "12.3"
+   }
+  },
+  {
+   "id": "w11-o4",
+   "text": "Explain why adolescence has the highest nutrient needs outside pregnancy.",
+   "source": {
+    "book": "aitn",
+    "section": "13.4"
+   }
+  },
+  {
+   "id": "w11-o5",
+   "text": "Describe how nutrient needs change in old age.",
+   "source": {
+    "book": "aitn",
+    "section": "13.7"
+   }
+  },
+  {
+   "id": "w11-o6",
+   "text": "Name the four essential elements of physical fitness.",
+   "source": {
+    "book": "aitn",
+    "section": "15.2"
+   }
+  }
+ ],
+ "terms": [
+  {
+   "term": "Growth chart",
+   "gloss": "Used to track an infant's development against expected ranges over time.",
+   "source": {
+    "book": "aitn",
+    "section": "12.3"
+   }
+  },
+  {
+   "term": "Exclusive breastfeeding",
+   "gloss": "Breast milk only, recommended for the first four to six months.",
+   "source": {
+    "book": "aitn",
+    "section": "12.3"
+   }
+  },
+  {
+   "term": "Growth spurt",
+   "gloss": "The rapid growth of puberty, which raises energy and nutrient needs sharply.",
+   "source": {
+    "book": "aitn",
+    "section": "13.3"
+   }
+  },
+  {
+   "term": "Cardiorespiratory endurance",
+   "gloss": "One of the four elements of fitness, with muscle strength, muscle endurance and flexibility.",
+   "source": {
+    "book": "aitn",
+    "section": "15.2"
+   }
+  },
+  {
+   "term": "Nutrient density in ageing",
+   "gloss": "Energy needs fall with age while many nutrient needs do not, so each calorie must carry more.",
+   "source": {
+    "book": "aitn",
+    "section": "13.7"
+   }
+  },
+  {
+   "term": "Modifiable risk factor",
+   "gloss": "A chronic-disease risk you can act on — diet, activity, smoking.",
+   "source": {
+    "book": "aitn",
+    "section": "15.3"
+   }
+  }
+ ],
+ "questions": [
+  {
+   "id": "w11-q1",
+   "objective": "w11-o2",
+   "type": "mc",
+   "prompt": "How much weight a woman should gain in pregnancy is determined mainly by:",
+   "options": [
+    "Her BMI at the start of pregnancy",
+    "Her height measured in centimetres",
+    "The number of pregnancies she has had",
+    "Her age at the time of conception"
+   ],
+   "answer": 0,
+   "why": "Starting BMI sets the recommended range, which is why there is no single number that applies to everyone.",
+   "distractorNotes": [
+    null,
+    "Height feeds into BMI but is not the determinant.",
+    "Parity is a factor in care, not in this guideline.",
+    "Age matters clinically, but not for this figure."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "12.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w11-q2",
+   "objective": "w11-o3",
+   "type": "mc",
+   "prompt": "For the first four to six months, infants should receive:",
+   "options": [
+    "Breast milk exclusively",
+    "Breast milk plus cereal",
+    "Cow's milk and soft foods",
+    "Diluted fruit juice daily"
+   ],
+   "answer": 0,
+   "why": "Exclusive breast milk for four to six months, with complementary foods introduced after that.",
+   "distractorNotes": [
+    null,
+    "Solids come later.",
+    "Cow's milk is not recommended in the first year.",
+    "Juice is not recommended for young infants."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "12.3",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w11-q3",
+   "objective": "w11-o3",
+   "type": "mc",
+   "prompt": "Infant development is tracked against expected ranges using:",
+   "options": [
+    "Growth charts",
+    "Body mass index",
+    "Blood nutrient panels",
+    "Daily calorie counts"
+   ],
+   "answer": 0,
+   "why": "Charts show the trajectory over time, which says more than any single measurement on its own.",
+   "distractorNotes": [
+    null,
+    "BMI is not used this way in infancy.",
+    "Not the routine tool.",
+    "Not how infant intake is assessed."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "12.3",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w11-q4",
+   "objective": "w11-o4",
+   "type": "mc",
+   "prompt": "Nutrient needs are greater in adolescence than at any other life stage except:",
+   "options": [
+    "Pregnancy",
+    "Infancy",
+    "Old age",
+    "Middle age"
+   ],
+   "answer": 0,
+   "why": "Adolescent growth is fast enough that requirements rival any other period, pregnancy aside.",
+   "distractorNotes": [
+    null,
+    "Needs are high per kilogram, but the total is smaller.",
+    "Needs generally fall.",
+    "Needs are at their most stable."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "13.4",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w11-q5",
+   "objective": "w11-o1",
+   "type": "mc",
+   "prompt": "Recommended intakes for children are higher relative to body size because:",
+   "options": [
+    "They are still growing and developing",
+    "Children absorb nutrients less well",
+    "Children are more physically active",
+    "Children lose more nutrients in waste"
+   ],
+   "answer": 0,
+   "why": "Growth itself consumes nutrients, on top of everything maintenance requires.",
+   "distractorNotes": [
+    null,
+    "Absorption is not the explanation.",
+    "Activity varies and is not the main reason.",
+    "Not the mechanism."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "13.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w11-q6",
+   "objective": "w11-o5",
+   "type": "mc",
+   "prompt": "In old age, the usual pattern is that:",
+   "options": [
+    "Energy needs fall but nutrient needs do not",
+    "Both energy and nutrient needs rise",
+    "Both energy needs and nutrient needs fall away",
+    "Energy needs rise while nutrients fall"
+   ],
+   "answer": 0,
+   "why": "Fewer calories have to carry the same nutrients, so nutrient density stops being optional and becomes the whole problem.",
+   "distractorNotes": [
+    null,
+    "Energy needs decline.",
+    "Many nutrient needs hold steady or rise.",
+    "Backwards on both counts."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "13.7",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w11-q7",
+   "objective": "w11-o6",
+   "type": "mc",
+   "prompt": "The four essential elements of physical fitness are:",
+   "options": [
+    "Cardiorespiratory endurance, strength, endurance, flexibility",
+    "Speed, power, agility, balance and overall reaction time under load",
+    "Running, swimming, cycling and weight training",
+    "Warm-up, main exercise, cool-down and rest"
+   ],
+   "answer": 0,
+   "why": "Fitness is not one thing. A programme strong in one element and absent in another leaves a real gap.",
+   "distractorNotes": [
+    null,
+    "Athletic qualities, not the four elements named.",
+    "Activities, not elements.",
+    "The structure of a session, not of fitness."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "15.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w11-q8",
+   "objective": "w11-o6",
+   "type": "mc",
+   "prompt": "Which risk factors for chronic disease can you actually act on?",
+   "options": [
+    "Diet, physical activity and smoking",
+    "Age, family history and biological sex",
+    "Inherited genes and your ethnicity",
+    "Height and your natural body frame"
+   ],
+   "answer": 0,
+   "why": "Separating the modifiable from the fixed is what turns a risk profile into a plan.",
+   "distractorNotes": [
+    null,
+    "All non-modifiable.",
+    "Non-modifiable.",
+    "Non-modifiable."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "15.3",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w11-q9",
+   "objective": "w11-o1",
+   "type": "mc",
+   "prompt": "Why does the chapter treat nutrition as a life-cycle question?",
+   "options": [
+    "Needs change at every stage of life",
+    "Because only pregnancy really matters",
+    "Because needs are fixed after twenty",
+    "Because childhood alone decides health"
+   ],
+   "answer": 0,
+   "why": "Every stage has its own demands, and meeting them is what supports health and wellness at that stage.",
+   "distractorNotes": [
+    null,
+    "Pregnancy is one stage among several.",
+    "They keep changing throughout adulthood.",
+    "Childhood matters, but does not decide everything."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "13.1",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w11-q10",
+   "objective": "w11-o4",
+   "type": "mc",
+   "prompt": "Daily energy requirements for preteens differ according to:",
+   "options": [
+    "Gender, growth rate and activity level",
+    "Height and shoe size alone",
+    "The school year that they are currently in",
+    "Their birth weight measured earlier"
+   ],
+   "answer": 0,
+   "why": "Three variables at once, which is why a single figure for an age group is only ever a starting point.",
+   "distractorNotes": [
+    null,
+    "Height matters; shoe size does not.",
+    "Not a determinant.",
+    "Not a determinant at this stage."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "13.3",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  }
+ ],
+ "applicationPrompts": [
+  {
+   "id": "w11-a1",
+   "forAssignment": null,
+   "checklist": [
+    "Pick a life stage other than your own and name its two biggest nutritional demands.",
+    "Say what changes about needs going into that stage, and what stays the same.",
+    "Rate yourself honestly on each of the four elements of fitness.",
+    "Name one modifiable risk factor you could act on, and the first step."
+   ],
+   "selfCheck": [
+    "Did I keep non-modifiable factors out of my action list?",
+    "Did I separate energy needs from nutrient needs?"
+   ],
+   "aiPolicy": "These are questions for you to answer. This app does not write any part of a submission."
+  }
+ ]
+}

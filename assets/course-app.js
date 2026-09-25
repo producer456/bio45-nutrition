@@ -718,6 +718,12 @@ export async function start() {
   studyWeek = currentWeek().n;
   await loadWeek(studyWeek);
   go(location.hash.slice(1) || DEFAULT_ROUTE);
+
+  // Offline support. Scope is confined to this directory: the origin is shared with
+  // other study sites. Registration failure must never block the app, so it is
+  // swallowed. Not gated on https, so localhost still exercises it.
+  if ('serviceWorker' in navigator)
+    navigator.serviceWorker.register('sw.js', { scope: './' }).catch(() => {});
 }
 
 if (typeof document !== 'undefined' && !globalThis.__BIO45_TEST__) start();

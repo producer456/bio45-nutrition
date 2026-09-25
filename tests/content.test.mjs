@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync,readdirSync,statSync} from 'node:fs';
+import {readFileSync,readdirSync,statSync,existsSync} from 'node:fs';
 import {join,relative} from 'node:path';
 
 const ROOT=new URL('..',import.meta.url).pathname;
@@ -200,4 +200,43 @@ test('the CSP itself is present and strict',()=>{
     assert.ok(csp.includes(d),`CSP must include ${d}`);
   assert.equal(/unsafe-inline|unsafe-eval/.test(csp),false,'no unsafe escapes');
   assert.match(html,/name="referrer" content="no-referrer"/);
+});
+
+test('SERVICE WORKER: scope confined, and it deletes only its own caches',()=>{
+  const sw=readFileSync(join(ROOT,'sw.js'),'utf8');
+  assert.match(sw,/url\.origin !== self\.location\.origin/,'must bail on cross-origin');
+  assert.match(sw,/url\.pathname\.indexOf\(BASE\) !== 0/,'must bail outside its own directory');
+  assert.match(sw,/startsWith\('b45-'\)/,"must delete only caches prefixed b45-");
+  assert.match(sw,/request\.method !== 'GET'/,'must ignore non-GET');
+  assert.match(sw,/mode === 'navigate'/,'navigations must be handled separately');
+  const app=readFileSync(join(ROOT,'assets/course-app.js'),'utf8');
+  assert.match(app,/register\('sw\.js', \{ scope: '\.\/' \}\)/,'explicit relative scope');
+  assert.match(app,/\.catch\(\(\) => \{\}\)/,'registration failure must not block the app');
+  assert.equal(/location\.protocol === 'https/.test(app),false,'not https-gated, so localhost works');
+});
+
+test('PRECACHE MATCHES index.html BOTH WAYS',()=>{
+  // Drift in either direction serves a stale file offline, which is the exact
+  // failure the ?v= convention exists to prevent.
+  const html=readFileSync(join(ROOT,'index.html'),'utf8');
+  const sw=readFileSync(join(ROOT,'sw.js'),'utf8');
+  const versioned=[...html.matchAll(/(?:src|href)="\.\/((?:assets\/)?[\w.-]+\.(?:css|js))\?v=(\d+)"/g)]
+    .map(m=>({path:m[1],v:m[2]}));
+  assert.ok(versioned.length>=8,`only ${versioned.length} versioned assets found`);
+  for(const a of versioned){
+    assert.ok(existsSync(join(ROOT,a.path)),`${a.path} referenced but missing on disk`);
+    assert.ok(sw.includes(`'./${a.path}?v=${a.v}'`),
+      `sw.js SHELL is missing ./${a.path}?v=${a.v}`);
+  }
+  const shell=sw.slice(sw.indexOf('const SHELL'),sw.indexOf('];',sw.indexOf('const SHELL')));
+  for(const m of shell.matchAll(/'\.\/((?:assets\/)?[\w.-]+\.(?:css|js))\?v=(\d+)'/g))
+    assert.ok(html.includes(`"./${m[1]}?v=${m[2]}"`),
+      `sw.js precaches ./${m[1]}?v=${m[2]} but index.html does not reference it`);
+});
+
+test('every unversioned file sw.js precaches exists',()=>{
+  const sw=readFileSync(join(ROOT,'sw.js'),'utf8');
+  const shell=sw.slice(sw.indexOf('const SHELL'),sw.indexOf('];',sw.indexOf('const SHELL')));
+  for(const m of shell.matchAll(/'\.\/([\w./-]+\.(?:js|json|svg|html))'/g))
+    assert.ok(existsSync(join(ROOT,m[1])),`sw.js precaches ${m[1]} which does not exist`);
 });

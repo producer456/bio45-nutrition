@@ -1,0 +1,1435 @@
+{
+ "schemaVersion": 1,
+ "id": "bio45-nutrition",
+ "version": "2026.09.25.1",
+ "title": "BIOL 45.01W",
+ "subtitle": "Introduction to Human Nutrition",
+ "policyStatus": "Unofficial study aid · confirm everything in Canvas",
+ "term": {
+  "college": "Foothill College",
+  "course": "BIOL 45.01W",
+  "instructor": "Dr. Gillian Schultz",
+  "instruction": "Fully online, asynchronous",
+  "units": 4,
+  "termStart": "2026-09-21",
+  "termEnd": "2026-12-11",
+  "timeZone": "America/Los_Angeles",
+  "weekStartsOn": 1,
+  "moduleOpenDay": 0,
+  "defaultDueTime": "23:59",
+  "source": "Syllabus and Canvas Course Summary supplied by the student, 2026-09-25",
+  "sourceDate": "2026-09-25",
+  "meetings": [],
+  "noFinalExam": true,
+  "examNote": "There is no final exam. The 10-day food diary with analysis is the exam.",
+  "notableDates": [
+   {
+    "date": "2026-10-04",
+    "what": "Last day to drop with refund / without a W"
+   },
+   {
+    "date": "2026-11-13",
+    "what": "Last day to drop"
+   },
+   {
+    "date": "2026-11-26",
+    "what": "Thanksgiving — falls Thursday inside Week 10 (Nov 23-29). She may shift that week; this app does not auto-adjust."
+   }
+  ]
+ },
+ "grading": {
+  "method": "points",
+  "declaredTotal": 1355,
+  "declaredTotalSource": "Syllabus, \"Summary of points and assignments\" total row",
+  "computedTotal": 1360,
+  "discrepancy": {
+   "points": 5,
+   "status": "unresolved",
+   "clarificationKey": "total",
+   "note": "The nine category subtotals sum to 1360; the syllabus total row reads 1355. Not reconciled with the instructor. This app computes against 1360 and shows both. 5 points is 0.37% — enough to move a borderline letter."
+  },
+  "scale": [
+   {
+    "letter": "A",
+    "min": 94
+   },
+   {
+    "letter": "A-",
+    "min": 90
+   },
+   {
+    "letter": "B+",
+    "min": 87
+   },
+   {
+    "letter": "B",
+    "min": 83
+   },
+   {
+    "letter": "B-",
+    "min": 80
+   },
+   {
+    "letter": "C+",
+    "min": 77
+   },
+   {
+    "letter": "C",
+    "min": 70
+   },
+   {
+    "letter": "D",
+    "min": 60
+   },
+   {
+    "letter": "F",
+    "min": 0
+   }
+  ],
+  "scaleNote": "There is no C- on her scale. Anything from 70.0 to 76.9 is a C.",
+  "categories": [
+   {
+    "id": "intro",
+    "name": "Introductory assignments",
+    "count": 2,
+    "unitPoints": null,
+    "drop": null,
+    "budget": 30,
+    "rawBudget": 30
+   },
+   {
+    "id": "discussions",
+    "name": "Reading Discussions",
+    "count": 11,
+    "unitPoints": 10,
+    "drop": {
+     "lowest": 1
+    },
+    "budget": 100,
+    "rawBudget": 110
+   },
+   {
+    "id": "videoquiz",
+    "name": "Embedded Video Quizzes",
+    "count": null,
+    "unitPoints": null,
+    "drop": null,
+    "budget": 50,
+    "rawBudget": 50,
+    "variablePoints": true,
+    "note": "Her syllabus says only \"points are variable\" and fixes the category total at 50. No individual items are known, so none are invented; the 50 points sit in the denominator as an unplaced budget."
+   },
+   {
+    "id": "checkins",
+    "name": "Content Check-Ins",
+    "count": 10,
+    "unitPoints": 25,
+    "drop": {
+     "lowest": 1
+    },
+    "budget": 225,
+    "rawBudget": 250
+   },
+   {
+    "id": "application",
+    "name": "Application Assignments",
+    "count": 16,
+    "unitPoints": 20,
+    "drop": {
+     "lowest": 1
+    },
+    "budget": 300,
+    "rawBudget": 320
+   },
+   {
+    "id": "reflections",
+    "name": "Learning Reflections",
+    "count": 6,
+    "unitPoints": 40,
+    "drop": null,
+    "budget": 240,
+    "rawBudget": 240
+   },
+   {
+    "id": "spotlights",
+    "name": "Research paper analyses / Scientist Spotlights",
+    "count": 6,
+    "unitPoints": 40,
+    "drop": null,
+    "budget": 240,
+    "rawBudget": 240
+   },
+   {
+    "id": "environment",
+    "name": "Environmental Impacts of Food Project",
+    "count": 1,
+    "unitPoints": 75,
+    "drop": null,
+    "budget": 75,
+    "rawBudget": 75
+   },
+   {
+    "id": "diary",
+    "name": "Ten Day Food Diary + analysis",
+    "count": 2,
+    "unitPoints": null,
+    "drop": null,
+    "budget": 100,
+    "rawBudget": 100
+   }
+  ],
+  "unplaced": [
+   {
+    "category": "application",
+    "count": 4,
+    "points": 80,
+    "note": "16 application assignments are promised; 12 have a week. She says \"Some weeks will have two application activities\" without saying which, so the remaining 4 are held here rather than given invented dates.",
+    "clarificationKey": "application-weeks"
+   },
+   {
+    "category": "reflections",
+    "count": 1,
+    "points": 40,
+    "note": "6 reflections are promised and the \"even weeks\" rule places only 5 (weeks 2,4,6,8,10). The sixth is unplaced — likely the wrap week.",
+    "clarificationKey": "reflection-count"
+   },
+   {
+    "category": "videoquiz",
+    "count": null,
+    "points": 50,
+    "note": "Category total is fixed at 50 but no individual quizzes are enumerated anywhere.",
+    "clarificationKey": "videoquiz-items"
+   }
+  ]
+ },
+ "latePolicy": {
+  "coupons": 3,
+  "extensionDays": 7,
+  "hardStop": "2026-12-05",
+  "penaltyIfUnused": "Not stated in the syllabus — confirm with the instructor.",
+  "note": "Three late coupons, each buying 7 no-penalty days. Nothing is accepted after 2026-12-05, \"even if that is less than 7 days after the due date. NO EXCEPTIONS.\"",
+  "hardStopWarning": "2026-12-05 is a Saturday that falls the day BEFORE the inferred Week 11 deadline (2026-12-06), so Week 11 work cannot be couponed at all."
+ },
+ "moduleRules": {
+  "opensOn": "Sunday",
+  "inOrder": true,
+  "note": "Modules open weekly on Sundays and must be completed in order — you cannot jump between assignments within a module."
+ },
+ "readingMap": {
+  "aitn": {
+   "title": "An Introduction to Nutrition",
+   "publisher": "Saylor Academy, 2013",
+   "license": "CC BY-NC-SA 3.0",
+   "local": true,
+   "note": "Chapter order matches this course's weekly topics one-to-one."
+  },
+  "callahan": {
+   "title": "Nutrition Science and Everyday Application",
+   "author": "Callahan, Leonard & Powell",
+   "publisher": "LibreTexts / OpenOregon",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "uhm": {
+   "title": "Human Nutrition, 2e",
+   "publisher": "University of Hawaiʻi at Mānoa",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "ksu": {
+   "title": "Human Nutrition (FNDH 400) Flexbook",
+   "author": "Brian Lindshield",
+   "publisher": "Kansas State University",
+   "license": "CC BY-NC-SA 4.0"
+  }
+ },
+ "weeks": [
+  {
+   "n": 1,
+   "id": "w01",
+   "start": "2026-09-21",
+   "end": "2026-09-27",
+   "opensOn": "2026-09-20",
+   "title": "Introductions · Nutrition and the process of science",
+   "topics": [
+    "Introductions to each other and the course",
+    "Introduction to nutrition / introduction to the process of science"
+   ],
+   "parity": "odd",
+   "readings": [
+    {
+     "book": "aitn",
+     "chapter": 1,
+     "file": "s05",
+     "title": "Nutrition and You"
+    }
+   ],
+   "supplements": [],
+   "contentFile": "content/week-01.json",
+   "depth": "authored"
+  },
+  {
+   "n": 2,
+   "id": "w02",
+   "start": "2026-09-28",
+   "end": "2026-10-04",
+   "opensOn": "2026-09-27",
+   "title": "Dietary Guidelines · Nutritional analysis · Chemistry review",
+   "topics": [
+    "Dietary Guidelines / Nutritional Analysis",
+    "Short Chemistry Review"
+   ],
+   "parity": "even",
+   "readings": [
+    {
+     "book": "aitn",
+     "chapter": 2,
+     "file": "s06",
+     "title": "Achieving a Healthy Diet"
+    }
+   ],
+   "supplements": [
+    {
+     "book": "callahan",
+     "topic": "Molecules and nutrient classification",
+     "note": "AITN's chemistry review is thin; Callahan 1.3-1.4 is the better short treatment."
+    }
+   ],
+   "contentFile": "content/week-02.json",
+   "depth": "authored"
+  },
+  {
+   "n": 3,
+   "id": "w03",
+   "start": "2026-10-05",
+   "end": "2026-10-11",
+   "opensOn": "2026-10-04",
+   "title": "The digestive system · Digestive disorders and GI issues",
+   "topics": [
+    "The digestive system",
+    "Digestive disorders and GI issues"
+   ],
+   "parity": "odd",
+   "readings": [
+    {
+     "book": "aitn",
+     "chapter": 3,
+     "file": "s07",
+     "title": "Nutrition and the Human Body"
+    }
+   ],
+   "supplements": [],
+   "contentFile": "content/week-03.json",
+   "depth": "authored"
+  },
+  {
+   "n": 4,
+   "id": "w04",
+   "start": "2026-10-12",
+   "end": "2026-10-18",
+   "opensOn": "2026-10-11",
+   "title": "Carbohydrates · The microbiome",
+   "topics": [
+    "Macronutrients: Carbohydrates",
+    "The Microbiome"
+   ],
+   "parity": "even",
+   "readings": [
+    {
+     "book": "aitn",
+     "chapter": 4,
+     "file": "s08",
+     "title": "Carbohydrates"
+    }
+   ],
+   "supplements": [
+    {
+     "book": "callahan",
+     "topic": "Gut microbiome",
+     "note": "AITN (2013) predates the microbiome literature and has no coverage. Callahan is the only supplied source that does."
+    }
+   ],
+   "contentFile": "content/week-04.json",
+   "depth": "scaffold"
+  },
+  {
+   "n": 5,
+   "id": "w05",
+   "start": "2026-10-19",
+   "end": "2026-10-25",
+   "opensOn": "2026-10-18",
+   "title": "Lipids · Food safety",
+   "topics": [
+    "Macronutrients: Lipids",
+    "Food Safety"
+   ],
+   "parity": "odd",
+   "readings": [
+    {
+     "book": "aitn",
+     "chapter": 5,
+     "file": "s09",
+     "title": "Lipids"
+    },
+    {
+     "book": "aitn",
+     "chapter": 15,
+     "file": "s19-04",
+     "title": "Foodborne Illness and Food Safety"
+    }
+   ],
+   "supplements": [
+    {
+     "book": "uhm",
+     "topic": "Food safety",
+     "note": "Human Nutrition 2e ch. 17 is a fuller treatment than AITN 15.4."
+    }
+   ],
+   "contentFile": "content/week-05.json",
+   "depth": "scaffold"
+  },
+  {
+   "n": 6,
+   "id": "w06",
+   "start": "2026-10-26",
+   "end": "2026-11-01",
+   "opensOn": "2026-10-25",
+   "title": "Proteins",
+   "topics": [
+    "Macronutrients: Proteins"
+   ],
+   "parity": "even",
+   "readings": [
+    {
+     "book": "aitn",
+     "chapter": 6,
+     "file": "s10",
+     "title": "Proteins"
+    }
+   ],
+   "supplements": [],
+   "contentFile": "content/week-06.json",
+   "depth": "scaffold"
+  },
+  {
+   "n": 7,
+   "id": "w07",
+   "start": "2026-11-02",
+   "end": "2026-11-08",
+   "opensOn": "2026-11-01",
+   "title": "Fluid and electrolyte balance · Antioxidants",
+   "topics": [
+    "Nutrients influencing fluid and electrolyte balance",
+    "Nutrients important as antioxidants"
+   ],
+   "parity": "odd",
+   "readings": [
+    {
+     "book": "aitn",
+     "chapter": 7,
+     "file": "s11",
+     "title": "Nutrients Important to Fluid and Electrolyte Balance"
+    },
+    {
+     "book": "aitn",
+     "chapter": 8,
+     "file": "s12",
+     "title": "Nutrients Important As Antioxidants"
+    }
+   ],
+   "supplements": [],
+   "contentFile": "content/week-07.json",
+   "depth": "scaffold"
+  },
+  {
+   "n": 8,
+   "id": "w08",
+   "start": "2026-11-09",
+   "end": "2026-11-15",
+   "opensOn": "2026-11-08",
+   "title": "Bone health · Metabolism and blood function",
+   "topics": [
+    "Nutrients for bone health",
+    "Nutrients for metabolism and blood function"
+   ],
+   "parity": "even",
+   "readings": [
+    {
+     "book": "aitn",
+     "chapter": 9,
+     "file": "s13",
+     "title": "Nutrients Important for Bone Health"
+    },
+    {
+     "book": "aitn",
+     "chapter": 10,
+     "file": "s14",
+     "title": "Nutrients Important for Metabolism and Blood Function"
+    }
+   ],
+   "supplements": [],
+   "contentFile": "content/week-08.json",
+   "depth": "scaffold"
+  },
+  {
+   "n": 9,
+   "id": "w09",
+   "start": "2026-11-16",
+   "end": "2026-11-22",
+   "opensOn": "2026-11-15",
+   "title": "Energy and metabolism · Energy balance and body weight",
+   "topics": [
+    "Energy and Metabolism",
+    "Energy balance and body weight"
+   ],
+   "parity": "odd",
+   "readings": [
+    {
+     "book": "aitn",
+     "chapter": 11,
+     "file": "s15",
+     "title": "Energy Balance and Body Weight"
+    },
+    {
+     "book": "aitn",
+     "chapter": 10,
+     "file": "s14-02",
+     "title": "Metabolism Overview"
+    }
+   ],
+   "supplements": [],
+   "contentFile": "content/week-09.json",
+   "depth": "scaffold"
+  },
+  {
+   "n": 10,
+   "id": "w10",
+   "start": "2026-11-23",
+   "end": "2026-11-29",
+   "opensOn": "2026-11-22",
+   "title": "Food and sustainability · Food claims",
+   "topics": [
+    "Food and Sustainability",
+    "Food Claims"
+   ],
+   "parity": "even",
+   "readings": [
+    {
+     "book": "aitn",
+     "chapter": 14,
+     "file": "s18",
+     "title": "Nutrition and Society: Food Politics and Perspectives"
+    },
+    {
+     "book": "aitn",
+     "chapter": 15,
+     "file": "s19-05",
+     "title": "Start Your Sustainable Future Today"
+    },
+    {
+     "book": "aitn",
+     "chapter": 2,
+     "file": "s06-09",
+     "title": "Nutrition and the Media"
+    },
+    {
+     "book": "aitn",
+     "chapter": 15,
+     "file": "s19-01",
+     "title": "Diet Trends and Health"
+    }
+   ],
+   "supplements": [],
+   "contentFile": "content/week-10.json",
+   "depth": "scaffold"
+  },
+  {
+   "n": 11,
+   "id": "w11",
+   "start": "2026-11-30",
+   "end": "2026-12-06",
+   "opensOn": "2026-11-29",
+   "title": "Nutrition through the years · Performance nutrition",
+   "topics": [
+    "Nutrition through the years",
+    "Performance nutrition"
+   ],
+   "parity": "odd",
+   "readings": [
+    {
+     "book": "aitn",
+     "chapter": 12,
+     "file": "s16",
+     "title": "Nutrition through the Life Cycle: Pregnancy to Toddler"
+    },
+    {
+     "book": "aitn",
+     "chapter": 13,
+     "file": "s17",
+     "title": "Nutrition through the Life Cycle: Childhood to Elderly"
+    },
+    {
+     "book": "aitn",
+     "chapter": 15,
+     "file": "s19-02",
+     "title": "Fitness and Health"
+    }
+   ],
+   "supplements": [
+    {
+     "book": "uhm",
+     "topic": "Performance nutrition",
+     "note": "Human Nutrition 2e ch. 16 is a dedicated chapter."
+    }
+   ],
+   "contentFile": "content/week-11.json",
+   "depth": "scaffold"
+  },
+  {
+   "n": 12,
+   "id": "wrap",
+   "start": "2026-12-07",
+   "end": "2026-12-11",
+   "opensOn": "2026-12-06",
+   "title": "Wrap · Dietary analysis",
+   "topics": [
+    "Ten Day Food Diary analysis"
+   ],
+   "parity": "even",
+   "readings": [],
+   "supplements": [],
+   "contentFile": "content/wrap.json",
+   "depth": "scaffold"
+  }
+ ],
+ "assignments": [
+  {
+   "id": "w01-beginning",
+   "week": 1,
+   "title": "Beginning of the Course Survey",
+   "category": null,
+   "possible": 0,
+   "due": null,
+   "dueConfidence": "unstated",
+   "graded": false,
+   "coupon": false,
+   "note": "Listed with 0 points and no due date in the Course Summary. Shown on the agenda, excluded from grade math.",
+   "projected": false
+  },
+  {
+   "id": "w01-let's",
+   "week": 1,
+   "title": "Let's Share Recipes!",
+   "category": null,
+   "possible": 0,
+   "due": null,
+   "dueConfidence": "unstated",
+   "graded": false,
+   "coupon": false,
+   "note": "Listed with 0 points and no due date in the Course Summary. Shown on the agenda, excluded from grade math.",
+   "projected": false
+  },
+  {
+   "id": "w01-pets",
+   "week": 1,
+   "title": "Pets! Share your pets pictures!",
+   "category": null,
+   "possible": 0,
+   "due": null,
+   "dueConfidence": "unstated",
+   "graded": false,
+   "coupon": false,
+   "note": "Listed with 0 points and no due date in the Course Summary. Shown on the agenda, excluded from grade math.",
+   "projected": false
+  },
+  {
+   "id": "w01-about-you",
+   "week": 1,
+   "sequence": 1,
+   "title": "About the Course and You",
+   "category": "intro",
+   "possible": 20,
+   "due": "2026-09-25",
+   "dueTime": "23:59",
+   "dueSource": "Canvas Course Summary supplied by the student, 2026-09-25",
+   "coupon": false,
+   "couponNote": "Titled \"NO LATE COUPONS\" in Canvas.",
+   "dropEligible": false,
+   "projected": false,
+   "dueConfidence": "stated",
+   "graded": true
+  },
+  {
+   "id": "w01-intro-nutrition",
+   "week": 1,
+   "sequence": 2,
+   "title": "Introduction to Nutrition Fall 2026",
+   "category": "intro",
+   "possible": 10,
+   "due": "2026-09-27",
+   "dueTime": "23:59",
+   "dueSource": "Canvas Course Summary supplied by the student, 2026-09-25",
+   "coupon": true,
+   "couponNote": null,
+   "dropEligible": false,
+   "projected": false,
+   "dueConfidence": "stated",
+   "graded": true
+  },
+  {
+   "id": "w01-first-discussion",
+   "week": 1,
+   "sequence": 3,
+   "title": "First Discussion- Introduce yourself",
+   "category": "discussions",
+   "possible": 10,
+   "due": "2026-09-27",
+   "dueTime": "23:59",
+   "dueSource": "Canvas Course Summary supplied by the student, 2026-09-25",
+   "coupon": false,
+   "couponNote": "Titled \"No Late Coupons\" in Canvas.",
+   "dropEligible": true,
+   "projected": false,
+   "dueConfidence": "stated",
+   "graded": true
+  },
+  {
+   "id": "w01-discussion",
+   "week": 1,
+   "sequence": 4,
+   "title": "Week 1 Discussion: Intro to Nutrition",
+   "category": "discussions",
+   "possible": 10,
+   "due": "2026-09-27",
+   "dueTime": "23:59",
+   "dueSource": "Canvas Course Summary supplied by the student, 2026-09-25",
+   "coupon": true,
+   "couponNote": null,
+   "dropEligible": true,
+   "projected": false,
+   "dueConfidence": "stated",
+   "graded": true
+  },
+  {
+   "id": "w01-checkin",
+   "week": 1,
+   "sequence": 5,
+   "title": "Week 1 Check In",
+   "category": "checkins",
+   "possible": 25,
+   "due": "2026-09-27",
+   "dueTime": "23:59",
+   "dueSource": "Canvas Course Summary supplied by the student, 2026-09-25",
+   "coupon": true,
+   "couponNote": null,
+   "dropEligible": true,
+   "projected": false,
+   "dueConfidence": "stated",
+   "graded": true
+  },
+  {
+   "id": "w01-energy-density",
+   "week": 1,
+   "sequence": 6,
+   "title": "Case Study: Energy Density",
+   "category": "application",
+   "possible": 20,
+   "due": "2026-09-27",
+   "dueTime": "23:59",
+   "dueSource": "Canvas Course Summary supplied by the student, 2026-09-25",
+   "coupon": true,
+   "couponNote": null,
+   "dropEligible": true,
+   "projected": false,
+   "dueConfidence": "stated",
+   "graded": true
+  },
+  {
+   "id": "w01-calories",
+   "week": 1,
+   "sequence": 7,
+   "title": "Homework: Practice calculating calories",
+   "category": "application",
+   "possible": 20,
+   "due": "2026-09-27",
+   "dueTime": "23:59",
+   "dueSource": "Canvas Course Summary supplied by the student, 2026-09-25",
+   "coupon": true,
+   "couponNote": null,
+   "dropEligible": true,
+   "projected": false,
+   "dueConfidence": "stated",
+   "graded": true
+  },
+  {
+   "id": "w01-sci-lit",
+   "week": 1,
+   "sequence": 8,
+   "title": "Introduction to Reading Scientific Literature",
+   "category": "spotlights",
+   "possible": 40,
+   "due": "2026-09-27",
+   "dueTime": "23:59",
+   "dueSource": "Canvas Course Summary supplied by the student, 2026-09-25",
+   "coupon": true,
+   "couponNote": null,
+   "dropEligible": false,
+   "projected": false,
+   "dueConfidence": "stated",
+   "graded": true
+  },
+  {
+   "id": "w02-discussion",
+   "week": 2,
+   "sequence": 1,
+   "title": "Week 2 Reading Discussion",
+   "category": "discussions",
+   "possible": 10,
+   "due": "2026-10-04",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w02-checkin",
+   "week": 2,
+   "sequence": 2,
+   "title": "Week 2 Content Check-In",
+   "category": "checkins",
+   "possible": 25,
+   "due": "2026-10-04",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w02-application",
+   "week": 2,
+   "sequence": 3,
+   "title": "Week 2 Application Activity",
+   "category": "application",
+   "possible": 20,
+   "due": "2026-10-04",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w02-reflection",
+   "week": 2,
+   "sequence": 4,
+   "title": "Week 2 Topic Learning Reflection",
+   "category": "reflections",
+   "possible": 40,
+   "due": "2026-10-04",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": false,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w03-discussion",
+   "week": 3,
+   "sequence": 1,
+   "title": "Week 3 Reading Discussion",
+   "category": "discussions",
+   "possible": 10,
+   "due": "2026-10-11",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w03-checkin",
+   "week": 3,
+   "sequence": 2,
+   "title": "Week 3 Content Check-In",
+   "category": "checkins",
+   "possible": 25,
+   "due": "2026-10-11",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w03-application",
+   "week": 3,
+   "sequence": 3,
+   "title": "Week 3 Application Activity",
+   "category": "application",
+   "possible": 20,
+   "due": "2026-10-11",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w03-spotlight",
+   "week": 3,
+   "sequence": 4,
+   "title": "Week 3 Research paper analysis / Scientist Spotlight",
+   "category": "spotlights",
+   "possible": 40,
+   "due": "2026-10-11",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": false,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w04-discussion",
+   "week": 4,
+   "sequence": 1,
+   "title": "Week 4 Reading Discussion",
+   "category": "discussions",
+   "possible": 10,
+   "due": "2026-10-18",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w04-checkin",
+   "week": 4,
+   "sequence": 2,
+   "title": "Week 4 Content Check-In",
+   "category": "checkins",
+   "possible": 25,
+   "due": "2026-10-18",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w04-application",
+   "week": 4,
+   "sequence": 3,
+   "title": "Week 4 Application Activity",
+   "category": "application",
+   "possible": 20,
+   "due": "2026-10-18",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w04-reflection",
+   "week": 4,
+   "sequence": 4,
+   "title": "Week 4 Topic Learning Reflection",
+   "category": "reflections",
+   "possible": 40,
+   "due": "2026-10-18",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": false,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w05-discussion",
+   "week": 5,
+   "sequence": 1,
+   "title": "Week 5 Reading Discussion",
+   "category": "discussions",
+   "possible": 10,
+   "due": "2026-10-25",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w05-checkin",
+   "week": 5,
+   "sequence": 2,
+   "title": "Week 5 Content Check-In",
+   "category": "checkins",
+   "possible": 25,
+   "due": "2026-10-25",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w05-application",
+   "week": 5,
+   "sequence": 3,
+   "title": "Week 5 Application Activity",
+   "category": "application",
+   "possible": 20,
+   "due": "2026-10-25",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w05-spotlight",
+   "week": 5,
+   "sequence": 4,
+   "title": "Week 5 Research paper analysis / Scientist Spotlight",
+   "category": "spotlights",
+   "possible": 40,
+   "due": "2026-10-25",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": false,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w06-discussion",
+   "week": 6,
+   "sequence": 1,
+   "title": "Week 6 Reading Discussion",
+   "category": "discussions",
+   "possible": 10,
+   "due": "2026-11-01",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w06-checkin",
+   "week": 6,
+   "sequence": 2,
+   "title": "Week 6 Content Check-In",
+   "category": "checkins",
+   "possible": 25,
+   "due": "2026-11-01",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w06-application",
+   "week": 6,
+   "sequence": 3,
+   "title": "Week 6 Application Activity",
+   "category": "application",
+   "possible": 20,
+   "due": "2026-11-01",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w06-reflection",
+   "week": 6,
+   "sequence": 4,
+   "title": "Week 6 Topic Learning Reflection",
+   "category": "reflections",
+   "possible": 40,
+   "due": "2026-11-01",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": false,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w07-discussion",
+   "week": 7,
+   "sequence": 1,
+   "title": "Week 7 Reading Discussion",
+   "category": "discussions",
+   "possible": 10,
+   "due": "2026-11-08",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w07-checkin",
+   "week": 7,
+   "sequence": 2,
+   "title": "Week 7 Content Check-In",
+   "category": "checkins",
+   "possible": 25,
+   "due": "2026-11-08",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w07-application",
+   "week": 7,
+   "sequence": 3,
+   "title": "Week 7 Application Activity",
+   "category": "application",
+   "possible": 20,
+   "due": "2026-11-08",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w07-spotlight",
+   "week": 7,
+   "sequence": 4,
+   "title": "Week 7 Research paper analysis / Scientist Spotlight",
+   "category": "spotlights",
+   "possible": 40,
+   "due": "2026-11-08",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": false,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w08-discussion",
+   "week": 8,
+   "sequence": 1,
+   "title": "Week 8 Reading Discussion",
+   "category": "discussions",
+   "possible": 10,
+   "due": "2026-11-15",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w08-checkin",
+   "week": 8,
+   "sequence": 2,
+   "title": "Week 8 Content Check-In",
+   "category": "checkins",
+   "possible": 25,
+   "due": "2026-11-15",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w08-application",
+   "week": 8,
+   "sequence": 3,
+   "title": "Week 8 Application Activity",
+   "category": "application",
+   "possible": 20,
+   "due": "2026-11-15",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w08-reflection",
+   "week": 8,
+   "sequence": 4,
+   "title": "Week 8 Topic Learning Reflection",
+   "category": "reflections",
+   "possible": 40,
+   "due": "2026-11-15",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": false,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w09-discussion",
+   "week": 9,
+   "sequence": 1,
+   "title": "Week 9 Reading Discussion",
+   "category": "discussions",
+   "possible": 10,
+   "due": "2026-11-22",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w09-checkin",
+   "week": 9,
+   "sequence": 2,
+   "title": "Week 9 Content Check-In",
+   "category": "checkins",
+   "possible": 25,
+   "due": "2026-11-22",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w09-application",
+   "week": 9,
+   "sequence": 3,
+   "title": "Week 9 Application Activity",
+   "category": "application",
+   "possible": 20,
+   "due": "2026-11-22",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w09-spotlight",
+   "week": 9,
+   "sequence": 4,
+   "title": "Week 9 Research paper analysis / Scientist Spotlight",
+   "category": "spotlights",
+   "possible": 40,
+   "due": "2026-11-22",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": false,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w10-discussion",
+   "week": 10,
+   "sequence": 1,
+   "title": "Week 10 Reading Discussion",
+   "category": "discussions",
+   "possible": 10,
+   "due": "2026-11-29",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w10-checkin",
+   "week": 10,
+   "sequence": 2,
+   "title": "Week 10 Content Check-In",
+   "category": "checkins",
+   "possible": 25,
+   "due": "2026-11-29",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w10-application",
+   "week": 10,
+   "sequence": 3,
+   "title": "Week 10 Application Activity",
+   "category": "application",
+   "possible": 20,
+   "due": "2026-11-29",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w10-reflection",
+   "week": 10,
+   "sequence": 4,
+   "title": "Week 10 Topic Learning Reflection",
+   "category": "reflections",
+   "possible": 40,
+   "due": "2026-11-29",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": false,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w11-application",
+   "week": 11,
+   "sequence": 1,
+   "title": "Week 11 Application Activity",
+   "category": "application",
+   "possible": 20,
+   "due": "2026-12-06",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": true,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "w11-spotlight",
+   "week": 11,
+   "sequence": 2,
+   "title": "Week 11 Research paper analysis / Scientist Spotlight",
+   "category": "spotlights",
+   "possible": 40,
+   "due": "2026-12-06",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "dueSource": "Inferred from \"Modules will be open weekly on Sundays\" — confirm in Canvas.",
+   "projected": true,
+   "dropEligible": false,
+   "coupon": true,
+   "graded": true
+  },
+  {
+   "id": "diary-part1",
+   "week": 10,
+   "sequence": 99,
+   "title": "Dietary Analysis Assignment · Food Diary",
+   "category": "diary",
+   "possible": 30,
+   "due": "2026-11-29",
+   "dueTime": "23:59",
+   "dueSource": "Canvas Course Summary supplied by the student, 2026-09-25",
+   "submitAs": "NutriCalc \"Food List Report\" PDF export",
+   "requires": "NutritionCalc Plus (ISBN 9781260891089) — a separate required purchase.",
+   "projected": false,
+   "coupon": true,
+   "dueConfidence": "stated",
+   "graded": true
+  },
+  {
+   "id": "diary-part2",
+   "week": 12,
+   "sequence": 99,
+   "title": "Dietary Analysis Assignment · Individual Analysis",
+   "category": "diary",
+   "possible": 70,
+   "due": "2026-12-08",
+   "dueTime": "23:59",
+   "dueSource": "Canvas Course Summary supplied by the student, 2026-09-25",
+   "projected": false,
+   "coupon": true,
+   "dueConfidence": "stated",
+   "graded": true
+  },
+  {
+   "id": "environment",
+   "week": 10,
+   "sequence": 98,
+   "title": "Environmental Impacts of Food Project",
+   "category": "environment",
+   "possible": 75,
+   "due": "2026-12-06",
+   "dueTime": "23:59",
+   "dueConfidence": "inferred",
+   "projected": true,
+   "dueSource": "Syllabus says it runs \"over the course of 2 weeks\" and \"will be explained later\". Week and date inferred from the Week 10 sustainability topic.",
+   "coupon": true,
+   "graded": true
+  }
+ ]
+}

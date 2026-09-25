@@ -1,0 +1,53 @@
+/* Readable course detail pane on iPad and tablet-sized browser windows.
+   The native wrapper enables this even when its split-view pane is narrow. */
+.workspace { font-size: 20px; }
+.workspace p,
+.workspace .unit-detail li,
+.workspace li,
+.workspace .response { font-size: 20px; line-height: 1.65; }
+.workspace .lede { font-size: 22px; }
+.workspace h1 { font-size: 36px; }
+.workspace h2 { font-size: 28px; }
+.workspace h3,
+.workspace .unit-card h3 { font-size: 23px; }
+.workspace .hero h2 { font-size: 38px; }
+.workspace .hero p { font-size: 20px; max-width: 42ch; }
+.workspace .section-heading h2 { font-size: 25px; }
+.workspace label,
+.workspace input,
+.workspace select,
+.workspace textarea,
+.workspace button,
+.workspace .button { font-size: 18px; line-height: 1.5; }
+.workspace .choices button { font-size: 20px; }
+.workspace small,
+.workspace .muted,
+.workspace .unit-card p,
+.workspace .unit-card small,
+.workspace .stats span,
+.workspace .stats small,
+.workspace .sources,
+.workspace summary,
+.workspace .section-heading a,
+.workspace .empty a { font-size: 16px; line-height: 1.65; }
+.workspace .notice,
+.workspace .list-row,
+.workspace .import-row { font-size: 18px; line-height: 1.6; }
+.workspace table { font-size: 17px; }
+.workspace th,
+.workspace figcaption { font-size: 15px; }
+.workspace td button,
+.workspace pre { font-size: 16px; }
+.workspace .eyebrow,
+.workspace .hero .eyebrow,
+.workspace .unit-symbol,
+.workspace footer { font-size: 14px; }
+.workspace .stats strong { font-size: 38px; }
+.workspace .stats strong.small-number { font-size: 28px; }
+.workspace .stats { grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); }
+.workspace .unit-grid,
+.native .workspace .unit-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
+.workspace .unit-card { min-width: 0; }
+.workspace .section-heading { flex-wrap: wrap; }
+.workspace .form-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.workspace .form-actions button + button { margin-left: 0; }

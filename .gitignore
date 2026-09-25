@@ -1,0 +1,11 @@
+node_modules/
+content/_seed/
+artifacts/
+backups/
+.DS_Store
+# Defensive: source textbooks and instructor documents stay in ~/Downloads/nutrition
+# and must never enter this tree. Nothing here is rehosted.
+*.pdf
+*.odt
+*.docx
+*.zip

@@ -1,0 +1,376 @@
+{
+ "schemaVersion": 1,
+ "week": 3,
+ "version": "2026.09.25.1",
+ "objectives": [
+  {
+   "id": "w03-o1",
+   "text": "Trace a bite of food through the GI tract and name what happens at each stop.",
+   "source": {
+    "book": "aitn",
+    "section": "3.2"
+   }
+  },
+  {
+   "id": "w03-o2",
+   "text": "Distinguish mechanical from chemical digestion, and digestion from absorption.",
+   "source": {
+    "book": "aitn",
+    "section": "3.2"
+   }
+  },
+  {
+   "id": "w03-o3",
+   "text": "Say where most absorption happens and what makes that surface suited to it.",
+   "source": {
+    "book": "aitn",
+    "section": "3.2"
+   }
+  },
+  {
+   "id": "w03-o4",
+   "text": "Explain what a calorie measures and how energy reaches the cell.",
+   "source": {
+    "book": "aitn",
+    "section": "3.4"
+   }
+  },
+  {
+   "id": "w03-o5",
+   "text": "Describe common GI disorders and the dietary change each calls for.",
+   "source": {
+    "book": "aitn",
+    "section": "3.5"
+   }
+  }
+ ],
+ "terms": [
+  {
+   "term": "Mechanical digestion",
+   "gloss": "Physical breakdown — chewing, churning — that increases surface area without changing chemistry.",
+   "source": {
+    "book": "aitn",
+    "section": "3.2"
+   }
+  },
+  {
+   "term": "Chemical digestion",
+   "gloss": "Enzymes and acid splitting molecules into absorbable units.",
+   "source": {
+    "book": "aitn",
+    "section": "3.2"
+   }
+  },
+  {
+   "term": "Absorption",
+   "gloss": "Movement of nutrients across the gut lining into blood or lymph. Digestion prepares; absorption delivers.",
+   "source": {
+    "book": "aitn",
+    "section": "3.2"
+   }
+  },
+  {
+   "term": "Villi",
+   "gloss": "Finger-like projections of the small-intestine lining that multiply its absorptive surface.",
+   "source": {
+    "book": "aitn",
+    "section": "3.2"
+   }
+  },
+  {
+   "term": "Peristalsis",
+   "gloss": "Coordinated muscle waves that move contents along the tract.",
+   "source": {
+    "book": "aitn",
+    "section": "3.2"
+   }
+  },
+  {
+   "term": "Kilocalorie",
+   "gloss": "Energy to raise one kilogram of water by one degree Celsius. A food 'Calorie' is a kilocalorie.",
+   "source": {
+    "book": "aitn",
+    "section": "3.4"
+   }
+  }
+ ],
+ "questions": [
+  {
+   "id": "w03-q1",
+   "objective": "w03-o3",
+   "type": "mc",
+   "prompt": "Where does most nutrient absorption take place?",
+   "options": [
+    "The small intestine",
+    "The stomach",
+    "The large intestine",
+    "The oesophagus"
+   ],
+   "answer": 0,
+   "why": "The small intestine's folds, villi and microvilli give it an enormous surface area, and that is where most nutrients cross into the body.",
+   "distractorNotes": [
+    null,
+    "Mainly chemical digestion and mixing; little absorption.",
+    "Absorbs water and some vitamins, not most nutrients.",
+    "A transport tube — no absorption at all."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "3.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w03-q2",
+   "objective": "w03-o2",
+   "type": "mc",
+   "prompt": "Chewing a piece of bread is an example of:",
+   "options": [
+    "Mechanical digestion",
+    "Chemical digestion by amylase",
+    "Absorption into the blood",
+    "Peristalsis in the throat"
+   ],
+   "answer": 0,
+   "why": "Chewing breaks food apart physically and raises surface area. The salivary amylase acting at the same time is the chemical half.",
+   "distractorNotes": [
+    null,
+    "That is the enzyme's work, not the teeth's.",
+    "Nothing has crossed the gut wall yet.",
+    "Muscle waves further down the tract."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "3.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w03-q3",
+   "objective": "w03-o3",
+   "type": "mc",
+   "prompt": "Villi increase absorption mainly by:",
+   "options": [
+    "Increasing available surface area",
+    "Secreting more digestive enzymes",
+    "Slowing the passage of food along",
+    "Neutralising acid as it arrives"
+   ],
+   "answer": 0,
+   "why": "Absorption scales with contact area. Folds, villi and microvilli each multiply it, turning a modest tube into a very large absorptive surface.",
+   "distractorNotes": [
+    null,
+    "Enzymes come largely from the pancreas and lining cells.",
+    "Motility is controlled separately.",
+    "Pancreatic bicarbonate does the neutralising."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "3.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w03-q4",
+   "objective": "w03-o4",
+   "type": "mc",
+   "prompt": "A food Calorie, written with a capital C, is equal to:",
+   "options": [
+    "One kilocalorie",
+    "One calorie",
+    "A thousand kilocalories",
+    "One joule of energy"
+   ],
+   "answer": 0,
+   "why": "The food Calorie is a kilocalorie — a thousand small calories. It is why label figures look small next to the physics unit.",
+   "distractorNotes": [
+    null,
+    "That is the small calorie, a thousand times less.",
+    "Off by a factor of a million.",
+    "A joule is a different and much smaller unit."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "3.4",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w03-q5",
+   "objective": "w03-o1",
+   "type": "mc",
+   "prompt": "What is the stomach's main contribution to digestion?",
+   "options": [
+    "Acid and enzymes plus churning",
+    "Absorbing the bulk of nutrients",
+    "Neutralising intestinal acid",
+    "Storing bile until a meal"
+   ],
+   "answer": 0,
+   "why": "The stomach mixes, acidifies and begins protein digestion, releasing the result gradually into the small intestine.",
+   "distractorNotes": [
+    null,
+    "Very little absorption happens there.",
+    "The direction is reversed — acid leaves the stomach.",
+    "Bile is stored in the gallbladder."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "3.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w03-q6",
+   "objective": "w03-o5",
+   "type": "mc",
+   "prompt": "Someone with lactose intolerance lacks enough of which enzyme?",
+   "options": [
+    "Lactase",
+    "Lactose",
+    "Amylase",
+    "Pepsin"
+   ],
+   "answer": 0,
+   "why": "Lactase splits lactose. Without enough of it, the sugar reaches the colon undigested and is fermented by bacteria there.",
+   "distractorNotes": [
+    null,
+    "Lactose is the sugar itself, not the enzyme.",
+    "Amylase acts on starch.",
+    "Pepsin acts on protein."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "3.5",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w03-q7",
+   "objective": "w03-o2",
+   "type": "mc",
+   "prompt": "Digestion and absorption differ in that:",
+   "options": [
+    "Digestion breaks down, absorption takes up",
+    "Digestion is chemical, absorption mechanical",
+    "Digestion happens only in the stomach",
+    "Absorption comes before digestion"
+   ],
+   "answer": 0,
+   "why": "Digestion reduces food to units small enough to cross the gut wall; absorption is that crossing. One prepares, the other delivers.",
+   "distractorNotes": [
+    null,
+    "Digestion is both mechanical and chemical.",
+    "It begins in the mouth and continues well past the stomach.",
+    "The order is the other way round."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "3.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w03-q8",
+   "objective": "w03-o1",
+   "type": "mc",
+   "prompt": "What is the main job of the large intestine?",
+   "options": [
+    "Reclaiming water and forming stool",
+    "Digesting the bulk of the protein",
+    "Absorbing most fat-soluble vitamins",
+    "Producing the enzymes for starch"
+   ],
+   "answer": 0,
+   "why": "By the time contents arrive, most nutrients are gone. The colon reclaims water and electrolytes, and its bacteria ferment what remains.",
+   "distractorNotes": [
+    null,
+    "Protein digestion finishes well upstream.",
+    "Fat absorption is a small-intestine job.",
+    "Those come from salivary glands and pancreas."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "3.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w03-q9",
+   "objective": "w03-o5",
+   "type": "mc",
+   "prompt": "Which dietary change most directly addresses ordinary constipation?",
+   "options": [
+    "More fibre and more fluid",
+    "Less fibre and less fluid",
+    "More protein, less fibre",
+    "More refined grain, less fruit"
+   ],
+   "answer": 0,
+   "why": "Fibre adds bulk and holds water, and the water has to be there for it to work. Fibre without fluid can make matters worse.",
+   "distractorNotes": [
+    null,
+    "Removes exactly what adds bulk.",
+    "Protein does not address bulk or hydration.",
+    "Refining strips the fibre out."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "3.5",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w03-q10",
+   "objective": "w03-o4",
+   "type": "mc",
+   "prompt": "Energy from food becomes usable to a cell only after:",
+   "options": [
+    "Nutrients are absorbed and metabolised",
+    "Food has been chewed very thoroughly",
+    "Food has been acidified in the stomach",
+    "Fibre is fermented in the colon"
+   ],
+   "answer": 0,
+   "why": "A calorie on a label is potential energy. The cell can use it only once the nutrient is absorbed and run through metabolism.",
+   "distractorNotes": [
+    null,
+    "A useful first step, but far from sufficient.",
+    "Also only a step along the way.",
+    "Fermentation yields a modest amount, not the main route."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "3.4",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  }
+ ],
+ "applicationPrompts": [
+  {
+   "id": "w03-a1",
+   "forAssignment": null,
+   "checklist": [
+    "Pick one meal you ate and follow it from mouth to colon.",
+    "At each stop, name what acts on it and what it becomes.",
+    "Say where each of its macronutrients is absorbed.",
+    "Name one disorder that would disrupt this path, and where."
+   ],
+   "selfCheck": [
+    "Did I separate mechanical from chemical at each stop?",
+    "Did I say where absorption happens, not just digestion?"
+   ],
+   "aiPolicy": "These are questions for you to answer. This app does not write any part of a submission."
+  }
+ ]
+}

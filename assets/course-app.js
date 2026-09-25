@@ -16,6 +16,7 @@ import { escape as esc } from './state-merge.js';
 import { STATE_KEY, blankState, validateState, mergeAssignments, setOverlay,
          spentCoupons, backupName, THEMES } from './state.js';
 import { courseGrade, neededFor, letterFor } from './grading.js';
+import { checkEntry, diaryProgress, TIPS, SUBMISSION, REQUIRED_DAYS } from './diary.js';
 import { courseToday, dueState, couponOffer, couponLedger, agenda, daysBetween } from './deadlines.js';
 
 export const ROUTES = [
@@ -32,6 +33,10 @@ const DEFAULT_ROUTE = 'today';
 
 let course = null, store = null, state = blankState();
 let route = DEFAULT_ROUTE, dirty = false, unreadable = false, saving = false;
+
+// Study session: which week is open, and the quiz in progress if there is one.
+let studyWeek = null, weekContent = new Map();
+let quiz = null;   // {week, order, i, picked, revealed}
 
 const app = () => document.querySelector('#app');
 const today = () => courseToday();
@@ -310,11 +315,164 @@ function viewCourse() {
 const viewStub = (title, body) =>
   `<section class="card"><p class="eyebrow">${esc(title)}</p><p class="muted">${esc(body)}</p></section>`;
 
+/* ---------- study ----------------------------------------------------------- */
+
+async function loadWeek(n) {
+  if (weekContent.has(n)) return weekContent.get(n);
+  const w = weekOf(n);
+  if (!w?.contentFile) return null;
+  try {
+    const data = await (await fetch(`./${w.contentFile}`)).json();
+    weekContent.set(n, data);
+    return data;
+  } catch {
+    weekContent.set(n, null);
+    return null;
+  }
+}
+
+function viewStudy() {
+  const authored = course.weeks.filter(w => w.depth === 'authored');
+  const n = studyWeek ?? currentWeek().n;
+  const w = weekOf(n);
+  const data = weekContent.get(n);
+
+  const picker = `<section class="card"><p class="eyebrow">Pick a week</p>
+    <p class="chips">${course.weeks.filter(x => x.n <= 11).map(x =>
+      `<button type="button" class="chip ${x.n === n ? 'chip-on' : ''}" data-act="study-week" data-week="${x.n}">
+        ${x.n}${x.depth === 'authored' ? '' : '<span class="chip-dot" title="reading map only">·</span>'}</button>`).join('')}</p>
+    <p class="muted small">Weeks ${authored.map(x => x.n).join(', ')} are written out.
+      The rest carry their reading map and fill in as the quarter runs.</p></section>`;
+
+  if (!data) return picker + `<section class="card"><p class="eyebrow">Week ${n} · ${esc(w.title)}</p>
+    <p class="muted">This week is scaffolded, not yet written out. Its reading is below.</p>
+    ${w.readings.map(r => `<p>${esc(course.readingMap[r.book].title)} — chapter ${r.chapter},
+      <em>${esc(r.title)}</em></p>`).join('')}
+    ${w.supplements.map(sp => `<p class="note muted small">${esc(course.readingMap[sp.book].title)} for
+      <strong>${esc(sp.topic)}</strong> — ${esc(sp.note)}</p>`).join('')}</section>`;
+
+  if (quiz && quiz.week === n) return picker + viewQuiz(data);
+
+  return picker + `
+  <section class="card"><p class="eyebrow">Week ${n} · what you should be able to do</p>
+    <ol class="tight">${data.objectives.map(o => `<li>${esc(o.text)}
+      <span class="cite">${esc(cite(o.source))}</span></li>`).join('')}</ol></section>
+  <section class="card"><p class="eyebrow">Terms</p>
+    <dl class="terms">${data.terms.map(t => `<dt>${esc(t.term)}</dt>
+      <dd>${esc(t.gloss)} <span class="cite">${esc(cite(t.source))}</span></dd>`).join('')}</dl></section>
+  <section class="card"><p class="eyebrow">Check yourself</p>
+    <p class="muted">${data.questions.length} questions, in a random order. Every answer explains
+      why the others are wrong, and cites where to read more.</p>
+    <p><button type="button" class="action" data-act="quiz-start" data-week="${n}">Start</button></p></section>
+  ${data.applicationPrompts?.length ? `<section class="card"><p class="eyebrow">Working on the application activity</p>
+    ${data.applicationPrompts.map(a => `<div class="prompt">
+      <p class="muted small">Checklist</p><ul class="tight">${a.checklist.map(c => `<li>${esc(c)}</li>`).join('')}</ul>
+      <p class="muted small">Before you submit, ask yourself</p><ul class="tight">${a.selfCheck.map(c => `<li>${esc(c)}</li>`).join('')}</ul>
+      <p class="policy">${esc(a.aiPolicy)}</p></div>`).join('')}</section>` : ''}`;
+}
+
+const cite = src => src ? `${course.readingMap[src.book]?.title ?? src.book} §${src.section}` : '';
+
+function viewQuiz(data) {
+  const q = data.questions[quiz.order[quiz.i]];
+  const total = quiz.order.length;
+  if (quiz.i >= total) {
+    const right = quiz.results.filter(Boolean).length;
+    return `<section class="card card-lead"><p class="eyebrow">Done</p>
+      <p class="big">${right} of ${total}</p>
+      <p class="muted">${right === total ? 'All correct.' : 'Worth rereading the ones you missed — each is cited above.'}</p>
+      <p><button type="button" class="action" data-act="quiz-start" data-week="${quiz.week}">Go again</button>
+         <button type="button" class="action" data-act="quiz-quit">Back to the week</button></p></section>`;
+  }
+  return `<section class="card">
+    <p class="eyebrow">Question ${quiz.i + 1} of ${total}</p>
+    <p class="stem">${esc(q.prompt)}</p>
+    <div class="opts">${q.options.map((o, i) => {
+      const picked = quiz.picked === i;
+      const cls = quiz.revealed ? (i === q.answer ? 'opt opt-right' : picked ? 'opt opt-wrong' : 'opt') : 'opt';
+      return `<button type="button" class="${cls}" data-act="quiz-pick" data-i="${i}"
+        ${quiz.revealed ? 'disabled' : ''}>${esc(o)}</button>`;
+    }).join('')}</div>
+    ${quiz.revealed ? `<div class="feedback ${quiz.picked === q.answer ? 'right' : 'wrong'}">
+      <p>${esc(q.why)}</p>
+      ${quiz.picked !== q.answer && q.distractorNotes?.[quiz.picked]
+        ? `<p class="muted small">Why not that one — ${esc(q.distractorNotes[quiz.picked])}</p>` : ''}
+      <p class="cite">${esc(cite(q.source))}</p>
+      <p><button type="button" class="action" data-act="quiz-next">
+        ${quiz.i + 1 >= total ? 'Finish' : 'Next'}</button></p></div>` : ''}
+  </section>`;
+}
+
+/* ---------- diary ----------------------------------------------------------- */
+
+function viewDiary() {
+  const p = diaryProgress(state.diary);
+  const part1 = course.assignments.find(a => a.id === 'diary-part1');
+  const part2 = course.assignments.find(a => a.id === 'diary-part2');
+
+  return `
+  <section class="card card-lead">
+    <p class="eyebrow">Ten-day food diary · ${part1.possible} pts, due ${dateLabel(part1.due)}</p>
+    <p class="big">${p.counted} of ${REQUIRED_DAYS} days</p>
+    <div class="bar"><span data-fill="${(Math.min(p.counted, REQUIRED_DAYS) / REQUIRED_DAYS) * 100}"></span></div>
+    <p class="muted">${p.points} of ${p.maxPoints} points at ${'2.5'} per complete day.
+      ${p.remaining ? `${p.remaining} to go.` : 'All ten are logged.'}</p>
+    ${p.warnings.map(w => `<p class="note warn">${esc(w)}</p>`).join('')}
+  </section>
+
+  <section class="card card-warn">
+    <p class="eyebrow">What actually gets submitted</p>
+    <p>${esc(SUBMISSION.what)} ${esc(SUBMISSION.where)}</p>
+    <p class="note">${esc(SUBMISSION.warning)}</p>
+    <p class="muted small">Two ways to collect it: ${SUBMISSION.alternatives.map(esc).join(' ')}</p>
+    <p class="muted small">This app does not calculate nutrients — NutriCalc does, and it is what she
+      grades. What this page is for is getting each entry specific enough to type in, and keeping count
+      of the ten days.</p>
+  </section>
+
+  <section class="card"><p class="eyebrow">Add an entry</p>
+    <form class="entry" data-act="entry-form">
+      <label>Day <input type="date" name="date" value="${today()}" min="${course.term.termStart}" max="${course.term.termEnd}" required></label>
+      <label>Food or drink <input name="food" placeholder="chicken thigh, skin off" required></label>
+      <label>Portion <input name="portion" placeholder="4 oz" required></label>
+      <label>How it was prepared <input name="prep" placeholder="grilled" required></label>
+      <label class="check"><input type="checkbox" name="mixed"> Mixed dish (several ingredients)</label>
+      <label class="check"><input type="checkbox" name="nonroutine"> This is a non-routine day</label>
+      <button type="submit" class="action">Add</button>
+    </form>
+    <p class="muted small">Nothing here leaves your browser.</p>
+  </section>
+
+  <section class="card"><p class="eyebrow">Her collection rules</p>
+    <ul class="tight">${TIPS.map(t => `<li>${esc(t)}</li>`).join('')}</ul></section>
+
+  ${p.days.length ? p.days.map(d => {
+    const day = state.diary[d.date];
+    const entries = Object.entries(day.entries ?? {});
+    return `<section class="card ${d.counts ? 'day-ok' : ''}">
+      <p class="eyebrow">${dateLabel(d.date)}
+        ${d.counts ? '<span class="mark mark-done">counts</span>'
+                   : '<span class="mark mark-inferred">not complete</span>'}
+        ${d.routine ? '' : '<span class="mark mark-extended">non-routine</span>'}</p>
+      <ul class="entries">${entries.map(([id, e]) => {
+        const probs = checkEntry(e);
+        return `<li>
+          <span>${esc(e.food)} — <strong>${esc(e.portion)}</strong>, ${esc(e.prep)}</span>
+          <button type="button" class="link" data-act="entry-del" data-date="${d.date}" data-entry="${esc(id)}">remove</button>
+          ${probs.map(x => `<span class="problem ${x.severity === 'warn' ? 'problem-warn' : ''}">${esc(x.msg)}</span>`).join('')}
+        </li>`;
+      }).join('')}</ul>
+    </section>`;
+  }).join('') : '<section class="card"><p class="muted">No days logged yet.</p></section>'}
+
+  <section class="card"><p class="eyebrow">Part two · ${part2.possible} pts, due ${dateLabel(part2.due)}</p>
+    <p class="muted">${esc(part2.title)}. Once the ten days are in NutriCalc, the analysis is written
+      from its reports. This app does not write any part of it.</p></section>`;
+}
+
 const VIEWS = {
   today: viewToday, weeks: viewWeeks, assignments: viewAssignments,
-  grades: viewGrades, course: viewCourse,
-  study: () => viewStub('Study', 'Reading cards, objectives and self-quizzing for weeks 1–3 land here next.'),
-  diary: () => viewStub('Food diary', 'The ten-day diary helper lands here next.'),
+  grades: viewGrades, course: viewCourse, study: viewStudy, diary: viewDiary,
 };
 
 /* ---------- shell ----------------------------------------------------------- */
@@ -348,6 +506,17 @@ function render() {
     <p class="muted small">Saved work lives under <code>${STATE_KEY}</code> in this browser.</p>
   </footer>`;
   applyAppearance();
+  paintBars();
+}
+
+// The Content-Security-Policy is style-src 'self', which silently drops inline
+// style="" attributes — the attribute lands in the HTML and is never applied, so a
+// zero-width progress bar rendered full. Setting the property through CSSOM is not
+// covered by style-src, so widths are applied here instead. Nothing in this app may
+// emit an inline style attribute; tests/content.test.mjs enforces that.
+function paintBars() {
+  for (const el of document.querySelectorAll('[data-fill]'))
+    el.style.width = `${Math.max(0, Math.min(100, Number(el.dataset.fill) || 0))}%`;
 }
 
 function applyAppearance() {
@@ -386,6 +555,20 @@ function wire() {
     if (kind === 'coupon')  return spendCoupon(id);
     if (kind === 'backup')  return exportBackup();
     if (kind === 'restore') return importBackup();
+    if (kind === 'study-week') { studyWeek = Number(act.dataset.week); quiz = null;
+      return loadWeek(studyWeek).then(render); }
+    if (kind === 'quiz-start')  return startQuiz(Number(act.dataset.week));
+    if (kind === 'quiz-pick')   return pickAnswer(Number(act.dataset.i));
+    if (kind === 'quiz-next')   return nextQuestion();
+    if (kind === 'quiz-quit')   { quiz = null; return render(); }
+    if (kind === 'entry-del')   return removeEntry(act.dataset.date, act.dataset.entry);
+  });
+
+  document.addEventListener('submit', ev => {
+    const form = ev.target.closest('[data-act="entry-form"]');
+    if (!form) return;
+    ev.preventDefault();
+    addEntry(new FormData(form));
   });
 
   document.addEventListener('change', ev => {
@@ -413,6 +596,76 @@ function wire() {
     ev.preventDefault(); ev.returnValue = 'A save is still in flight.';
   });
   window.matchMedia?.('(prefers-color-scheme: light)').addEventListener?.('change', applyAppearance);
+}
+
+/* ---------- study + diary actions ------------------------------------------- */
+
+function startQuiz(n) {
+  const data = weekContent.get(n);
+  if (!data?.questions?.length) return;
+  const order = data.questions.map((_, i) => i);
+  for (let i = order.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [order[i], order[j]] = [order[j], order[i]];
+  }
+  studyWeek = n;
+  quiz = { week: n, order, i: 0, picked: null, revealed: false, results: [] };
+  render();
+}
+
+function pickAnswer(i) {
+  if (!quiz || quiz.revealed) return;
+  const data = weekContent.get(quiz.week);
+  const q = data.questions[quiz.order[quiz.i]];
+  quiz.picked = i;
+  quiz.revealed = true;
+  quiz.results[quiz.i] = i === q.answer;
+  // Attempts are recorded so the week view can show what has been practised. They
+  // are the student's own work and never leave the browser.
+  save(s2 => ({ ...s2, attempts: [...s2.attempts.filter(a => a.id !== q.id),
+    { id: q.id, week: quiz.week, correct: i === q.answer, at: today() }] }));
+}
+
+function nextQuestion() {
+  if (!quiz) return;
+  quiz.i += 1; quiz.picked = null; quiz.revealed = false;
+  render();
+}
+
+function addEntry(fd) {
+  const date = fd.get('date');
+  if (!date) return;
+  const id = `e${Date.now().toString(36)}`;
+  const entry = {
+    food: (fd.get('food') ?? '').trim(),
+    portion: (fd.get('portion') ?? '').trim(),
+    prep: (fd.get('prep') ?? '').trim(),
+    mixed: fd.get('mixed') === 'on',
+  };
+  dirty = false;
+  save(s2 => {
+    const day = s2.diary[date] ?? { entries: {} };
+    return { ...s2, diary: { ...s2.diary, [date]: {
+      ...day,
+      routine: fd.get('nonroutine') === 'on' ? false : (day.routine ?? true),
+      entries: { ...day.entries, [id]: entry },
+    } } };
+  });
+}
+
+function removeEntry(date, id) {
+  save(s2 => {
+    const day = s2.diary[date];
+    if (!day) return s2;
+    const entries = { ...day.entries };
+    delete entries[id];
+    if (!Object.keys(entries).length) {
+      const diary = { ...s2.diary };
+      delete diary[date];
+      return { ...s2, diary };
+    }
+    return { ...s2, diary: { ...s2.diary, [date]: { ...day, entries } } };
+  });
 }
 
 function spendCoupon(id) {
@@ -462,6 +715,8 @@ export async function start() {
   course = await (await fetch('./course.json')).json();
   boot();
   wire();
+  studyWeek = currentWeek().n;
+  await loadWeek(studyWeek);
   go(location.hash.slice(1) || DEFAULT_ROUTE);
 }
 

@@ -1,0 +1,392 @@
+{
+ "schemaVersion": 1,
+ "week": 1,
+ "version": "2026.09.25.1",
+ "objectives": [
+  {
+   "id": "w01-o1",
+   "text": "Distinguish nutrition, health and disease, and say why health is more than the absence of disease.",
+   "source": {
+    "book": "aitn",
+    "section": "1.1"
+   }
+  },
+  {
+   "id": "w01-o2",
+   "text": "Name the six classes of nutrients and say which three yield energy, and how much.",
+   "source": {
+    "book": "aitn",
+    "section": "1.2"
+   }
+  },
+  {
+   "id": "w01-o3",
+   "text": "Explain what nutrient density measures and why it is not the same as calorie count.",
+   "source": {
+    "book": "aitn",
+    "section": "1.2"
+   }
+  },
+  {
+   "id": "w01-o4",
+   "text": "Explain why an observational study cannot establish that a food causes an outcome.",
+   "source": {
+    "book": "aitn",
+    "section": "1.3"
+   }
+  },
+  {
+   "id": "w01-o5",
+   "text": "Describe how genetics, environment, life stage and lifestyle each act on health status.",
+   "source": {
+    "book": "aitn",
+    "section": "1.4"
+   }
+  }
+ ],
+ "terms": [
+  {
+   "term": "Nutrient",
+   "gloss": "A substance in food the body uses to grow, maintain itself and run its processes.",
+   "source": {
+    "book": "aitn",
+    "section": "1.2"
+   }
+  },
+  {
+   "term": "Essential nutrient",
+   "gloss": "One the body cannot make in sufficient quantity, so it has to come from the diet.",
+   "source": {
+    "book": "aitn",
+    "section": "1.2"
+   }
+  },
+  {
+   "term": "Macronutrient",
+   "gloss": "A nutrient needed in large amounts: carbohydrate, lipid, protein and water.",
+   "source": {
+    "book": "aitn",
+    "section": "1.2"
+   }
+  },
+  {
+   "term": "Micronutrient",
+   "gloss": "A nutrient needed in small amounts: vitamins and minerals. Small amount, not small importance.",
+   "source": {
+    "book": "aitn",
+    "section": "1.2"
+   }
+  },
+  {
+   "term": "Nutrient density",
+   "gloss": "Essential nutrients per unit of energy. A food can be calorie-dense and nutrient-poor at the same time.",
+   "source": {
+    "book": "aitn",
+    "section": "1.2"
+   }
+  },
+  {
+   "term": "Epidemiological study",
+   "gloss": "Observes populations as they are. It can show association; it cannot by itself show cause.",
+   "source": {
+    "book": "aitn",
+    "section": "1.3"
+   }
+  }
+ ],
+ "questions": [
+  {
+   "id": "w01-q1",
+   "objective": "w01-o2",
+   "type": "mc",
+   "prompt": "How many of the six classes of nutrients yield energy?",
+   "options": [
+    "Three — carbohydrate, lipid and protein",
+    "Four — carbohydrate, lipid, protein and water",
+    "Two — carbohydrate and lipid",
+    "Six — all of them"
+   ],
+   "answer": 0,
+   "why": "Carbohydrate, lipid and protein yield energy. Water is a macronutrient because it is needed in large amounts, but it yields none; vitamins and minerals yield none either.",
+   "distractorNotes": [
+    null,
+    "Water is needed in large amounts but supplies no energy.",
+    "Protein yields energy too, at 4 kcal per gram.",
+    "Vitamins, minerals and water supply no energy."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "1.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w01-q2",
+   "objective": "w01-o2",
+   "type": "mc",
+   "prompt": "Which set of energy values per gram is right?",
+   "options": [
+    "Carbohydrate 4, protein 4, lipid 9",
+    "Carbohydrate 9, protein 4, lipid 4",
+    "Carbohydrate 4, protein 9, lipid 4",
+    "Carbohydrate 7, protein 7, lipid 7"
+   ],
+   "answer": 0,
+   "why": "Fat is the most energy-dense at 9 kcal per gram, more than twice carbohydrate or protein at 4.",
+   "distractorNotes": [
+    null,
+    "Reverses fat and carbohydrate.",
+    "Puts the high value on protein instead of fat.",
+    "Alcohol is 7 kcal per gram, but it is not one of the six nutrient classes."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "1.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w01-q3",
+   "objective": "w01-o3",
+   "type": "mc",
+   "prompt": "A food is high in calories but supplies few vitamins and minerals. How is that described?",
+   "options": [
+    "Low nutrient density",
+    "High nutrient density",
+    "Low energy density",
+    "High fibre density"
+   ],
+   "answer": 0,
+   "why": "Nutrient density is essential nutrients relative to energy. Plenty of energy with few nutrients is a low ratio.",
+   "distractorNotes": [
+    null,
+    "That would be many nutrients for few calories — the opposite.",
+    "Describes a person's status, not a property of the food.",
+    "The food is energy-rich, not energy-poor."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "1.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w01-q4",
+   "objective": "w01-o4",
+   "type": "mc",
+   "prompt": "A study finds people who eat more yogurt have lower rates of type 2 diabetes. What does that design support?",
+   "options": [
+    "An association between yogurt intake and diabetes rates",
+    "A mechanism by which yogurt lowers fasting blood glucose",
+    "Evidence that yogurt prevents the onset of type 2 diabetes",
+    "Evidence that diabetes impairs the digestion of dairy sugar"
+   ],
+   "answer": 0,
+   "why": "Observational data show association. Cause needs a design that controls what people consume and rules out confounders — overall diet quality, activity, income.",
+   "distractorNotes": [
+    null,
+    "A mechanism claim; this design measured neither blood glucose nor an intervention.",
+    "A causal-prevention claim, which observation alone cannot support.",
+    "Reverses the direction and adds digestion, which was not measured."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "1.3",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w01-q5",
+   "objective": "w01-o4",
+   "type": "mc",
+   "prompt": "Which design is best placed to show that a nutrient causes an effect?",
+   "options": [
+    "A randomized clinical intervention trial",
+    "A much larger epidemiological cohort study",
+    "A population survey with a high response rate",
+    "A detailed case report on a single patient"
+   ],
+   "answer": 0,
+   "why": "Randomizing who receives the intervention is what separates the nutrient from everything else that travels with it in real diets.",
+   "distractorNotes": [
+    null,
+    "Scale improves precision, not the ability to infer cause.",
+    "Still observational, however well sampled.",
+    "A single case can raise a question; it cannot settle one."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "1.3",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w01-q6",
+   "objective": "w01-o1",
+   "type": "mc",
+   "prompt": "The WHO definition of health is best summarised as:",
+   "options": [
+    "Complete physical, mental and social health",
+    "Simply the absence of diagnosed disease",
+    "Normal results across a standard blood panel",
+    "Capacity to do a day's work without pain"
+   ],
+   "answer": 0,
+   "why": "Health is defined positively and across three dimensions. Disease affects all three, which is why the definition is not simply its negation.",
+   "distractorNotes": [
+    null,
+    "This is the 'merely the absence of disease' phrasing the definition rejects.",
+    "Too narrow, and physical only.",
+    "Functional capacity is part of it, not the whole of it."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "1.1",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w01-q7",
+   "objective": "w01-o5",
+   "type": "mc",
+   "prompt": "Nutrients can change the way genes are expressed. What follows?",
+   "options": [
+    "Genetic risk is modifiable rather than fixed at birth",
+    "Genetic inheritance has little bearing on disease risk",
+    "Dietary change can rewrite the underlying DNA sequence",
+    "Only conditions that are inherited will respond to diet"
+   ],
+   "answer": 0,
+   "why": "Traits emerge from genes and environment together, and diet is part of the environment acting on expression.",
+   "distractorNotes": [
+    null,
+    "Overcorrects: genes do determine traits, including risk.",
+    "Expression changes; the underlying sequence does not.",
+    "Diet bears on risk broadly, not only inherited conditions."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "1.4",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w01-q8",
+   "objective": "w01-o5",
+   "type": "mc",
+   "prompt": "Which is a socioeconomic determinant of food choice rather than a biological one?",
+   "options": [
+    "What food is affordable and reachable nearby",
+    "Life stage, such as pregnancy or adolescence",
+    "An inherited deficiency of the lactase enzyme",
+    "Resting metabolic rate and body composition"
+   ],
+   "answer": 0,
+   "why": "Cost and access are environmental determinants, and they constrain choice regardless of what someone knows about nutrition.",
+   "distractorNotes": [
+    null,
+    "Life stage is biological, though it does change needs.",
+    "An inherited trait.",
+    "A physiological measure."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "1.4",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w01-q9",
+   "objective": "w01-o1",
+   "type": "mc",
+   "prompt": "Why does good nutrition count as health promotion rather than only disease prevention?",
+   "options": [
+    "It builds well-being, not only avoidance of illness",
+    "Promotion and prevention describe the same activity",
+    "It removes the need for routine medical care",
+    "Its value only begins once disease appears"
+   ],
+   "answer": 0,
+   "why": "Promotion works toward the positive state the definition of health describes; prevention works against a specific outcome. Nutrition does both.",
+   "distractorNotes": [
+    null,
+    "They are related but distinct ideas.",
+    "It reduces risk; it does not replace care.",
+    "Backwards — its value is largely before disease."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "1.1",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w01-q10",
+   "objective": "w01-o3",
+   "type": "mc",
+   "prompt": "Two of the six nutrient classes are needed in smaller amounts. Which?",
+   "options": [
+    "Vitamins and minerals",
+    "Protein and water",
+    "Carbohydrate and lipid",
+    "Lipid and minerals"
+   ],
+   "answer": 0,
+   "why": "Vitamins and minerals are micronutrients — needed in small amounts, essential all the same.",
+   "distractorNotes": [
+    null,
+    "Both are macronutrients.",
+    "Both are macronutrients.",
+    "Lipid is a macronutrient."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "1.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  }
+ ],
+ "applicationPrompts": [
+  {
+   "id": "w01-a1",
+   "forAssignment": "w01-energy-density",
+   "checklist": [
+    "Name the two foods and give kcal per 100 g for each.",
+    "Say which is more energy dense and why, in terms of water and fat content.",
+    "Say what that means for how full you feel at equal volume.",
+    "Cite the section you used."
+   ],
+   "selfCheck": [
+    "Did I define energy density before using the phrase?",
+    "Did I give a number rather than 'more' or 'less'?",
+    "Is my comparison at equal weight or equal volume, and did I say which?"
+   ],
+   "aiPolicy": "These are questions for you to answer. This app does not write any part of a submission."
+  },
+  {
+   "id": "w01-a2",
+   "forAssignment": "w01-calories",
+   "checklist": [
+    "List grams of carbohydrate, protein and fat.",
+    "Multiply by 4, 4 and 9 respectively.",
+    "Add them and compare with the label's stated calories.",
+    "If the numbers differ, say why — rounding, fibre, or alcohol."
+   ],
+   "selfCheck": [
+    "Did I use 9 for fat, not 4?",
+    "Does my total land within a few kcal of the label?"
+   ],
+   "aiPolicy": "These are questions for you to answer. This app does not write any part of a submission."
+  }
+ ]
+}

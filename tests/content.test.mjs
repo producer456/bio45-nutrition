@@ -177,3 +177,27 @@ test('the course carries its licence and permission posture',()=>{
   assert.match(course.policyStatus,/Unofficial/i);
   assert.ok(course.term.source&&course.term.sourceDate);
 });
+
+test('no inline style attributes: the CSP drops them silently',()=>{
+  // style-src 'self' means a style="" attribute is parsed into the DOM and never
+  // applied. That failed silently once already — a 0% progress bar rendered full.
+  const hits=[];
+  for(const f of FILES.filter(f=>/\.(js|mjs|html)$/.test(f))){
+    const rel=relative(ROOT,f);
+    if(rel.startsWith('tests/')) continue;
+    const src=/\.(js|mjs)$/.test(f)?stripComments(readFileSync(f,'utf8')):readFileSync(f,'utf8');
+    for(const line of src.split('\n'))
+      if(/\bstyle="/.test(line)) hits.push(`${rel}: ${line.trim().slice(0,80)}`);
+  }
+  assert.deepEqual(hits,[],'set styles through element.style instead, which CSP allows');
+});
+
+test('the CSP itself is present and strict',()=>{
+  const html=readFileSync(join(ROOT,'index.html'),'utf8');
+  const csp=html.match(/Content-Security-Policy"[^>]*content="([^"]+)"/)?.[1];
+  assert.ok(csp,'index.html must carry a CSP');
+  for(const d of ["default-src 'self'","style-src 'self'","script-src 'self'","object-src 'none'"])
+    assert.ok(csp.includes(d),`CSP must include ${d}`);
+  assert.equal(/unsafe-inline|unsafe-eval/.test(csp),false,'no unsafe escapes');
+  assert.match(html,/name="referrer" content="no-referrer"/);
+});

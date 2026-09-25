@@ -1,0 +1,376 @@
+{
+ "schemaVersion": 1,
+ "week": 2,
+ "version": "2026.09.25.1",
+ "objectives": [
+  {
+   "id": "w02-o1",
+   "text": "Explain balance, moderation and variety as working principles rather than slogans.",
+   "source": {
+    "book": "aitn",
+    "section": "2.2"
+   }
+  },
+  {
+   "id": "w02-o2",
+   "text": "Say what the Dietary Guidelines are for and who they are written for.",
+   "source": {
+    "book": "aitn",
+    "section": "2.3"
+   }
+  },
+  {
+   "id": "w02-o3",
+   "text": "Distinguish EAR, RDA, AI and UL, and say which one an individual should aim at.",
+   "source": {
+    "book": "aitn",
+    "section": "2.6"
+   }
+  },
+  {
+   "id": "w02-o4",
+   "text": "Read a Nutrition Facts panel: serving size, %DV, and what 5% and 20% mean.",
+   "source": {
+    "book": "aitn",
+    "section": "2.7"
+   }
+  },
+  {
+   "id": "w02-o5",
+   "text": "Judge a nutrition claim in the media against the evidence behind it.",
+   "source": {
+    "book": "aitn",
+    "section": "2.9"
+   }
+  }
+ ],
+ "terms": [
+  {
+   "term": "RDA",
+   "gloss": "Recommended Dietary Allowance — meets the needs of about 97–98% of healthy people. This is the individual target.",
+   "source": {
+    "book": "aitn",
+    "section": "2.6"
+   }
+  },
+  {
+   "term": "EAR",
+   "gloss": "Estimated Average Requirement — meets the needs of half a group. A research and planning figure, not a personal goal.",
+   "source": {
+    "book": "aitn",
+    "section": "2.6"
+   }
+  },
+  {
+   "term": "AI",
+   "gloss": "Adequate Intake — used when the evidence is too thin to set an RDA.",
+   "source": {
+    "book": "aitn",
+    "section": "2.6"
+   }
+  },
+  {
+   "term": "UL",
+   "gloss": "Tolerable Upper Intake Level — the most you can take routinely without expecting harm. A ceiling, not a goal.",
+   "source": {
+    "book": "aitn",
+    "section": "2.6"
+   }
+  },
+  {
+   "term": "%Daily Value",
+   "gloss": "A label figure based on a 2,000-calorie reference diet. Roughly: 5% or less is a little, 20% or more is a lot.",
+   "source": {
+    "book": "aitn",
+    "section": "2.7"
+   }
+  },
+  {
+   "term": "Serving size",
+   "gloss": "The amount the label's numbers describe. Every value on the panel is per serving, not per package.",
+   "source": {
+    "book": "aitn",
+    "section": "2.7"
+   }
+  }
+ ],
+ "questions": [
+  {
+   "id": "w02-q1",
+   "objective": "w02-o3",
+   "type": "mc",
+   "prompt": "Which Dietary Reference Intake should an individual use as a personal target?",
+   "options": [
+    "The RDA",
+    "The EAR",
+    "The UL",
+    "The AMDR"
+   ],
+   "answer": 0,
+   "why": "The RDA is set to cover nearly all healthy people. The EAR covers only half a group, so aiming at it means a coin-flip chance of falling short.",
+   "distractorNotes": [
+    null,
+    "Meets the needs of 50% of a group — a planning figure, not a personal goal.",
+    "A ceiling to stay under, not a target to reach.",
+    "A range for energy-yielding nutrients, not a single intake target."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "2.6",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w02-q2",
+   "objective": "w02-o3",
+   "type": "mc",
+   "prompt": "What does the Tolerable Upper Intake Level describe?",
+   "options": [
+    "The most you can take routinely without harm",
+    "The intake meeting the needs of most healthy adults",
+    "The point above which a nutrient stops absorbing",
+    "The largest amount the body can store at once"
+   ],
+   "answer": 0,
+   "why": "The UL is a safety ceiling. Sitting between the RDA and the UL is fine; routinely exceeding the UL is where risk begins.",
+   "distractorNotes": [
+    null,
+    "That describes the RDA.",
+    "Absorption often continues past the UL; the concern is toxicity.",
+    "Storage capacity is a different idea entirely."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "2.6",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w02-q3",
+   "objective": "w02-o4",
+   "type": "mc",
+   "prompt": "A label says 20% DV for sodium. Per the label's own rule of thumb, that is:",
+   "options": [
+    "A lot of sodium in one serving",
+    "A little sodium in one serving",
+    "A fifth of the sodium in the pack",
+    "A fifth of your own daily limit"
+   ],
+   "answer": 0,
+   "why": "5% DV or less is a little, 20% or more is a lot. The figure is per serving and against a 2,000-calorie reference, not against your personal limit.",
+   "distractorNotes": [
+    null,
+    "That is the 5%-or-less end of the rule.",
+    "Percent Daily Value is per serving, not a share of the package.",
+    "It is against a 2,000-calorie reference diet, which may not be yours."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "2.7",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w02-q4",
+   "objective": "w02-o4",
+   "type": "mc",
+   "prompt": "A package holds 2.5 servings. You eat the whole thing. The calories you consumed are:",
+   "options": [
+    "Two and a half times the label value",
+    "Exactly what the label figure states",
+    "Half of the figure the label states",
+    "Impossible to work out from a label"
+   ],
+   "answer": 0,
+   "why": "Every number on the panel is per serving. Eating the container means multiplying by the servings it holds — the most common label-reading error there is.",
+   "distractorNotes": [
+    null,
+    "The label figure covers one serving only.",
+    "Multiply, do not divide.",
+    "The servings-per-container line makes it a simple multiplication."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "2.7",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w02-q5",
+   "objective": "w02-o1",
+   "type": "mc",
+   "prompt": "Which best captures 'moderation' as the chapter uses it?",
+   "options": [
+    "Eating any food in a sensible amount",
+    "Removing unhealthy foods from the diet",
+    "Eating the same balanced meals daily",
+    "Eating only at strictly regular times"
+   ],
+   "answer": 0,
+   "why": "Moderation is about amount, not prohibition. Variety and balance are the companion ideas — no single food group carries everything.",
+   "distractorNotes": [
+    null,
+    "Elimination is a different principle, and rarely a sustainable one.",
+    "That is closer to the opposite of variety.",
+    "Timing is not what the term refers to."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "2.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w02-q6",
+   "objective": "w02-o2",
+   "type": "mc",
+   "prompt": "Who are the Dietary Guidelines for Americans primarily written for?",
+   "options": [
+    "Healthy people from age two upward",
+    "People already diagnosed with disease",
+    "Athletes in structured training",
+    "Infants in their first year of life"
+   ],
+   "answer": 0,
+   "why": "They are population-level guidance for generally healthy people. Clinical diets for existing disease are a separate matter.",
+   "distractorNotes": [
+    null,
+    "Therapeutic diets fall outside general population guidance.",
+    "Athletes have specific needs that sit on top of this.",
+    "The earliest years are handled separately."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "2.3",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w02-q7",
+   "objective": "w02-o5",
+   "type": "mc",
+   "prompt": "An advert cites 'a clinical study' with no author, size or comparison group. The sound response is:",
+   "options": [
+    "Treat the claim as unsupported for now",
+    "Accept it, since a study was cited",
+    "Reject it — supplement claims are false",
+    "Try it and judge by how you feel"
+   ],
+   "answer": 0,
+   "why": "A citation you cannot check is not evidence. Who ran it, how many took part, and what it was compared against are the questions that decide what it is worth.",
+   "distractorNotes": [
+    null,
+    "Naming a study is not the same as producing one.",
+    "Overcorrection — some claims do hold up.",
+    "Personal response cannot separate effect from expectation."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "2.9",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w02-q8",
+   "objective": "w02-o3",
+   "type": "mc",
+   "prompt": "Why is an AI set for some nutrients instead of an RDA?",
+   "options": [
+    "The evidence is too thin for an RDA",
+    "It is needed only in very small amounts",
+    "It has no known toxic ceiling as yet",
+    "The body can synthesise enough itself"
+   ],
+   "answer": 0,
+   "why": "An Adequate Intake is a best estimate used where the research does not yet support calculating an RDA. It is about evidence, not the nutrient's size or role.",
+   "distractorNotes": [
+    null,
+    "Trace nutrients can still have an RDA.",
+    "Having no UL is a separate matter.",
+    "Nutrients the body makes may not be essential at all."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "2.6",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w02-q9",
+   "objective": "w02-o1",
+   "type": "mc",
+   "prompt": "Why does variety matter even when calorie needs are already met?",
+   "options": [
+    "No one food group has every nutrient",
+    "Because eating one food becomes dull",
+    "Because calories differ between foods",
+    "Because variety slows digestion down"
+   ],
+   "answer": 0,
+   "why": "Different foods carry different nutrient profiles. Meeting energy needs says nothing about whether the six nutrient classes are all covered.",
+   "distractorNotes": [
+    null,
+    "True enough, but not the nutritional reason.",
+    "A calorie is a calorie; the nutrients alongside it differ.",
+    "Not the principle at work here."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "2.2",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  },
+  {
+   "id": "w02-q10",
+   "objective": "w02-o4",
+   "type": "mc",
+   "prompt": "On a Nutrition Facts panel, which figure should you read first?",
+   "options": [
+    "The serving size",
+    "The calorie count",
+    "The total fat line",
+    "The ingredient list"
+   ],
+   "answer": 0,
+   "why": "Serving size sets the scale for everything below it. Reading calories before checking the serving is how a 200-calorie snack turns out to be 500.",
+   "distractorNotes": [
+    null,
+    "Meaningless until you know what serving it describes.",
+    "Same problem — it is a per-serving figure.",
+    "Useful, but it is not part of the panel's numbers."
+   ],
+   "source": {
+    "book": "aitn",
+    "section": "2.7",
+    "license": "CC BY-NC-SA 3.0"
+   },
+   "authored": true
+  }
+ ],
+ "applicationPrompts": [
+  {
+   "id": "w02-a1",
+   "forAssignment": null,
+   "checklist": [
+    "Pick a packaged food you actually ate this week.",
+    "Write down the serving size and how many servings you really had.",
+    "Multiply the calories, sodium and added sugar by that number.",
+    "Name one line on the panel that surprised you, and say why."
+   ],
+   "selfCheck": [
+    "Did I multiply by servings actually eaten, not servings on the label?",
+    "Did I use the 5% / 20% rule rather than eyeballing it?"
+   ],
+   "aiPolicy": "These are questions for you to answer. This app does not write any part of a submission."
+  }
+ ]
+}

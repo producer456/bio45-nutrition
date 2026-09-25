@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Nutrition study aid">
+  <rect width="64" height="64" rx="12" fill="#191c1f"/>
+  <path d="M32 14c9 0 15 6 15 15 0 11-8 21-15 21s-15-10-15-21c0-9 6-15 15-15z" fill="none" stroke="#7fc7a4" stroke-width="3"/>
+  <path d="M32 20v28" stroke="#7fc7a4" stroke-width="2.5"/>
+  <path d="M32 30l7-5M32 38l-7-5" stroke="#7fc7a4" stroke-width="2.5"/>
+</svg>

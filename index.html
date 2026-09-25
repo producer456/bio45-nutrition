@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<!-- Same-origin only. This page makes no third-party requests: no fonts, no
+     analytics, no images from elsewhere. The Content-Security-Policy and the
+     referrer rule are authored in here rather than applied by a build step,
+     because there is no build step to apply them. -->
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; frame-ancestors 'none'">
+<meta name="referrer" content="no-referrer">
+<title>BIOL 45.01W · Nutrition</title>
+<meta name="description" content="Unofficial student study and coursework console for BIOL 45.01W, Introduction to Human Nutrition. Weekly reading map, self-quizzing, coursework tracking and grade arithmetic. Saved work stays in the browser.">
+<meta name="theme-color" content="#111315">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="45W Nutrition">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./icon.svg">
+
+<!-- Order is load-bearing. base defines the layout, theme the tokens, appearance
+     (the iOS palette) overrides those tokens and must come after theme, and
+     learning adds the reading-mode accent on top. -->
+<link rel="stylesheet" href="./assets/base.css?v=1">
+<link rel="stylesheet" href="./assets/theme.css?v=1">
+<link rel="stylesheet" href="./assets/polish.css?v=1">
+<link rel="stylesheet" href="./assets/study.css?v=1">
+<link rel="stylesheet" href="./assets/reading.css?v=1">
+<link rel="stylesheet" href="./assets/appearance.css?v=1">
+<link rel="stylesheet" href="./assets/learning.css?v=1">
+<link rel="stylesheet" href="./assets/shell.css?v=2">
+</head>
+<body>
+<div id="app">
+  <noscript><p style="padding:1rem">This study aid needs JavaScript. Everything it
+    stores stays in your browser; nothing is sent anywhere.</p></noscript>
+</div>
+<script type="module" src="./assets/course-app.js?v=2"></script>
+</body>
+</html>

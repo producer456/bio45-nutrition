@@ -1,0 +1,11 @@
+{
+  "name": "bio45-nutrition",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Study and coursework console for BIOL 45.01W, Introduction to Human Nutrition.",
+  "license": "CC-BY-NC-SA-4.0",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs"
+  }
+}

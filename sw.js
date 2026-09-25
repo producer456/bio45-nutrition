@@ -15,6 +15,7 @@ const BASE = new URL('./', self.location).pathname;
 
 const SHELL = [
   './', './index.html', './course.json', './icon.svg',
+  './manifest.webmanifest?v=1', './icon-180.png', './icon-192.png', './icon-512.png',
   './assets/base.css?v=1', './assets/theme.css?v=1', './assets/polish.css?v=1',
   './assets/study.css?v=1', './assets/reading.css?v=1', './assets/appearance.css?v=1',
   './assets/learning.css?v=1', './assets/shell.css?v=4',

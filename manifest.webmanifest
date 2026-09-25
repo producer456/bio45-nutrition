@@ -1,0 +1,17 @@
+{
+  "name": "BIOL 45.01W Nutrition",
+  "short_name": "Nutrition 45",
+  "description": "Unofficial student study and coursework console for BIOL 45.01W, Introduction to Human Nutrition.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#111315",
+  "theme_color": "#111315",
+  "icons": [
+    { "src": "./icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

@@ -43,6 +43,24 @@ the day *before* the inferred Week 11 deadline of 2026-12-06. Two Week 1 items a
 marked "NO LATE COUPONS" in Canvas. The app refuses a coupon in all three cases and
 says why.
 
+## Where it lives
+
+| | |
+|---|---|
+| **Public website** | <https://producer456.github.io/bio45-nutrition/> — no login, nothing to install, this is the one to share |
+| **Tailnet copy** | <https://davids-macbook-pro.tailb97fc.ts.net/bio45-nutrition/> — on the OTA hub, Tailscale required |
+
+Both install to a home screen: open in **Safari** → Share → **Add to Home Screen**.
+It then runs full screen with its own icon and works offline after the first load.
+
+> ⚠ **The two copies keep separate saved work.** They are different origins, so
+> localStorage does not travel between them. Pick one as yours, or move between them
+> with Export/Restore under **Course**.
+
+Deploying: `git push` publishes the website; `scripts/deploy-ota.sh` publishes the
+tailnet copy. The OTA card is web-only — no IPA, no signing, so it needs neither the
+Mac's keychain nor a GUI session.
+
 ## Running it
 
 ```sh

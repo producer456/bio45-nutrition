@@ -1,7 +1,15 @@
 # Handoff
 
-**Updated 2026-09-25.** Working tree clean, 85 tests green, nothing published yet.
-All 11 weeks are now written out.
+**Updated 2026-09-25.** Working tree clean, 85 tests green. **Published to both
+targets.** All 11 weeks written out.
+
+| | |
+|---|---|
+| Public website | <https://producer456.github.io/bio45-nutrition/> |
+| Tailnet copy | <https://davids-macbook-pro.tailb97fc.ts.net/bio45-nutrition/> |
+| Repo | `producer456/bio45-nutrition` (public) |
+
+Redeploy: `git push` for the website, `scripts/deploy-ota.sh` for the tailnet copy.
 
 ```sh
 cd ~/bio45-nutrition
@@ -27,20 +35,13 @@ third-party requests. State persists and survives reload under
 
 ## The immediate next step
 
-**Nothing has been pushed.** The plan calls for a new *public* repo
-`producer456/bio45-nutrition` on GitHub Pages, but publishing is outward-facing and
-was left for you to confirm. When you want it:
+Nothing is blocked. Both copies are live and verified.
 
-```sh
-gh repo create producer456/bio45-nutrition --public --source=. --remote=origin --push
-# then: Settings → Pages → Deploy from a branch → main / (root)
-```
-
-Two things to check before you do:
-1. Re-read `SHARING.md` and confirm it states the permission accurately.
-2. Once Pages is live, browse it **read-only**. Never write-test against
-   `producer456.github.io` — several study sites share that origin and one
-   localStorage, and a fuzz run there has destroyed real saved work before.
+⚠ **Never write-test against `producer456.github.io`.** That origin already carries
+**15 localStorage keys** belonging to four BIOL 40B sites, the 40C companion and
+lecture-pocket. Ours is a sixteenth, isolated by its `bio45-nutrition-` prefix, and
+the service worker is scoped to `/bio45-nutrition/` with a `b45-` cache prefix — all
+verified live. Browse it read-only; do local work at `http://127.0.0.1:8146/`.
 
 ## Then, in order
 

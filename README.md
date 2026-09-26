@@ -40,6 +40,11 @@ projection.
 - The feed only carries what she has actually posted — at the time of writing,
   Week 1 plus the two diary deadlines. Everything after that is still projected.
 
+The publisher writes to **both** copies: it commits `calendar.json` to this repo for
+the website, and writes the same bytes into the OTA card on the Mac. The tailnet copy
+cannot fetch the public one — its CSP is `connect-src 'self'` — so without that the
+two would silently drift apart.
+
 Install or reinstall with `scripts/install-canvas-publisher.sh`.
 ⚠ It must run as a LaunchAgent, not over ssh: `gh` keeps its token in the login
 keychain, which a plain ssh session cannot read. `gh auth status` will claim the

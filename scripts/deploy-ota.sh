@@ -49,11 +49,11 @@ scp -q "$STAGE/card.tgz" "$HOST:/tmp/$CARD.tgz"
 
 # refresh-ota-hub.sh regenerates index.html wholesale. Never edit it by hand.
 ssh "$HOST" "set -e
-  D=\~/Sites/ios-ota/$CARD
+  D=\"\$HOME/Sites/ios-ota/$CARD\"
   rm -rf \"\$D\" && mkdir -p \"\$D\"
   tar -xzf /tmp/$CARD.tgz -C \"\$D\"
   rm -f /tmp/$CARD.tgz
-  cd \~/Sites && ./refresh-ota-hub.sh >/dev/null 2>&1
+  cd \"\$HOME/Sites\" && ./refresh-ota-hub.sh >/dev/null 2>&1
   echo \"deployed \$(find \"\$D/web\" -type f | wc -l | tr -d ' ') files\""
 
 echo "→ https://davids-macbook-pro.tailb97fc.ts.net/$CARD/   (tailnet only)"

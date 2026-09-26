@@ -133,6 +133,14 @@ def main():
         if current:
             request['sha'] = current['sha']
         api('PUT', request)
+
+        # The tailnet copy on the OTA hub is served straight off this machine and
+        # cannot fetch the public one — its CSP is connect-src 'self'. Without this
+        # it would keep whatever calendar.json was current at the last deploy, so
+        # the two copies would silently drift apart.
+        card = Path.home() / 'Sites/ios-ota/bio45-nutrition/web/calendar.json'
+        if card.parent.is_dir():
+            card.write_bytes(body)
         print('Published %d BIOL 45 calendar items; refresh %s.'
               % (len(items), 'failed; cached dates retained' if error else 'succeeded'))
 

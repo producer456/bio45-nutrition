@@ -134,3 +134,63 @@ test('diary-rules.json is the SINGLE source: diary.js agrees with it exactly',()
       `"${sample}" is listed as vague in diary-rules.json but the linter accepts it`);
   }
 });
+
+import {loadSyncedDiary,mergeSynced} from '../assets/diary.js';
+
+test('a missing synced diary changes nothing — that is the PUBLIC site',()=>{
+  const local={'2026-10-01':{entries:{a:{food:'oats',portion:'1 cup',prep:'boiled'}}}};
+  for(const bad of [null,undefined,{},{version:2,days:{}},{version:1,days:null}]){
+    const r=mergeSynced(local,bad);
+    assert.deepEqual(r.diary,local);
+    assert.deepEqual(r.syncedDates,[]);
+  }
+});
+
+test('the phone’s record wins on a day it covers',()=>{
+  const local={'2026-10-01':{entries:{a:{food:'guess',portion:'1 cup',prep:'boiled'}}}};
+  const synced={version:1,updated:'2026-10-02T00:00:00+00:00',days:{
+    '2026-10-01':{date:'2026-10-01',isRoutine:false,entries:[
+      {id:'p1',food:'chicken thigh',portion:'4 oz',prep:'grilled',isMixed:false,components:[]}]}}};
+  const {diary,syncedDates}=mergeSynced(local,synced);
+  assert.deepEqual(syncedDates,['2026-10-01']);
+  assert.equal(diary['2026-10-01'].fromPhone,true);
+  assert.equal(diary['2026-10-01'].routine,false);
+  assert.equal(Object.values(diary['2026-10-01'].entries)[0].food,'chicken thigh');
+});
+
+test('a browser-only day is never destroyed by a sync',()=>{
+  const local={'2026-10-01':{entries:{a:{food:'oats',portion:'1 cup',prep:'boiled'}}},
+               '2026-10-02':{entries:{b:{food:'rice',portion:'1 cup',prep:'boiled'}}}};
+  const synced={version:1,days:{'2026-10-02':{date:'2026-10-02',isRoutine:true,entries:[
+    {id:'p1',food:'salmon',portion:'5 oz',prep:'baked',isMixed:false,components:[]}]}}};
+  const {diary}=mergeSynced(local,synced);
+  assert.equal(Object.values(diary['2026-10-01'].entries)[0].food,'oats','untouched');
+  assert.equal(Object.values(diary['2026-10-02'].entries)[0].food,'salmon','overridden');
+});
+
+test('synced days count toward the ten and obey the SAME rubric',()=>{
+  const days={};
+  for(let i=1;i<=10;i++){
+    const d=`2026-10-${String(i).padStart(2,'0')}`;
+    days[d]={date:d,isRoutine:i!==3,entries:[
+      {id:`p${i}`,food:'chicken breast',portion:'4 oz',prep:'grilled',isMixed:false,components:[]}]};
+  }
+  const {diary}=mergeSynced({},{version:1,days});
+  const p=diaryProgress(diary);
+  assert.equal(p.counted,10);
+  assert.equal(p.complete,true);
+  assert.equal(p.hasNonRoutineDay,true);
+  // A phone entry missing a preparation method must fail here too.
+  const sloppy=mergeSynced({},{version:1,days:{'2026-11-01':{date:'2026-11-01',isRoutine:true,
+    entries:[{id:'x',food:'pasta',portion:'1 serving',prep:'',isMixed:false,components:[]}]}}});
+  assert.equal(diaryProgress(sloppy.diary).counted,0,'the rubric applies to synced entries too');
+});
+
+test('loadSyncedDiary swallows a 404 rather than breaking the page',async()=>{
+  const original=globalThis.fetch;
+  globalThis.fetch=async()=>({ok:false,status:404});
+  assert.equal(await loadSyncedDiary(),null);
+  globalThis.fetch=async()=>{throw new Error('offline');};
+  assert.equal(await loadSyncedDiary(),null);
+  globalThis.fetch=original;
+});

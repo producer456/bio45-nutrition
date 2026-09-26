@@ -50,8 +50,19 @@ scp -q "$STAGE/card.tgz" "$HOST:/tmp/$CARD.tgz"
 # refresh-ota-hub.sh regenerates index.html wholesale. Never edit it by hand.
 ssh "$HOST" "set -e
   D=\"\$HOME/Sites/ios-ota/$CARD\"
+  # The phone syncs diary.json into the card and the Canvas publisher writes
+  # calendar.json there. Both are produced elsewhere and would be destroyed by the
+  # rm below, so they are carried across a deploy rather than re-shipped.
+  KEEP=\$(mktemp -d)
+  for f in diary.json calendar.json; do
+    [ -f \"\$D/web/\$f\" ] && cp \"\$D/web/\$f\" \"\$KEEP/\$f\"
+  done
   rm -rf \"\$D\" && mkdir -p \"\$D\"
   tar -xzf /tmp/$CARD.tgz -C \"\$D\"
+  for f in diary.json calendar.json; do
+    [ -f \"\$KEEP/\$f\" ] && cp \"\$KEEP/\$f\" \"\$D/web/\$f\"
+  done
+  rm -rf \"\$KEEP\"
   rm -f /tmp/$CARD.tgz
   cd \"\$HOME/Sites\" && ./refresh-ota-hub.sh >/dev/null 2>&1
   echo \"deployed \$(find \"\$D/web\" -type f | wc -l | tr -d ' ') files\""

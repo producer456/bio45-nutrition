@@ -16,7 +16,8 @@ import { escape as esc } from './state-merge.js';
 import { STATE_KEY, blankState, validateState, mergeAssignments, setOverlay,
          spentCoupons, backupName, THEMES } from './state.js';
 import { courseGrade, neededFor, letterFor } from './grading.js';
-import { checkEntry, diaryProgress, TIPS, SUBMISSION, REQUIRED_DAYS } from './diary.js';
+import { checkEntry, diaryProgress, TIPS, SUBMISSION, REQUIRED_DAYS,
+         loadSyncedDiary, mergeSynced } from './diary.js';
 import { loadCalendar, applyCalendar, calendarHealth } from './canvas.js';
 import { courseToday, dueState, couponOffer, couponLedger, agenda, daysBetween } from './deadlines.js';
 
@@ -38,6 +39,7 @@ let route = DEFAULT_ROUTE, dirty = false, unreadable = false, saving = false;
 // Study session: which week is open, and the quiz in progress if there is one.
 let studyWeek = null, weekContent = new Map();
 let calendar = null, calendarExtras = [], calendarApplied = 0;
+let synced = null, syncedDates = [];
 let quiz = null;   // {week, order, i, picked, revealed}
 
 const app = () => document.querySelector('#app');
@@ -478,7 +480,10 @@ function viewQuiz(data) {
 /* ---------- diary ----------------------------------------------------------- */
 
 function viewDiary() {
-  const p = diaryProgress(state.diary);
+  // The phone's record wins on any day it covers: it is logged as the food is
+  // eaten rather than typed from memory afterwards.
+  const { diary, syncedDates: fromPhone } = mergeSynced(state.diary, synced);
+  const p = diaryProgress(diary);
   const part1 = course.assignments.find(a => a.id === 'diary-part1');
   const part2 = course.assignments.find(a => a.id === 'diary-part2');
 
@@ -518,19 +523,28 @@ function viewDiary() {
   <section class="card"><p class="eyebrow">Her collection rules</p>
     <ul class="tight">${TIPS.map(t => `<li>${esc(t)}</li>`).join('')}</ul></section>
 
+  ${synced ? `<section class="card card-due-soon"><p class="eyebrow">Synced from your phone</p>
+    <p class="muted">${fromPhone.length} day${fromPhone.length === 1 ? '' : 's'} came from the
+      Food Diary app on your phone and watch, last sent
+      ${esc(String(synced.updated ?? '').slice(0, 16).replace('T', ' '))}.</p>
+    <p class="muted small">This only appears on the private copy of this site. What you
+      eat is not published.</p></section>` : ''}
+
   ${p.days.length ? p.days.map(d => {
-    const day = state.diary[d.date];
+    const day = diary[d.date];
     const entries = Object.entries(day.entries ?? {});
     return `<section class="card ${d.counts ? 'day-ok' : ''}">
       <p class="eyebrow">${dateLabel(d.date)}
         ${d.counts ? '<span class="mark mark-done">counts</span>'
                    : '<span class="mark mark-inferred">not complete</span>'}
-        ${d.routine ? '' : '<span class="mark mark-extended">non-routine</span>'}</p>
+        ${d.routine ? '' : '<span class="mark mark-extended">non-routine</span>'}
+        ${day.fromPhone ? '<span class="mark mark-canvas">from your phone</span>' : ''}</p>
       <ul class="entries">${entries.map(([id, e]) => {
         const probs = checkEntry(e);
         return `<li>
           <span>${esc(e.food)} — <strong>${esc(e.portion)}</strong>, ${esc(e.prep)}</span>
-          <button type="button" class="link" data-act="entry-del" data-date="${d.date}" data-entry="${esc(id)}">remove</button>
+          ${day.fromPhone ? '' :
+            `<button type="button" class="link" data-act="entry-del" data-date="${d.date}" data-entry="${esc(id)}">remove</button>`}
           ${probs.map(x => `<span class="problem ${x.severity === 'warn' ? 'problem-warn' : ''}">${esc(x.msg)}</span>`).join('')}
         </li>`;
       }).join('')}</ul>
@@ -787,6 +801,8 @@ export async function start() {
   course = await (await fetch('./course.json')).json();
   // Best effort. A calendar that will not load must never take the schedule with it.
   calendar = await loadCalendar();
+  synced = await loadSyncedDiary();   // tailnet copy only; 404 on the public site
+  if (synced) syncedDates = mergeSynced(state.diary, synced).syncedDates;
   if (calendar) {
     const result = applyCalendar(course.assignments, calendar);
     calendarExtras = result.extras;

@@ -125,3 +125,48 @@ export const SUBMISSION = {
     'Use the mobile shortcut on Android or iOS and track as you go.',
   ],
 };
+
+/**
+ * The diary synced from the phone and watch.
+ *
+ * Only the tailnet copy has this file — the public site returns 404 and simply
+ * shows nothing, which is the intended behaviour rather than a fallback. What
+ * someone eats is not published.
+ */
+export async function loadSyncedDiary(url = './diary.json') {
+  try {
+    const response = await fetch(url, { cache: 'no-cache' });
+    if (!response.ok) return null;
+    const raw = await response.json();
+    if (raw?.version !== 1 || typeof raw.days !== 'object') return null;
+    return raw;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Fold synced days onto the ones typed into this browser.
+ *
+ * A date present in both takes the phone's version: it is logged as the food is
+ * eaten, where the browser copy is typed from memory afterwards. Nothing is
+ * deleted — a browser-only day survives untouched.
+ */
+export function mergeSynced(localDiary = {}, synced) {
+  if (!synced?.days) return { diary: localDiary, syncedDates: [] };
+  const diary = { ...localDiary };
+  const syncedDates = [];
+  for (const [date, day] of Object.entries(synced.days)) {
+    if (!day?.entries?.length) continue;
+    syncedDates.push(date);
+    diary[date] = {
+      routine: day.isRoutine !== false,
+      fromPhone: true,
+      entries: Object.fromEntries(day.entries.map((e, i) => [e.id || `s${i}`, {
+        food: e.food, portion: e.portion, prep: e.prep,
+        mixed: Boolean(e.isMixed), components: e.components ?? [],
+      }])),
+    };
+  }
+  return { diary, syncedDates: syncedDates.sort() };
+}

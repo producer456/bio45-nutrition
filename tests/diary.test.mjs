@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {checkEntry,entryOk,diaryProgress,TIPS,SUBMISSION,REQUIRED_DAYS,POINTS_PER_DAY} from '../assets/diary.js';
+import {checkEntry,entryOk,diaryProgress,TIPS,SUBMISSION,UNITS,REQUIRED_DAYS,POINTS_PER_DAY} from '../assets/diary.js';
 
 const good={food:'brown rice',portion:'1/2 cup',prep:'boiled'};
 const msgs=e=>checkEntry(e).map(p=>p.msg).join(' | ');
@@ -108,3 +108,29 @@ test('this app never computes nutrient values',()=>{
     assert.equal(forbidden.test(src),false,`diary.js must not compute nutrients: ${forbidden}`);
 });
 import {readFileSync} from 'node:fs';
+
+test('diary-rules.json is the SINGLE source: diary.js agrees with it exactly',()=>{
+  // The iOS and watchOS app read this JSON. If the web app's own constants drift
+  // from it, the two implementations start disagreeing about whether an entry
+  // counts toward the ten days — the kind of split that is invisible until it
+  // costs points.
+  const rules=JSON.parse(readFileSync(new URL('../content/diary-rules.json',import.meta.url)));
+  assert.equal(rules.requiredDays,REQUIRED_DAYS);
+  assert.equal(rules.pointsPerDay,POINTS_PER_DAY);
+  assert.deepEqual(rules.units,UNITS,'unit vocabulary must match');
+  assert.deepEqual(rules.tips,TIPS,'her collection tips must match');
+  assert.equal(rules.submission.what,SUBMISSION.what);
+  assert.equal(rules.submission.where,SUBMISSION.where);
+  assert.equal(rules.submission.warning,SUBMISSION.warning);
+  assert.deepEqual(rules.submission.alternatives,SUBMISSION.alternatives);
+  // Every portion the JSON calls vague must actually be rejected by the linter.
+  for(const v of rules.vaguePortions){
+    const sample=v.pattern
+      .replace(/\^\\s\*/,'').replace(/\\s\*\$/,'').replace(/\\b.*$/,'')
+      .replace(/\\d\*\\s\*/,'1 ').replace(/\(([^)]*)\)/,(m,g)=>g.split('|')[0])
+      .replace(/[\^$\\]/g,'').trim();
+    if(!sample) continue;
+    assert.equal(entryOk({food:'x',prep:'y',portion:sample}),false,
+      `"${sample}" is listed as vague in diary-rules.json but the linter accepts it`);
+  }
+});

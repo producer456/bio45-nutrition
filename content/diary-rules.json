@@ -1,0 +1,121 @@
+{
+ "schemaVersion": 1,
+ "source": "Dietary Analysis Assignment rubric, BIOL 45.01W (Dr. Gillian Schultz), transcribed 2026-09-25",
+ "requiredDays": 10,
+ "pointsPerDay": 2.5,
+ "requiredFields": [
+  "food",
+  "portion",
+  "prep"
+ ],
+ "units": [
+  "cup",
+  "cups",
+  "tsp",
+  "teaspoon",
+  "teaspoons",
+  "tbsp",
+  "tablespoon",
+  "tablespoons",
+  "oz",
+  "ounce",
+  "ounces",
+  "g",
+  "gram",
+  "grams",
+  "ml",
+  "l",
+  "litre",
+  "liter",
+  "slice",
+  "slices",
+  "piece",
+  "pieces",
+  "each",
+  "can",
+  "bottle",
+  "packet",
+  "scoop",
+  "fillet"
+ ],
+ "vaguePortions": [
+  {
+   "pattern": "^\\s*\\d*\\s*servings?\\s*$",
+   "why": "\"Do not just put “1 serving” or similar.\""
+  },
+  {
+   "pattern": "^\\s*some\\b",
+   "why": "Not an amount."
+  },
+  {
+   "pattern": "^\\s*a\\s+(little|lot|bit)\\b",
+   "why": "Not an amount."
+  },
+  {
+   "pattern": "^\\s*(small|medium|large|big)\\s*$",
+   "why": "A size is not a measured portion."
+  },
+  {
+   "pattern": "^\\s*handful\\s*$",
+   "why": "Not a measurable unit."
+  },
+  {
+   "pattern": "^\\s*portion\\s*$",
+   "why": "Circular — state the amount."
+  },
+  {
+   "pattern": "^\\s*plenty\\s*$",
+   "why": "Not an amount."
+  },
+  {
+   "pattern": "^\\s*enough\\s*$",
+   "why": "Not an amount."
+  },
+  {
+   "pattern": "^\\s*normal\\s*$",
+   "why": "Not an amount."
+  },
+  {
+   "pattern": "^\\s*regular\\s*$",
+   "why": "Not an amount."
+  }
+ ],
+ "cutRequired": [
+  {
+   "foods": [
+    "chicken",
+    "turkey",
+    "duck"
+   ],
+   "parts": [
+    "breast",
+    "thigh",
+    "leg",
+    "wing",
+    "drumstick"
+   ],
+   "why": "Which cut — leg, thigh or breast? And skin on or off?"
+  }
+ ],
+ "tips": [
+  "Include every food and drink, and be as specific as you can. Chicken — leg, thigh or breast? Skin on or off?",
+  "Estimate the portion as carefully as you can: ½ cup rice, 10 potato chips, 2 oz tofu.",
+  "Record how it was cooked or prepared. Was the potato peeled? Was the chicken skinless? Baked or fried?",
+  "Include anything added to it — ketchup, mustard, salad dressing.",
+  "Record all snacks, beverages and desserts.",
+  "Fast food is usually already in the database. Search by the item: \"hamburger\", \"cheesecake\".",
+  "Break mixed dishes into their parts. A tuna sandwich is 2 slices wholewheat bread, 1 T mayo, 3 oz tuna in water.",
+  "NutriCalc has a recipe builder — enter the recipe once, then say what serving you ate."
+ ],
+ "submission": {
+  "what": "The Food List Report, exported from NutriCalc as a PDF.",
+  "where": "In NutriCalc, under Reports.",
+  "warning": "No credit is given without the Food List Report.",
+  "alternatives": [
+   "Keep a paper daily food log and type it into NutriCalc afterwards, or",
+   "Use the mobile shortcut on Android or iOS and track as you go."
+  ]
+ },
+ "nonRoutineDay": "At least one day off your usual routine.",
+ "note": "ONE source of truth. The web app and the iOS/watchOS app both read this; implementing the rubric twice would let them drift and disagree about whether an entry counts."
+}

@@ -16,6 +16,22 @@ function walk(dir,out=[]){
 }
 const FILES=walk(ROOT).filter(f=>/\.(js|mjs|json|html|css|md)$/.test(f));
 
+// The guards below apply to the SHIPPED RUNTIME: the files a browser actually loads.
+// Documentation and deploy scaffolding are deliberately excluded — the README has to
+// name the hosts it deploys to, and the handoff has to explain the shared-origin risk
+// by naming the neighbouring sites. Scanning those was a category error: it flagged
+// the very sentences that exist to prevent the problem.
+const isRuntime = f => {
+  const rel = relative(ROOT, f);
+  if (rel.startsWith('tests/') || rel.startsWith('scripts/') || rel.startsWith('tools/')) return false;
+  if (rel.endsWith('.md')) return false;
+  if (rel.includes('_seed')) return false;
+  return rel === 'index.html' || rel === 'sw.js' || rel === 'course.json' ||
+         rel === 'manifest.webmanifest' ||
+         rel.startsWith('assets/') || rel.startsWith('content/');
+};
+const RUNTIME=FILES.filter(isRuntime);
+
 // Two tiers, because they fail differently.
 //
 // CRITICAL things — storage keys, remote hosts, native bridges — are dangerous even
@@ -34,11 +50,10 @@ const stripComments=text=>text
   .replace(/\/\*[\s\S]*?\*\//g,'')
   .split('\n').map(l=>l.replace(/(^|\s)\/\/.*$/,'')).join('\n');
 
-test('NO 40C CONTAMINATION: keys, remotes and native bridges, comments included',()=>{
+test('NO 40C CONTAMINATION in the runtime: keys, remotes, native bridges',()=>{
   const hits=[];
-  for(const f of FILES){
+  for(const f of RUNTIME){
     const rel=relative(ROOT,f);
-    if(rel.startsWith('tests/')) continue;
     for(const line of readFileSync(f,'utf8').split('\n')){
       const m=line.match(CRITICAL);
       if(m) hits.push(`${rel}: ${m[0]} -> ${line.trim().slice(0,90)}`);
@@ -47,11 +62,10 @@ test('NO 40C CONTAMINATION: keys, remotes and native bridges, comments included'
   assert.deepEqual(hits,[],'a 40C storage key, remote or native hook must never survive');
 });
 
-test('NO 40C CONTENT outside provenance comments',()=>{
+test('NO 40C CONTENT in the runtime, outside provenance comments',()=>{
   const hits=[];
-  for(const f of FILES){
+  for(const f of RUNTIME){
     const rel=relative(ROOT,f);
-    if(rel.startsWith('tests/')) continue;
     const code=/\.(js|mjs|css)$/.test(f)?stripComments(readFileSync(f,'utf8')):readFileSync(f,'utf8');
     for(const line of code.split('\n')){
       const m=line.match(CONTENT);
@@ -63,6 +77,11 @@ test('NO 40C CONTENT outside provenance comments',()=>{
 
 test('neither guard is vacuous',()=>{
   assert.ok(FILES.length>=10,`scanned ${FILES.length} files`);
+  assert.ok(RUNTIME.length>=15,`runtime set has ${RUNTIME.length} files`);
+  assert.ok(RUNTIME.some(f=>relative(ROOT,f)==='index.html'),'index.html is runtime');
+  assert.ok(RUNTIME.some(f=>relative(ROOT,f).startsWith('assets/')),'assets are runtime');
+  assert.ok(RUNTIME.some(f=>relative(ROOT,f).startsWith('content/')),'content is runtime');
+  assert.equal(RUNTIME.some(f=>relative(ROOT,f).endsWith('.md')),false,'docs are not runtime');
   assert.ok(CRITICAL.test('bio40c-state-v1'),'critical pattern works');
   assert.ok(CRITICAL.test('// see bio40c-state-v1'),'and it fires inside a comment');
   assert.ok(CONTENT.test('BIOL F040C section 02'),'content pattern works');
@@ -72,10 +91,9 @@ test('neither guard is vacuous',()=>{
     'stripComments keeps the code');
 });
 
-test('no remote origins: nothing is fetched from another host',()=>{
-  for(const f of FILES.filter(f=>/\.(js|mjs|html|css)$/.test(f))){
+test('no remote origins: the app fetches nothing from another host',()=>{
+  for(const f of RUNTIME.filter(f=>/\.(js|mjs|html|css)$/.test(f))){
     const rel=relative(ROOT,f);
-    if(rel.startsWith('tests/')) continue;
     const text=readFileSync(f,'utf8');
     const urls=[...text.matchAll(/https?:\/\/[^\s'"()]+/g)].map(m=>m[0])
       .filter(u=>!/^https?:\/\/(creativecommons\.org|www\.w3\.org)/.test(u));
@@ -187,9 +205,8 @@ test('no inline style attributes: the CSP drops them silently',()=>{
   // style-src 'self' means a style="" attribute is parsed into the DOM and never
   // applied. That failed silently once already — a 0% progress bar rendered full.
   const hits=[];
-  for(const f of FILES.filter(f=>/\.(js|mjs|html)$/.test(f))){
+  for(const f of RUNTIME.filter(f=>/\.(js|mjs|html)$/.test(f))){
     const rel=relative(ROOT,f);
-    if(rel.startsWith('tests/')) continue;
     const src=/\.(js|mjs)$/.test(f)?stripComments(readFileSync(f,'utf8')):readFileSync(f,'utf8');
     for(const line of src.split('\n'))
       if(/\bstyle="/.test(line)) hits.push(`${rel}: ${line.trim().slice(0,80)}`);
@@ -252,4 +269,16 @@ test('the service worker precaches every authored week',()=>{
   for(const w of course.weeks.filter(x=>x.depth==='authored'))
     assert.ok(sw.includes(`'./${w.contentFile}'`),
       `week ${w.n} is authored but sw.js does not precache ${w.contentFile}`);
+});
+
+test('the OTA install page links only where it should',()=>{
+  // Deploy scaffolding is exempt from the runtime scan, so it gets its own check:
+  // an install page is a good place to quietly point somewhere it should not.
+  const html=readFileSync(join(ROOT,'scripts/ota-install.html'),'utf8');
+  const external=[...html.matchAll(/https?:\/\/[^\s'"()<>]+/g)].map(m=>m[0]);
+  const allowed=/^https:\/\/producer456\.github\.io\/bio45-nutrition/;
+  for(const u of external)
+    assert.match(u,allowed,`install page links to an unexpected host: ${u}`);
+  assert.match(html,/href="web\/"/,'it must actually link to the app');
+  assert.match(html,/Unofficial student study aid/i,'the disclaimer travels with it');
 });

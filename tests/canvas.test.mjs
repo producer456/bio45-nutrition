@@ -122,3 +122,31 @@ test('the published feed applies cleanly to the real course data',()=>{
   for(const a of r.assignments)
     if(a.dueConfidence==='canvas') assert.equal(a.projected,false);
 });
+
+import {calendarHealth,STALE_HOURS} from '../assets/canvas.js';
+
+test('a feed that stopped refreshing is reported STALE, not trusted silently',()=>{
+  const now=1790000000;
+  const fresh=calendarHealth({lastAttempt:now-600,error:''},now);
+  assert.equal(fresh.stale,false);
+  assert.equal(fresh.error,null);
+  const old=calendarHealth({lastAttempt:now-(STALE_HOURS+1)*3600,error:''},now);
+  assert.equal(old.stale,true,'past the threshold it must be flagged');
+  assert.ok(old.ageHours>STALE_HOURS);
+  // A publisher that has never run at all is the worst case, not the best.
+  assert.equal(calendarHealth({error:''},now).stale,true);
+  assert.equal(calendarHealth(null,now).present,false);
+});
+
+test("the publisher's own error is carried through, not swallowed",()=>{
+  const h=calendarHealth({lastAttempt:1790000000,error:'Canvas refresh failed.'},1790000600);
+  assert.equal(h.stale,false,'recent attempt');
+  assert.match(h.error,/Canvas refresh failed/,'but the error still surfaces');
+});
+
+test('the last-checked date is in COURSE time, not UTC',()=>{
+  // 2026-09-26T00:18Z is still the evening of the 25th in California.
+  const h=calendarHealth({lastAttempt:Date.parse('2026-09-26T00:18:00Z')/1000,error:''},
+                         Date.parse('2026-09-26T00:20:00Z')/1000);
+  assert.equal(h.checkedAt,'2026-09-25');
+});

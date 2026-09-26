@@ -97,6 +97,27 @@ export function applyCalendar(assignments, calendar) {
   return { assignments: next, applied: dates.size + milestones.size, extras, error: cal.error || null };
 }
 
+/**
+ * Is the feed still being refreshed?
+ *
+ * A publisher that has quietly stopped is worse than no publisher: the dates still
+ * look authoritative. Kept here, out of the DOM, so it can be tested.
+ */
+export const STALE_HOURS = 6;
+
+export function calendarHealth(calendar, nowSeconds = Date.now() / 1000) {
+  if (!calendar) return { present: false, stale: false, ageHours: null, error: null };
+  const attempted = calendar.lastAttempt ?? 0;
+  const ageHours = attempted ? (nowSeconds - attempted) / 3600 : null;
+  return {
+    present: true,
+    ageHours,
+    stale: ageHours === null || ageHours > STALE_HOURS,
+    error: calendar.error || null,
+    checkedAt: attempted ? instantToCourseDate(new Date(attempted * 1000).toISOString()) : null,
+  };
+}
+
 /** Never let a bad fetch take the schedule down with it. */
 export async function loadCalendar(url = './calendar.json') {
   try {

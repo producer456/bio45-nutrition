@@ -17,7 +17,7 @@ import { STATE_KEY, blankState, validateState, mergeAssignments, setOverlay,
          spentCoupons, backupName, THEMES } from './state.js';
 import { courseGrade, neededFor, letterFor } from './grading.js';
 import { checkEntry, diaryProgress, TIPS, SUBMISSION, REQUIRED_DAYS } from './diary.js';
-import { loadCalendar, applyCalendar } from './canvas.js';
+import { loadCalendar, applyCalendar, calendarHealth } from './canvas.js';
 import { courseToday, dueState, couponOffer, couponLedger, agenda, daysBetween } from './deadlines.js';
 
 export const ROUTES = [
@@ -161,6 +161,7 @@ function viewToday() {
   </section>
 
   ${milestoneCard()}
+  ${calendarCard()}
   ${extrasCard()}
 
   <section class="card">
@@ -180,6 +181,24 @@ function milestoneCard() {
     <ul class="tight">${soon.map(a => `<li>${esc(a.title)} —
       <strong>${dateLabel(a.milestone.date)}</strong>${canvasMark({dueConfidence: a.milestone.source})}</li>`).join('')}</ul>
   </section>`;
+}
+
+// A feed that has quietly stopped is worse than no feed: the dates still look
+// authoritative. Surface both the publisher's own error and the case where it has
+// simply not run for a long time.
+function calendarCard() {
+  const health = calendarHealth(calendar);
+  if (!health.present || (!health.error && !health.stale)) return '';
+  const when = health.ageHours === null ? 'never'
+    : health.ageHours < 48 ? `${Math.round(health.ageHours)} hours ago`
+    : `${Math.round(health.ageHours / 24)} days ago`;
+  return `<section class="card card-warn"><p class="eyebrow">Canvas dates may be out of date</p>
+    ${health.error ? `<p>${esc(health.error)}</p>` : ''}
+    ${health.stale ? `<p>The Canvas calendar was last checked <strong>${when}</strong>.
+      It normally refreshes every 30 minutes, so the publisher on the Mac may have
+      stopped.</p>` : ''}
+    <p class="muted small">The dates shown are the last ones retrieved. Confirm
+      anything you are relying on in Canvas.</p></section>`;
 }
 
 function extrasCard() {
@@ -340,6 +359,19 @@ function viewCourse() {
       <span class="muted small">${esc(b.author ?? b.publisher)} · ${esc(b.license)}</span>
       ${b.note ? `<br><span class="muted small">${esc(b.note)}</span>` : ''}</li>`).join('')}</ul>
   </section>
+  <section class="card"><p class="eyebrow">Where the dates come from</p>
+    ${calendar
+      ? `<p>${calendarApplied} date${calendarApplied === 1 ? '' : 's'} on this page come
+           straight from your Canvas calendar, refreshed about every 30 minutes.
+           Anything marked <span class="mark mark-inferred">inferred</span> is this
+           app's guess from her stated Sunday cadence — she has not posted it yet.</p>
+         <p class="muted small">Last checked
+           ${calendarHealth(calendar).checkedAt ? dateLabel(calendarHealth(calendar).checkedAt) : 'never'}.
+           ${esc(calendar.coverage ?? '')}</p>`
+      : `<p class="muted">No Canvas calendar is loaded, so every date here is
+           transcribed by hand or inferred. Confirm them in Canvas.</p>`}
+  </section>
+
   <section class="card"><p class="eyebrow">Your saved work</p>
     <p class="muted">Everything you type lives in this browser only. Nothing is sent anywhere.</p>
     <p><button type="button" class="action" data-act="backup">Export a backup</button>

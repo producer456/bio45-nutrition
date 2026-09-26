@@ -19,7 +19,7 @@ const SHELL = [
   './assets/base.css?v=1', './assets/theme.css?v=1', './assets/polish.css?v=1',
   './assets/study.css?v=1', './assets/reading.css?v=1', './assets/appearance.css?v=1',
   './assets/learning.css?v=1', './assets/shell.css?v=5',
-  './assets/course-app.js?v=5',
+  './assets/course-app.js?v=6',
   './assets/course-store.js', './assets/state-merge.js', './assets/state.js',
   './assets/grading.js', './assets/deadlines.js', './assets/diary.js',
   './content/week-01.json',

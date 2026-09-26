@@ -22,6 +22,29 @@ date, point value and policy there. Where this app is guessing, it says so on sc
 Everything you type stays in your browser under `bio45-nutrition-state-v1`. No
 account, no server, no analytics, and no third-party requests of any kind.
 
+## Canvas
+
+Real dates come from Canvas. A LaunchAgent on the Mac reads David's personal Canvas
+iCal feed every 30 minutes, keeps only BIOL 45 events, and publishes them to this
+repo as `calendar.json`; the app overlays them onto its own data at load. An
+assignment whose date came from Canvas is badged **from Canvas** and stops being a
+projection.
+
+- The feed URL is a credential — it grants read access to the whole personal
+  calendar — and stays on the Mac. It is never logged, printed, or published.
+- `calendar.json` is **owned by the publisher**, which writes it straight to the
+  repo. It is gitignored here so the two writers cannot fight over it.
+- Anything Canvas lists that this app does not have is **surfaced**, not dropped.
+  That is how the Case Study rename was caught: the syllabus summary called it
+  "Case Study: Energy Density", Canvas calls it "Case Study 1: Nutrient Density".
+- The feed only carries what she has actually posted — at the time of writing,
+  Week 1 plus the two diary deadlines. Everything after that is still projected.
+
+Install or reinstall with `scripts/install-canvas-publisher.sh`.
+⚠ It must run as a LaunchAgent, not over ssh: `gh` keeps its token in the login
+keychain, which a plain ssh session cannot read. `gh auth status` will claim the
+token is invalid there while the same command works in the GUI session.
+
 ## Three things worth knowing
 
 **Her syllabus contains two different totals.** The nine category subtotals add up to

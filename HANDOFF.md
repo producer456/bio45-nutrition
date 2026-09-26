@@ -10,6 +10,7 @@ targets.** All 11 weeks written out.
 | Repo | `producer456/bio45-nutrition` (public) |
 
 Redeploy: `git push` for the website, `scripts/deploy-ota.sh` for the tailnet copy.
+Canvas dates publish themselves every 30 min from the Mac — see `README.md`.
 
 ```sh
 cd ~/bio45-nutrition

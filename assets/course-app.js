@@ -17,6 +17,7 @@ import { STATE_KEY, blankState, validateState, mergeAssignments, setOverlay,
          spentCoupons, backupName, THEMES } from './state.js';
 import { courseGrade, neededFor, letterFor } from './grading.js';
 import { checkEntry, diaryProgress, TIPS, SUBMISSION, REQUIRED_DAYS } from './diary.js';
+import { loadCalendar, applyCalendar } from './canvas.js';
 import { courseToday, dueState, couponOffer, couponLedger, agenda, daysBetween } from './deadlines.js';
 
 export const ROUTES = [
@@ -36,6 +37,7 @@ let route = DEFAULT_ROUTE, dirty = false, unreadable = false, saving = false;
 
 // Study session: which week is open, and the quiz in progress if there is one.
 let studyWeek = null, weekContent = new Map();
+let calendar = null, calendarExtras = [], calendarApplied = 0;
 let quiz = null;   // {week, order, i, picked, revealed}
 
 const app = () => document.querySelector('#app');
@@ -83,7 +85,14 @@ async function save(mutate, opts = {}) {
 
 /* ---------- derived ---------------------------------------------------------- */
 
-const rows = () => mergeAssignments(course.assignments, state);
+// Canvas dates, where she has published them, override the transcribed and
+// projected ones before the student's own overlay goes on top.
+function courseAssignments() {
+  if (!calendar) return course.assignments;
+  const { assignments } = applyCalendar(course.assignments, calendar);
+  return assignments;
+}
+const rows = () => mergeAssignments(courseAssignments(), state);
 const grade = () => courseGrade(course, rows());
 const weekOf = n => course.weeks.find(w => w.n === n);
 
@@ -102,6 +111,9 @@ const dateLabel = iso => new Date(iso + 'T12:00:00Z').toLocaleDateString('en-US'
 
 const inferredMark = cond => cond
   ? `<span class="mark mark-inferred" title="Inferred from her stated Sunday cadence, not printed in Canvas. Confirm it there.">inferred</span>` : '';
+
+const canvasMark = a => a?.dueConfidence === 'canvas'
+  ? `<span class="mark mark-canvas" title="Taken from your Canvas calendar feed, refreshed every 30 minutes.">from Canvas</span>` : '';
 
 const stateChip = st => {
   const label = { overdue: 'overdue', today: 'due today', soon: 'due soon', ahead: '', done: 'done', undated: 'no date' }[st.state] ?? '';
@@ -132,6 +144,9 @@ function viewToday() {
     <ul class="tight">${d.items.map(i => `<li>
       ${esc(i.title)} <span class="muted">${i.possible ? pts(i.possible) : 'ungraded'}</span>
       ${i.coupon === false ? '<span class="mark mark-nocoupon">no late coupons</span>' : ''}
+      ${canvasMark(i)}
+      ${i.milestone ? `<br><span class="muted small">First post by ${dateLabel(i.milestone.date)}
+        — ${esc(i.milestone.note ?? 'so classmates have something to reply to. Missing it is not counted late.')}</span>` : ''}
     </li>`).join('')}</ul>
   </section>`).join('')
   : `<section class="card"><p>Nothing due in the next three days.</p></section>`}
@@ -145,10 +160,35 @@ function viewToday() {
     <p class="muted small">${g.remaining.computed} of ${g.denominators.computed} points still ahead.</p>
   </section>
 
+  ${milestoneCard()}
+  ${extrasCard()}
+
   <section class="card">
     <p class="eyebrow">Late coupons</p>
     <p class="big">${'●'.repeat(led.left)}${'○'.repeat(led.spent)} <span class="muted">${led.left} of ${led.total} left</span></p>
     <p class="muted small">${esc(led.note ?? '')}</p>
+  </section>`;
+}
+
+function milestoneCard() {
+  const soon = rows().filter(a => a.milestone?.date && a.status !== 'done'
+    && daysBetween(today(), a.milestone.date) >= 0 && daysBetween(today(), a.milestone.date) <= 3);
+  if (!soon.length) return '';
+  return `<section class="card card-due-soon"><p class="eyebrow">First posts due</p>
+    <p class="muted small">Discussion milestones. Missing one is not counted late — they exist
+      so classmates have something to reply to.</p>
+    <ul class="tight">${soon.map(a => `<li>${esc(a.title)} —
+      <strong>${dateLabel(a.milestone.date)}</strong>${canvasMark({dueConfidence: a.milestone.source})}</li>`).join('')}</ul>
+  </section>`;
+}
+
+function extrasCard() {
+  if (!calendarExtras.length) return '';
+  return `<section class="card card-warn"><p class="eyebrow">In Canvas, not in this app</p>
+    <p class="muted small">Your Canvas calendar lists these and this app does not have them —
+      most likely she added or renamed something. Canvas is right; this app needs updating.</p>
+    <ul class="tight">${calendarExtras.map(x => `<li>${esc(x.title)} —
+      <strong>${dateLabel(x.due)}</strong></li>`).join('')}</ul>
   </section>`;
 }
 
@@ -206,7 +246,7 @@ function viewAssignments() {
              data-act="score" data-id="${esc(a.id)}" value="${a.earned ?? ''}"
              placeholder="–" aria-label="Score out of ${a.possible} for ${esc(a.title)}">
            <span class="muted">/ ${a.possible}</span>`}</td>
-        <td>${a.due ? `${dateLabel(a.due)} ${stateChip(st)} ${inferredMark(st.inferred)}` : '<span class="muted">no date</span>'}
+        <td>${a.due ? `${dateLabel(a.due)} ${stateChip(st)} ${inferredMark(st.inferred)} ${canvasMark(a)}` : '<span class="muted">no date</span>'}
             ${couponButton(a)}</td></tr>`;
     }).join('')}
     </tbody></table></section>`;
@@ -713,6 +753,13 @@ function importBackup() {
 
 export async function start() {
   course = await (await fetch('./course.json')).json();
+  // Best effort. A calendar that will not load must never take the schedule with it.
+  calendar = await loadCalendar();
+  if (calendar) {
+    const result = applyCalendar(course.assignments, calendar);
+    calendarExtras = result.extras;
+    calendarApplied = result.applied;
+  }
   boot();
   wire();
   studyWeek = currentWeek().n;

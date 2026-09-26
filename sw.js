@@ -18,8 +18,8 @@ const SHELL = [
   './manifest.webmanifest?v=1', './icon-180.png', './icon-192.png', './icon-512.png',
   './assets/base.css?v=1', './assets/theme.css?v=1', './assets/polish.css?v=1',
   './assets/study.css?v=1', './assets/reading.css?v=1', './assets/appearance.css?v=1',
-  './assets/learning.css?v=1', './assets/shell.css?v=4',
-  './assets/course-app.js?v=4',
+  './assets/learning.css?v=1', './assets/shell.css?v=5',
+  './assets/course-app.js?v=5',
   './assets/course-store.js', './assets/state-merge.js', './assets/state.js',
   './assets/grading.js', './assets/deadlines.js', './assets/diary.js',
   './content/week-01.json',
@@ -51,11 +51,26 @@ self.addEventListener('fetch', e => {
   if (url.origin !== self.location.origin) return;
   if (url.pathname.indexOf(BASE) !== 0) return;
 
-  if (e.request.mode === 'navigate') {
+  // Data is network-first; versioned assets are cache-first.
+  //
+  // course.json, calendar.json and the week files carry no ?v=, so cache-first would
+  // pin them to whatever was cached at install and no edit would ever arrive. That
+  // matters most for calendar.json, which is republished from Canvas every 30
+  // minutes — serving it from cache would make the feed permanently stale.
+  const isData = url.pathname.endsWith('.json') || url.pathname.endsWith('.webmanifest');
+
+  if (e.request.mode === 'navigate' || isData) {
     e.respondWith(
       fetch(e.request)
         .then(res => { if (res.status === 200) caches.open(VERSION).then(c => c.put(e.request, res.clone())); return res; })
-        .catch(() => caches.match(e.request).then(r => r ?? caches.match(BASE + 'index.html')).then(r => r ?? caches.match('./')))
+        .catch(() => caches.match(e.request).then(r => {
+          if (r) return r;
+          // Only a navigation falls back to the shell; a missing data file must
+          // fail honestly rather than being served an HTML page as JSON.
+          return e.request.mode === 'navigate'
+            ? caches.match(BASE + 'index.html').then(x => x ?? caches.match('./'))
+            : undefined;
+        }))
     );
     return;
   }

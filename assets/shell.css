@@ -158,3 +158,4 @@ select { min-height:38px; font:inherit; background:var(--paper,#111315); color:v
 .problem-warn { color:var(--warn,#d9a13b); }
 .day-ok { border-left:3px solid var(--ok,#5cb87a); }
 .noscript { padding:1rem; }
+.mark-canvas { color:var(--ok,#5cb87a); }

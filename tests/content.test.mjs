@@ -282,3 +282,16 @@ test('the OTA install page links only where it should',()=>{
   assert.match(html,/href="web\/"/,'it must actually link to the app');
   assert.match(html,/Unofficial student study aid/i,'the disclaimer travels with it');
 });
+
+test('the service worker serves DATA network-first, not cache-first',()=>{
+  // Unversioned JSON served cache-first is pinned forever at whatever was cached on
+  // install. calendar.json is republished from Canvas every 30 minutes, so this is
+  // the difference between a live feed and a permanently stale one.
+  const sw=readFileSync(join(ROOT,'sw.js'),'utf8');
+  assert.match(sw,/\.endsWith\('\.json'\)/,'json must be recognised as data');
+  assert.match(sw,/mode === 'navigate' \|\| isData/,'data joins navigations on the network-first path');
+  assert.equal(/'\.\/course\.json\?v=/.test(sw),false,'data is not versioned; it is refetched');
+  // A failed data fetch must not be answered with the HTML shell.
+  assert.match(sw,/request\.mode === 'navigate'\s*\n?\s*\? caches\.match\(BASE/,
+    'only navigations fall back to index.html');
+});

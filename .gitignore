@@ -9,3 +9,9 @@ backups/
 *.odt
 *.docx
 *.zip
+
+# NOTE: calendar.json is deliberately NOT ignored. The Mac publisher commits it to
+# this repo every 30 minutes, so it is tracked and the publisher owns it — ignoring
+# it here would have no effect on a tracked file anyway. Never edit it by hand, and
+# `git pull --rebase` before pushing: the publisher may have committed while you
+# were working.

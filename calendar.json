@@ -2,8 +2,8 @@
  "version": 1,
  "course": "40466",
  "coverage": "BIOL 45.01W dates as Canvas publishes them. Canvas is the source of record; this is a copy, and only as complete as what she has posted.",
- "lastSuccess": 1790696844.6336498,
- "lastAttempt": 1790696844.6336498,
+ "lastSuccess": 1790698649.607747,
+ "lastAttempt": 1790698649.607747,
  "error": "",
  "items": [
   {
@@ -111,9 +111,25 @@
    "milestone": false
   },
   {
+   "id": "canvas-40466-event-assignment-1219261",
+   "title": "Topic 2 Check In- Dietary Guidelines",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219261",
+   "due": "2026-10-04",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
    "id": "canvas-40466-event-assignment-1219268",
    "title": "Week 2 Discussion Board: Dietary Planning Principles",
    "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219268",
+   "due": "2026-10-04",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-assignment-1219283",
+   "title": "Weeks 1 and 2 Learning Reflection",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219283",
    "due": "2026-10-04",
    "dueKind": "date",
    "milestone": false

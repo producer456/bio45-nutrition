@@ -2,8 +2,8 @@
  "version": 1,
  "course": "40466",
  "coverage": "BIOL 45.01W dates as Canvas publishes them. Canvas is the source of record; this is a copy, and only as complete as what she has posted.",
- "lastSuccess": 1790695039.798066,
- "lastAttempt": 1790695039.798066,
+ "lastSuccess": 1790696844.6336498,
+ "lastAttempt": 1790696844.6336498,
  "error": "",
  "items": [
   {
@@ -93,6 +93,22 @@
    "due": "2026-10-02T06:59:00+00:00",
    "dueKind": "instant",
    "milestone": true
+  },
+  {
+   "id": "canvas-40466-event-assignment-1219228",
+   "title": "Application Assignment: Food Label Exercise",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219228",
+   "due": "2026-10-04",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-assignment-1237100",
+   "title": "Case Study 2: Constipation",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1237100",
+   "due": "2026-10-04",
+   "dueKind": "date",
+   "milestone": false
   },
   {
    "id": "canvas-40466-event-assignment-1219268",

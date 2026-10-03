@@ -2,8 +2,8 @@
  "version": 1,
  "course": "40466",
  "coverage": "BIOL 45.01W dates as Canvas publishes them. Canvas is the source of record; this is a copy, and only as complete as what she has posted.",
- "lastSuccess": 1791058187.941225,
- "lastAttempt": 1791058187.941225,
+ "lastSuccess": 1791059993.332698,
+ "lastAttempt": 1791059993.332698,
  "error": "",
  "items": [
   {
@@ -87,14 +87,6 @@
    "milestone": false
   },
   {
-   "id": "canvas-40466-event-calendar-event-285039",
-   "title": "Week 2 Discussion Board: Dietary Planning Principles: Milestone 1",
-   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#calendar_event_285039",
-   "due": "2026-10-02T06:59:00+00:00",
-   "dueKind": "instant",
-   "milestone": true
-  },
-  {
    "id": "canvas-40466-event-assignment-1219228",
    "title": "Application Assignment: Food Label Exercise",
    "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219228",
@@ -133,6 +125,14 @@
    "due": "2026-10-04",
    "dueKind": "date",
    "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-calendar-event-285039",
+   "title": "Week 2 Discussion Board: Dietary Planning Principles: Milestone 1",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#calendar_event_285039",
+   "due": "2026-10-04T06:59:00+00:00",
+   "dueKind": "instant",
+   "milestone": true
   },
   {
    "id": "canvas-40466-event-assignment-1219235",

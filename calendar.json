@@ -2,8 +2,8 @@
  "version": 1,
  "course": "40466",
  "coverage": "BIOL 45.01W dates as Canvas publishes them. Canvas is the source of record; this is a copy, and only as complete as what she has posted.",
- "lastSuccess": 1791145375.635621,
- "lastAttempt": 1791145375.635621,
+ "lastSuccess": 1791147181.224108,
+ "lastAttempt": 1791147181.224108,
  "error": "",
  "items": [
   {
@@ -141,6 +141,22 @@
    "due": "2026-10-09T06:59:00+00:00",
    "dueKind": "instant",
    "milestone": true
+  },
+  {
+   "id": "canvas-40466-event-assignment-1237974",
+   "title": "Case Study 3: Celiac Disease and Irritable Bowel Syndrome",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1237974",
+   "due": "2026-10-11",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-assignment-1219255",
+   "title": "Scientist Spotlight 1",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219255",
+   "due": "2026-10-11",
+   "dueKind": "date",
+   "milestone": false
   },
   {
    "id": "canvas-40466-event-assignment-1219258",

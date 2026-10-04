@@ -2,8 +2,8 @@
  "version": 1,
  "course": "40466",
  "coverage": "BIOL 45.01W dates as Canvas publishes them. Canvas is the source of record; this is a copy, and only as complete as what she has posted.",
- "lastSuccess": 1791143571.188694,
- "lastAttempt": 1791143571.188694,
+ "lastSuccess": 1791145375.635621,
+ "lastAttempt": 1791145375.635621,
  "error": "",
  "items": [
   {
@@ -135,9 +135,25 @@
    "milestone": true
   },
   {
+   "id": "canvas-40466-event-calendar-event-285869",
+   "title": "Week 3 Discussion Board: The Digestive Tract and Digestive Disorders: Milestone 1",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#calendar_event_285869",
+   "due": "2026-10-09T06:59:00+00:00",
+   "dueKind": "instant",
+   "milestone": true
+  },
+  {
    "id": "canvas-40466-event-assignment-1219258",
    "title": "The Digestive Tract Part 2: Disorders",
    "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219258",
+   "due": "2026-10-11",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-assignment-1219269",
+   "title": "Week 3 Check In - The Digestive System and Digestive Disorders",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219269",
    "due": "2026-10-11",
    "dueKind": "date",
    "milestone": false

@@ -2,8 +2,8 @@
  "version": 1,
  "course": "40466",
  "coverage": "BIOL 45.01W dates as Canvas publishes them. Canvas is the source of record; this is a copy, and only as complete as what she has posted.",
- "lastSuccess": 1791743113.090508,
- "lastAttempt": 1791743113.090508,
+ "lastSuccess": 1791744918.5701141,
+ "lastAttempt": 1791744918.5701141,
  "error": "",
  "items": [
   {
@@ -179,6 +179,38 @@
    "title": "Week 3 Discussion Board: The Digestive Tract and Digestive Disorders",
    "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219226",
    "due": "2026-10-11",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-assignment-1238954",
+   "title": "Case Study 4: Diabetes and Blood Glucose Regulation",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1238954",
+   "due": "2026-10-18",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-assignment-1219270",
+   "title": "Week 4 Check-In - Carbohydrates and the Microbiome",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219270",
+   "due": "2026-10-18",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-assignment-1219271",
+   "title": "Week 4 Discussion: Carbohydrates and the Microbiome",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219271",
+   "due": "2026-10-18",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-assignment-1219284",
+   "title": "Weeks 3 and 4 Learning Reflection:  Digestive system\\, digestive disorders\\, carbohydrates and the microbiome",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219284",
+   "due": "2026-10-18",
    "dueKind": "date",
    "milestone": false
   },

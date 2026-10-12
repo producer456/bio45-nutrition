@@ -2,8 +2,8 @@
  "version": 1,
  "course": "40466",
  "coverage": "BIOL 45.01W dates as Canvas publishes them. Canvas is the source of record; this is a copy, and only as complete as what she has posted.",
- "lastSuccess": 1791839221.1825678,
- "lastAttempt": 1791839221.1825678,
+ "lastSuccess": 1791841039.355582,
+ "lastAttempt": 1791841039.355582,
  "error": "",
  "items": [
   {
@@ -189,6 +189,14 @@
    "due": "2026-10-16T06:59:00+00:00",
    "dueKind": "instant",
    "milestone": true
+  },
+  {
+   "id": "canvas-40466-event-assignment-1219230",
+   "title": "Carbohydrate Assignment: your choice",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219230",
+   "due": "2026-10-18",
+   "dueKind": "date",
+   "milestone": false
   },
   {
    "id": "canvas-40466-event-assignment-1238954",

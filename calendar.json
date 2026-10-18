@@ -2,8 +2,8 @@
  "version": 1,
  "course": "40466",
  "coverage": "BIOL 45.01W dates as Canvas publishes them. Canvas is the source of record; this is a copy, and only as complete as what she has posted.",
- "lastSuccess": 1792360437.3651571,
- "lastAttempt": 1792360437.3651571,
+ "lastSuccess": 1792362245.248539,
+ "lastAttempt": 1792362245.248539,
  "error": "",
  "items": [
   {
@@ -229,6 +229,14 @@
    "due": "2026-10-18",
    "dueKind": "date",
    "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-calendar-event-287515",
+   "title": "Week 5 Discussion: Lipids: Milestone 1",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#calendar_event_287515",
+   "due": "2026-10-23T06:59:00+00:00",
+   "dueKind": "instant",
+   "milestone": true
   },
   {
    "id": "canvas-40466-event-assignment-1219236",

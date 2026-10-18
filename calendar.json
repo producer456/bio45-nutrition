@@ -2,8 +2,8 @@
  "version": 1,
  "course": "40466",
  "coverage": "BIOL 45.01W dates as Canvas publishes them. Canvas is the source of record; this is a copy, and only as complete as what she has posted.",
- "lastSuccess": 1792358629.157297,
- "lastAttempt": 1792358629.157297,
+ "lastSuccess": 1792360437.3651571,
+ "lastAttempt": 1792360437.3651571,
  "error": "",
  "items": [
   {
@@ -227,6 +227,30 @@
    "title": "Weeks 3 and 4 Learning Reflection:  Digestive system\\, digestive disorders\\, carbohydrates and the microbiome",
    "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219284",
    "due": "2026-10-18",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-assignment-1219236",
+   "title": "Evaluating Scientific Articles",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219236",
+   "due": "2026-10-25",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-assignment-1219273",
+   "title": "Week 5 Check-in - Lipids",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219273",
+   "due": "2026-10-25",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-assignment-1219274",
+   "title": "Week 5 Discussion: Lipids",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219274",
+   "due": "2026-10-25",
    "dueKind": "date",
    "milestone": false
   },

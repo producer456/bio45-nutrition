@@ -2,8 +2,8 @@
  "version": 1,
  "course": "40466",
  "coverage": "BIOL 45.01W dates as Canvas publishes them. Canvas is the source of record; this is a copy, and only as complete as what she has posted.",
- "lastSuccess": 1792978802.937078,
- "lastAttempt": 1792978802.937078,
+ "lastSuccess": 1792980608.3191218,
+ "lastAttempt": 1792980608.3191218,
  "error": "",
  "items": [
   {
@@ -263,9 +263,25 @@
    "milestone": false
   },
   {
+   "id": "canvas-40466-event-calendar-event-287781",
+   "title": "Week 6 Discussion: Proteins and Food Safety: Milestone 1",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#calendar_event_287781",
+   "due": "2026-10-30T06:59:00+00:00",
+   "dueKind": "instant",
+   "milestone": true
+  },
+  {
    "id": "canvas-40466-event-assignment-1219254",
    "title": "Protein Assignment - Your choice",
    "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=11&year=2026#assignment_1219254",
+   "due": "2026-11-01",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-assignment-1219275",
+   "title": "Week 6 Check- in Proteins and Food Safety",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=11&year=2026#assignment_1219275",
    "due": "2026-11-01",
    "dueKind": "date",
    "milestone": false

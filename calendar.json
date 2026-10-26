@@ -2,8 +2,8 @@
  "version": 1,
  "course": "40466",
  "coverage": "BIOL 45.01W dates as Canvas publishes them. Canvas is the source of record; this is a copy, and only as complete as what she has posted.",
- "lastSuccess": 1792976998.335659,
- "lastAttempt": 1792976998.335659,
+ "lastSuccess": 1792978802.937078,
+ "lastAttempt": 1792978802.937078,
  "error": "",
  "items": [
   {
@@ -259,6 +259,30 @@
    "title": "Week 5 Discussion: Lipids",
    "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219274",
    "due": "2026-10-25",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-assignment-1219254",
+   "title": "Protein Assignment - Your choice",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=11&year=2026#assignment_1219254",
+   "due": "2026-11-01",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-assignment-1219276",
+   "title": "Week 6 Discussion: Proteins and Food Safety",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=11&year=2026#assignment_1219276",
+   "due": "2026-11-01",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-assignment-1219285",
+   "title": "Weeks 5 and 6  Learning Reflection",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=11&year=2026#assignment_1219285",
+   "due": "2026-11-01",
    "dueKind": "date",
    "milestone": false
   },

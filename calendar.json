@@ -2,66 +2,10 @@
  "version": 1,
  "course": "40466",
  "coverage": "BIOL 45.01W dates as Canvas publishes them. Canvas is the source of record; this is a copy, and only as complete as what she has posted.",
- "lastSuccess": 1793170433.850081,
- "lastAttempt": 1793170433.850081,
+ "lastSuccess": 1793172240.0423942,
+ "lastAttempt": 1793172240.0423942,
  "error": "",
  "items": [
-  {
-   "id": "canvas-40466-event-assignment-1236473",
-   "title": "Case Study 1: Nutrient Density",
-   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=09&year=2026#assignment_1236473",
-   "due": "2026-09-27",
-   "dueKind": "date",
-   "milestone": false
-  },
-  {
-   "id": "canvas-40466-event-assignment-1219239",
-   "title": "First Discussion- Introduce yourself - No Late Coupons",
-   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=09&year=2026#assignment_1219239",
-   "due": "2026-09-27",
-   "dueKind": "date",
-   "milestone": false
-  },
-  {
-   "id": "canvas-40466-event-assignment-1219242",
-   "title": "Homework: Practice calculating calories",
-   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=09&year=2026#assignment_1219242",
-   "due": "2026-09-27",
-   "dueKind": "date",
-   "milestone": false
-  },
-  {
-   "id": "canvas-40466-event-assignment-1223936",
-   "title": "Introduction to Nutrition Fall 2026",
-   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=09&year=2026#assignment_1223936",
-   "due": "2026-09-27",
-   "dueKind": "date",
-   "milestone": false
-  },
-  {
-   "id": "canvas-40466-event-assignment-1219244",
-   "title": "Introduction to Reading Scientific Literature",
-   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=09&year=2026#assignment_1219244",
-   "due": "2026-09-27",
-   "dueKind": "date",
-   "milestone": false
-  },
-  {
-   "id": "canvas-40466-event-assignment-1219263",
-   "title": "Week 1 Check In",
-   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=09&year=2026#assignment_1219263",
-   "due": "2026-09-27",
-   "dueKind": "date",
-   "milestone": false
-  },
-  {
-   "id": "canvas-40466-event-assignment-1219264",
-   "title": "Week 1 Discussion: Intro to Nutrition",
-   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=09&year=2026#assignment_1219264",
-   "due": "2026-09-27",
-   "dueKind": "date",
-   "milestone": false
-  },
   {
    "id": "canvas-40466-event-assignment-1219228",
    "title": "Application Assignment: Food Label Exercise",

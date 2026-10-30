@@ -2,8 +2,8 @@
  "version": 1,
  "course": "40466",
  "coverage": "BIOL 45.01W dates as Canvas publishes them. Canvas is the source of record; this is a copy, and only as complete as what she has posted.",
- "lastSuccess": 1793390043.595005,
- "lastAttempt": 1793390043.595005,
+ "lastSuccess": 1793391848.9647849,
+ "lastAttempt": 1793391848.9647849,
  "error": "",
  "items": [
   {
@@ -227,6 +227,14 @@
    "title": "Weeks 5 and 6  Learning Reflection",
    "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=11&year=2026#assignment_1219285",
    "due": "2026-11-01",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-assignment-1219278",
+   "title": "Week 7 Discussion Board: Water and Micronutrients I",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=11&year=2026#assignment_1219278",
+   "due": "2026-11-08",
    "dueKind": "date",
    "milestone": false
   },

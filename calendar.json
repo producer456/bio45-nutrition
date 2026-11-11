@@ -2,50 +2,10 @@
  "version": 1,
  "course": "40466",
  "coverage": "BIOL 45.01W dates as Canvas publishes them. Canvas is the source of record; this is a copy, and only as complete as what she has posted.",
- "lastSuccess": 1794383523.201186,
- "lastAttempt": 1794383523.201186,
+ "lastSuccess": 1794385328.509396,
+ "lastAttempt": 1794385328.509396,
  "error": "",
  "items": [
-  {
-   "id": "canvas-40466-event-assignment-1237974",
-   "title": "Case Study 3: Celiac Disease and Irritable Bowel Syndrome",
-   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1237974",
-   "due": "2026-10-11",
-   "dueKind": "date",
-   "milestone": false
-  },
-  {
-   "id": "canvas-40466-event-assignment-1219255",
-   "title": "Scientist Spotlight 1",
-   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219255",
-   "due": "2026-10-11",
-   "dueKind": "date",
-   "milestone": false
-  },
-  {
-   "id": "canvas-40466-event-assignment-1219258",
-   "title": "The Digestive Tract Part 2: Disorders",
-   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219258",
-   "due": "2026-10-11",
-   "dueKind": "date",
-   "milestone": false
-  },
-  {
-   "id": "canvas-40466-event-assignment-1219269",
-   "title": "Week 3 Check In - The Digestive System and Digestive Disorders",
-   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219269",
-   "due": "2026-10-11",
-   "dueKind": "date",
-   "milestone": false
-  },
-  {
-   "id": "canvas-40466-event-assignment-1219226",
-   "title": "Week 3 Discussion Board: The Digestive Tract and Digestive Disorders",
-   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219226",
-   "due": "2026-10-11",
-   "dueKind": "date",
-   "milestone": false
-  },
   {
    "id": "canvas-40466-event-calendar-event-286988",
    "title": "Week 4 Discussion: Carbohydrates and the Microbiome: Milestone 1",

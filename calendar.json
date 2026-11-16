@@ -2,8 +2,8 @@
  "version": 1,
  "course": "40466",
  "coverage": "BIOL 45.01W dates as Canvas publishes them. Canvas is the source of record; this is a copy, and only as complete as what she has posted.",
- "lastSuccess": 1794792065.561867,
- "lastAttempt": 1794792065.561867,
+ "lastSuccess": 1794793872.400595,
+ "lastAttempt": 1794793872.400595,
  "error": "",
  "items": [
   {
@@ -210,6 +210,38 @@
    "id": "canvas-40466-event-assignment-1219248",
    "title": "Part 1: Food\\, Energy. Water Nexus Project- No late passes",
    "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=11&year=2026#assignment_1219248",
+   "due": "2026-11-22",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-assignment-1219251",
+   "title": "Personal Metabolic Health Calculations",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=11&year=2026#assignment_1219251",
+   "due": "2026-11-22",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-assignment-1219256",
+   "title": "Scientist Spotlight 2",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=11&year=2026#assignment_1219256",
+   "due": "2026-11-22",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-assignment-1219281",
+   "title": "Week 9 Check-in: Energy and Metabolism",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=11&year=2026#assignment_1219281",
+   "due": "2026-11-22",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-assignment-1219282",
+   "title": "Week 9 Discussion: Energy Balance and Metabolism",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=11&year=2026#assignment_1219282",
    "due": "2026-11-22",
    "dueKind": "date",
    "milestone": false

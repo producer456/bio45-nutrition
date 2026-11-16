@@ -2,8 +2,8 @@
  "version": 1,
  "course": "40466",
  "coverage": "BIOL 45.01W dates as Canvas publishes them. Canvas is the source of record; this is a copy, and only as complete as what she has posted.",
- "lastSuccess": 1794790260.056511,
- "lastAttempt": 1794790260.056511,
+ "lastSuccess": 1794792065.561867,
+ "lastAttempt": 1794792065.561867,
  "error": "",
  "items": [
   {
@@ -203,6 +203,14 @@
    "title": "Weeks 7 and 8  Learning Reflection",
    "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=11&year=2026#assignment_1219286",
    "due": "2026-11-15",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-assignment-1219248",
+   "title": "Part 1: Food\\, Energy. Water Nexus Project- No late passes",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=11&year=2026#assignment_1219248",
+   "due": "2026-11-22",
    "dueKind": "date",
    "milestone": false
   },

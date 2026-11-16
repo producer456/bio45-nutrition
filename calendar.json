@@ -2,8 +2,8 @@
  "version": 1,
  "course": "40466",
  "coverage": "BIOL 45.01W dates as Canvas publishes them. Canvas is the source of record; this is a copy, and only as complete as what she has posted.",
- "lastSuccess": 1794793872.400595,
- "lastAttempt": 1794793872.400595,
+ "lastSuccess": 1794795680.1460109,
+ "lastAttempt": 1794795680.1460109,
  "error": "",
  "items": [
   {
@@ -205,6 +205,14 @@
    "due": "2026-11-15",
    "dueKind": "date",
    "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-calendar-event-289877",
+   "title": "Week 9 Discussion: Energy Balance and Metabolism: Milestone 1",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=11&year=2026#calendar_event_289877",
+   "due": "2026-11-20T07:59:00+00:00",
+   "dueKind": "instant",
+   "milestone": true
   },
   {
    "id": "canvas-40466-event-assignment-1219248",

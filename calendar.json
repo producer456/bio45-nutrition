@@ -2,50 +2,10 @@
  "version": 1,
  "course": "40466",
  "coverage": "BIOL 45.01W dates as Canvas publishes them. Canvas is the source of record; this is a copy, and only as complete as what she has posted.",
- "lastSuccess": 1794987396.426948,
- "lastAttempt": 1794987396.426948,
+ "lastSuccess": 1794989201.956487,
+ "lastAttempt": 1794989201.956487,
  "error": "",
  "items": [
-  {
-   "id": "canvas-40466-event-assignment-1219230",
-   "title": "Carbohydrate Assignment: your choice",
-   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219230",
-   "due": "2026-10-18",
-   "dueKind": "date",
-   "milestone": false
-  },
-  {
-   "id": "canvas-40466-event-assignment-1238954",
-   "title": "Case Study 4: Diabetes and Blood Glucose Regulation",
-   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1238954",
-   "due": "2026-10-18",
-   "dueKind": "date",
-   "milestone": false
-  },
-  {
-   "id": "canvas-40466-event-assignment-1219270",
-   "title": "Week 4 Check-In - Carbohydrates and the Microbiome",
-   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219270",
-   "due": "2026-10-18",
-   "dueKind": "date",
-   "milestone": false
-  },
-  {
-   "id": "canvas-40466-event-assignment-1219271",
-   "title": "Week 4 Discussion: Carbohydrates and the Microbiome",
-   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219271",
-   "due": "2026-10-18",
-   "dueKind": "date",
-   "milestone": false
-  },
-  {
-   "id": "canvas-40466-event-assignment-1219284",
-   "title": "Weeks 3 and 4 Learning Reflection:  Digestive system\\, digestive disorders\\, carbohydrates and the microbiome",
-   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219284",
-   "due": "2026-10-18",
-   "dueKind": "date",
-   "milestone": false
-  },
   {
    "id": "canvas-40466-event-calendar-event-287515",
    "title": "Week 5 Discussion: Lipids: Milestone 1",

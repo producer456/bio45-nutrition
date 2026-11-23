@@ -2,8 +2,8 @@
  "version": 1,
  "course": "40466",
  "coverage": "BIOL 45.01W dates as Canvas publishes them. Canvas is the source of record; this is a copy, and only as complete as what she has posted.",
- "lastSuccess": 1795390552.536427,
- "lastAttempt": 1795390552.536427,
+ "lastSuccess": 1795392357.219797,
+ "lastAttempt": 1795392357.219797,
  "error": "",
  "items": [
   {
@@ -207,9 +207,57 @@
    "milestone": false
   },
   {
+   "id": "canvas-40466-event-calendar-event-291193",
+   "title": "Week 10 Discussion: Food claims and sustainability: Milestone 1",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=11&year=2026#calendar_event_291193",
+   "due": "2026-11-27T07:59:00+00:00",
+   "dueKind": "instant",
+   "milestone": true
+  },
+  {
    "id": "canvas-40466-event-assignment-1219235",
    "title": "Dietary Analysis Assignment _ Food Diary",
    "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=11&year=2026#assignment_1219235",
+   "due": "2026-11-29",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-assignment-1219247",
+   "title": "Our Food Supply- Your choice",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=11&year=2026#assignment_1219247",
+   "due": "2026-11-29",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-assignment-1219249",
+   "title": "Part 2- Food\\, Energy and Water Nexus Project",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=11&year=2026#assignment_1219249",
+   "due": "2026-11-29",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-assignment-1219265",
+   "title": "Week 10 Check In: Food Sustainability and Food Claims",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=11&year=2026#assignment_1219265",
+   "due": "2026-11-29",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-assignment-1219266",
+   "title": "Week 10 Discussion: Food claims and sustainability",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=11&year=2026#assignment_1219266",
+   "due": "2026-11-29",
+   "dueKind": "date",
+   "milestone": false
+  },
+  {
+   "id": "canvas-40466-event-assignment-1219287",
+   "title": "Weeks 9  and 10  Learning Reflection",
+   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=11&year=2026#assignment_1219287",
    "due": "2026-11-29",
    "dueKind": "date",
    "milestone": false

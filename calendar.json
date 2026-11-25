@@ -2,42 +2,10 @@
  "version": 1,
  "course": "40466",
  "coverage": "BIOL 45.01W dates as Canvas publishes them. Canvas is the source of record; this is a copy, and only as complete as what she has posted.",
- "lastSuccess": 1795592844.3133109,
- "lastAttempt": 1795592844.3133109,
+ "lastSuccess": 1795594672.586845,
+ "lastAttempt": 1795594672.586845,
  "error": "",
  "items": [
-  {
-   "id": "canvas-40466-event-assignment-1240057",
-   "title": "Case Study 5: Mediterranean Diet and Heart Health",
-   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1240057",
-   "due": "2026-10-25",
-   "dueKind": "date",
-   "milestone": false
-  },
-  {
-   "id": "canvas-40466-event-assignment-1219236",
-   "title": "Evaluating Scientific Articles",
-   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219236",
-   "due": "2026-10-25",
-   "dueKind": "date",
-   "milestone": false
-  },
-  {
-   "id": "canvas-40466-event-assignment-1219273",
-   "title": "Week 5 Check-in - Lipids",
-   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219273",
-   "due": "2026-10-25",
-   "dueKind": "date",
-   "milestone": false
-  },
-  {
-   "id": "canvas-40466-event-assignment-1219274",
-   "title": "Week 5 Discussion: Lipids",
-   "url": "https://foothillcollege.instructure.com/calendar?include_contexts=course_40466&month=10&year=2026#assignment_1219274",
-   "due": "2026-10-25",
-   "dueKind": "date",
-   "milestone": false
-  },
   {
    "id": "canvas-40466-event-calendar-event-287781",
    "title": "Week 6 Discussion: Proteins and Food Safety: Milestone 1",
